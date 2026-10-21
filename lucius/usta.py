@@ -69,7 +69,7 @@ class LuciusHandler(BaseHTTPRequestHandler):
 
 def streznik(port=5824):
     """Živi strežnik LUCIUS-ovega okna (127.0.0.1:5824 — LUCI po tipkovnici)."""
-    httpd = ThreadingHTTPServer(("127.0.0.1", port), LuciusHandler)
+    httpd = ThreadingHTTPServer(("0.0.0.0", port), LuciusHandler)  # telefon doseze okno po lokalni mrezi (ukaz Lastnika, 21. 10.)
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
     out("  usta: LUCIUS govori na http://127.0.0.1:" + str(port))
     return httpd

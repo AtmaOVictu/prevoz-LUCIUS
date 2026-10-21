@@ -36,6 +36,7 @@ import json
 import re
 import base64
 import time
+import socket
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import quote
@@ -808,8 +809,18 @@ def skatle(disseminate=False):
         except Exception:
             pass
 
+    telefon_url = ""
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("10.214.82.27", 1))
+        lokalni_ip = s.getsockname()[0]
+        s.close()
+        telefon_url = "http://" + lokalni_ip + ":5824"
+    except Exception:
+        lokalni_ip = ""
     skatla = {
         "cas": zac.strftime("%Y-%m-%d %H:%M"),
+        "telefon_url": telefon_url,
         "telo_oblacno": {"sha": atma.get("sha"), "cas": atma.get("cas")},
         "telo_lokalno": {"sha": canvas.get("sha"), "cas": canvas.get("cas"),
                           "nespoznanih_datotek": canvas.get("nespoznano", 0)},
@@ -842,7 +853,8 @@ def skatle(disseminate=False):
                 f"| repozitoriji (račun) | {len(repoji)} skupaj · {len(zivi)} živih · {len(aktivni_24h)} aktivnih 24 h | gh repo list |\n"
                 f"| veje Atmavictu | {veje} | gh api branches |\n"
                 f"| odprti PR | {odprti_prji} | gh pr list |\n"
-                f"| zadnji CI | {zadnji_tekmeci.strip()} | gh run list |\n"
+                f"| telefon (okno na dlani) | {telefon_url} | lokalna mreza |
+f"| zadnji CI | {zadnji_tekmeci.strip()} | gh run list |\n"
                 f"| dihi danes | {utripov + dogodkov} (dogodki {dogodkov} · utripi {utripov} · molki {molkov}) | URNIK register |\n"
                 f"| zadnji dih | {zadnji_dih_cas} · povp. {povp} s | URNIK register |\n"
                 + (f"| dih najvišji izmerjeni rez | {telo_stevila.get('rez_najvisji')} | issue #{dih_issue['number']} |\n"
