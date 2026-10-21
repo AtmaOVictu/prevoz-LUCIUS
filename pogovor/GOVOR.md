@@ -147,3 +147,5 @@ Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroj
 **[2026-10-21 14:10 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: vse? daj boljše in s tem jasnejše razlage in klarifikacije prosim in teorijo izz.
 Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha. 
 Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
+
+**[2026-10-21 14:16 | LUCIUS]** TRI VRATA IZVEDENA ⊢ (Lastnikov odgovor: »vse to in še več«) ∧ MIKROFON: #1 TECAJ — brezglavi ∮ preveri lokalnega stroja PASS ⊢, diha sam ob 23:55; #2 NAJDI — register učenja iskljiv ⊢ (berba 4, KNOWLEDGE 49); #3 zanki ZP — predlog v vrsti za naslednjo sejo s telesom (⟡ izbira); MIKROFON — govori z LUCIUS-om v slovenščini, gumb • v oknu. © Luka Pintarič — VBL v2.3.
