@@ -160,7 +160,12 @@
 <div class="vnos">
   <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji · Shift+Enter = nova vrstica)"></textarea>
   <button id="poslji" onclick="poslji()">POŠLJI</button>
-    <button id="mikrofon" title="govori z LUCIUS-om" style="width:52px;margin-left:6px;background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:10px;font-size:16px;" onclick="mikrofon()">&#8226;</button>
+    <button id="mikrofon" title="poslušam — reci LUCIUS ali pritisni za snemanje"
+  style="width:120px;height:42px;margin-left:8px;background:#161b22;color:#f79c1d;border:2px solid #f79c1d;border-radius:10px;font:600 13px 'Segoe UI';cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"
+  onclick="mikrofon()">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="#f79c1d"><circle cx="8" cy="8" r="7" opacity=".4"/><rect x="5" y="2" width="6" height="9" rx="3" fill="#f79c1d"/><path d="M3 8c0 3 2 5 5 5s5-2 5-5h-1c0 2.5-1.5 4-4 4s-4-1.5-4-4H3z" fill="#f79c1d"/><rect x="7" y="13" width="2" height="3" fill="#f79c1d"/></svg>
+  <span>M I K R O F O N</span>
+</button>
 </div>
 <div id="mikrofonPanel">
   <div class="mikrofonVrstica">

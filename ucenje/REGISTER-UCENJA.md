@@ -635,3 +635,27 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:36 · ⚠ · Mucilnica-modrosti:README.md · 905 B / 18 vrstic · PEČAT×0 · ∂×0 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:50 · ⚠ · Mucilnica-modrosti:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:50 · ⚠ · Mucilnica-modrosti:izdaje/README.md · 131 B / 4 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:50 · ⚠ · Mucilnica-modrosti:knjige/prirocnik-jaszu/telo-2.5.md · 113078 B / 3680 vrstic · PEČAT×1 · ∂×0 · ⊢×16
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:50 · ⚠ · Mucilnica-modrosti:osnutki/README.md · 109 B / 4 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:50 · ⚠ · EnglishVarient:CANONICAL.md · 386 B / 14 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · EnglishVarient:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · EnglishVarient:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · soul-evolution:AGENTS.md · 2430 B / 60 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · soul-evolution:CANONICAL.md · 1100 B / 31 vrstic · PEČAT×0 · ∂×0 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · soul-evolution:CRITICAL_BRIEF.md · 13878 B / 224 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · soul-evolution:DESIGN.md · 7464 B / 130 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:51 · ⚠ · soul-evolution:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
