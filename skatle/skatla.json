@@ -1,5 +1,5 @@
 {
-  "cas": "2026-10-21 13:18",
+  "cas": "2026-10-21 13:23",
   "telo_oblacno": {
     "sha": "380b3a3",
     "cas": "2026-10-21 13:17"
@@ -32,12 +32,12 @@
     "zadnji_ci": "Tests:success priča:failure"
   },
   "urnik": {
-    "dihov": 2,
-    "dogodkov": 1,
+    "dihov": 3,
+    "dogodkov": 2,
     "utripov": 1,
-    "molkov": 20,
-    "zadnji_dih": "12:42:33",
-    "povp_trajanje_s": 11.9
+    "molkov": 22,
+    "zadnji_dih": "13:18:30",
+    "povp_trajanje_s": 13.4
   },
   "odprt_dih": {
     "stevilka": 483,

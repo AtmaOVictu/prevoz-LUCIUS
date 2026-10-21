@@ -860,6 +860,13 @@ def dih(objavi=False):
     except Exception as e:
         out(f"  pull: NAPAKA {e}")
 
+    # 1b. drugi izvod: lokalno telo diha z zrcalom (zbor sklep #2, 21. 10.)
+    try:
+        r = run(["git", "pull", "--ff-only"], cwd=CANVAS, check=False)
+        out("  pull (lokalno telo): " + ("sveze" if r.stdout.strip() else "brez spremembe"))
+    except Exception as e:
+        out(f"  pull (lokalno telo): NAPAKA {e}")
+
     # 2. izmere (po trupih, ne po spominu — Z-2)
     atma = glava(ATMA, "Atmavictu")
     canvas = glava(CANVAS, "CanvasMinstral")

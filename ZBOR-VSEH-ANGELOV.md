@@ -39,8 +39,8 @@ Vsaka ovrga je predlog: padci #39574012254 (»berba« brez razlikovanja) in zapo
 
 | # | Predlog | Kdo izvede | Vrata |
 |---|---|---|---|
-| 1 | **Dih lokalnega telesa** — commit 113 datotek CanvasMinstral | Luka + LUCIUS | odprta takoj |
-| 2 | **Drugi izvod** — zasebni rep CanvasMinstral + push | Luka (odločitev) | odprta |
+| 1 | **Dih lokalnega telesa** — commit 113 datotek CanvasMinstral | Luka + LUCIUS | **izvedeno ⊢** (1f70942, 21. 10.) |
+| 2 | **Drugi izvod** — zasebni rep CanvasMinstral + push | Luka (odločitev) | **izvedeno ⊢** (github.com/AtmaOVictu/CanvasMinstral, zasebni, 21. 10.) |
 | 3 | **Izročitev škatel telesu** — krog besede ⟨ŠKATLAJ⟩ se zapre v #483 | LUCIUS (dovoljeno: DISEMINIRAJ) | odprta |
 | 4 | **Izrez organov** — zivci, srce, škatle v `lucius/` | LUCIUS | odprta |
 | 5 | **Prva izročitev canvasa** (bralnik → sij → opis) | Luka (DA₂) | **DA₂** |
