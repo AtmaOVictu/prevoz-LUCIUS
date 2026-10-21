@@ -393,6 +393,38 @@ def poroci():
     out(f"  PRODUKCIJA: {tel.name} — {len(zadnji)} teles, {skupno_b} B")
 
 
+def tecaj():
+    """TECAJ — brezglavi dih lokalnega stroja (vrata #1, Lastnikov DA: "vse to in e ve").
+    Poene ∮ preveri (run_checks.py) tvojega stroja — samo preverjanje, brez pisanja (K1)."""
+    cwd = CANVAS / "Scripts" / "comprehension_machine"
+    r = run(["python", "scripts/run_checks.py", "--skip-ui"], cwd=cwd, check=False)
+    vrstice = [l for l in (r.stdout or "").splitlines() if l.strip()][-6:]
+    for l in vrstice:
+        out("  tecaj: " + l.strip()[:120])
+    out("  tecaj: ∮ preveri koncan, izhodna koda " + str(r.returncode))
+    return r.returncode
+
+def najdi(niz):
+    """NAJDI — globina rabe registra uenja (Lastnikov DA: "vse to in e ve").
+    Isee po registrskih priah: poti teles + verbatim priae. K1: bere, ne presoi."""
+    if not niz:
+        out("  najdi: (prazen niz)")
+        return
+    j = UCENJE / "REGISTER-UCENJA.jsonl"
+    if not j.exists():
+        out("  najdi: (register prazen)")
+        return
+    n = 0
+    for line in j.read_text(encoding="utf-8").splitlines():
+        try:
+            v = json.loads(line)
+        except Exception:
+            continue
+        if (niz.lower() in v.get("vir", "").lower()) or (niz.lower() in (v.get("prica_verbatim") or "").lower()):
+            n += 1
+            out("  - " + v["vir"] + " (" + v["cas"] + ")")
+    out("  najdi: " + str(n) + " zadetkov")
+
 def prinesi(url):
     """PRINESI — vedno-odprta lokalna vrata v svet (ukaz Lastnika: najdi vec vrat, 21. 10.):
     prinese telo URL-ja v prevoz/prinesi/ in zapece izmero v GOVOR. Samo branje — K1."""
@@ -506,6 +538,15 @@ def odgovori():
                 izvedeno.append("iscitev izvedena")
             elif ukaz.startswith("izroci"):
                 izvedeno.append("izrocitev caka DA2 (O7): prevoznik.py " + ukaz)
+            elif ukaz.startswith("tecaj"):
+                tecaj()
+                izvedeno.append("tecaj: brezglavi preveri lokalnega stroja izveden")
+            elif ukaz.startswith("najdi "):
+                najdi(ukaz[6:].strip())
+                izvedeno.append("najdi: iskanje po registru izvedeno")
+            elif ukaz.startswith("povej "):
+                povej(ukaz[6:].strip())
+                izvedeno.append("izgovorjeno iz zvocnikov")
             elif ukaz.startswith("prinesi "):
                 prinesi(ukaz[8:].strip())
                 izvedeno.append("prinesi: " + ukaz[8:].strip()[:60])
@@ -1021,6 +1062,14 @@ def main():
         dih(objavi="--objavi" in sys.argv)
     elif ukaz == "ucenje":
         ucenje_cikel()
+    elif ukaz == "tecaj":
+        tecaj()
+    elif ukaz == "najdi":
+        poiskus = [a for a in sys.argv[2:] if not a.startswith("--")]
+        najdi(" ".join(poiskus) if poiskus else None)
+    elif ukaz == "povej":
+        bes = sys.argv[2:]
+        povej(" ".join(bes) if bes else None)
     elif ukaz == "isci":
         poiskus = [a for a in sys.argv[2:] if not a.startswith("--")]
         isci(poiskus[0] if poiskus else None)

@@ -123,6 +123,7 @@
 <div class="vnos">
   <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji · Shift+Enter = nova vrstica)"></textarea>
   <button id="poslji" onclick="poslji()">POŠLJI</button>
+    <button id="mikrofon" title="govori z LUCIUS-om" style="width:52px;margin-left:6px;background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:10px;font-size:16px;" onclick="mikrofon()">&#8226;</button>
 </div>
 <div class="noga">© Luka Pintarič — VBL v2.3 · prevoznik meri, ne presoja (K1) · prevoz\pogovor\GOVOR.md</div>
 
@@ -231,6 +232,32 @@ async function poslji() {
 }
 function hitriUkaz(u) { document.getElementById("besedilo").value = u; poslji(); }
 function fokusIsci() { var p = document.getElementById("besedilo"); p.value = "isci "; p.focus(); }
+var prepoznava = null;
+function mikrofon() {
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var gumb = document.getElementById("mikrofon");
+  if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora. Uporabi Edge ali Chrome."); return; }
+  if (prepoznava) { prepoznava.stop(); prepoznava = null; gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3"; return; }
+  prepoznava = new SR();
+  prepoznava.lang = "sl-SI";
+  prepoznava.continuous = true;
+  prepoznava.interimResults = true;
+  prepoznava.onresult = function (e) {
+    var besedilo = "";
+    for (var i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) besedilo += e.results[i][0].transcript;
+    }
+    if (besedilo) {
+      var p = document.getElementById("besedilo");
+      p.value = (p.value ? p.value + " " : "") + besedilo.trim();
+      p.focus();
+    }
+  };
+  prepoznava.onend = function () { prepoznava = null; gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3"; };
+  prepoznava.onerror = function () { prepoznava = null; gumb.style.background = "#21262d"; };
+  prepoznava.start();
+  gumb.style.background = "#f79c1d"; gumb.style.color = "#1a1005";
+}
 function glasVklopljen() { return localStorage.getItem("luciusGlas") !== "0"; }
 function preklopiGlas() {
   var b = document.getElementById("glasBtn");
