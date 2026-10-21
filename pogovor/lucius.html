@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LUCIUS — linija zaupanja</title>
 <style>
-  :root {
+  :root, :root[data-tema="temno"] {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d;
+    --text: #e6edf3; --dim: #8b949e; --faint: #484f58;
+    --lucius: #f79c1d; --lucius-svetlo: #ffd569;
+    --ti: #4493f8; --zeleno: #3fb950; --odprto: #d29922;
+  }
+  :root[data-tema="svetlo"] {
     --bg: #f5f0e8; --panel: #ffffff; --border: #d4c9b8;
     --text: #1a1005; --dim: #6b5d4f; --faint: #a89a8a;
     --lucius: #b45309; --lucius-svetlo: #d97706;
@@ -14,7 +20,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
   body {
-    background: #fff; color: var(--text);
+    background: var(--panel); color: var(--text);
     font: 14px/1.5 "Segoe UI", system-ui, sans-serif;
     display: flex; flex-direction: column; overflow: hidden;
   }
@@ -49,15 +55,15 @@
   #klepet::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; border: 2px solid var(--bg); }
   .sporocilo { max-width: 82%; border-radius: 12px; padding: 9px 13px; margin-bottom: 8px;
     white-space: pre-wrap; overflow-wrap: break-word; }
-  .lucius { background: #fff8f0; border: 1px solid var(--border); border-left: 3px solid var(--lucius); box-shadow: 0 2px 8px rgba(180,83,9,.1); }
-  .lastnik { background: #eff6ff; border: 1px solid #93c5fd; border-right: 3px solid var(--ti); margin-left: auto; box-shadow: 0 2px 8px rgba(37,99,235,.08); }
+  .lucius { background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--lucius); box-shadow: 0 2px 8px rgba(180,83,9,.1); }
+  .lastnik { background: var(--panel); border: 1px solid var(--border); border-right: 3px solid var(--ti); margin-left: auto; box-shadow: 0 2px 8px rgba(37,99,235,.08); }
   .glavaSpor { font-size: 10px; color: var(--dim); margin-bottom: 3px; letter-spacing: .4px; }
   .sporocilo b, .sporocilo strong { color: var(--lucius-svetlo); font-weight: 600; }
   .tok-peca { color: var(--zeleno); font-weight: 700; }
   .tok-zvezdica { color: var(--lucius); font-weight: 700; }
   .tok-del { color: var(--odprto); font-weight: 700; }
   .tok-copy { color: var(--faint); font-size: 11px; }
-  .tok-ukaz { background: #21262d; border: 1px solid var(--border); border-radius: 5px; padding: 0 5px; font-family: Consolas, monospace; font-size: 12.5px; color: #79c0ff; }
+  .tok-ukaz { background: var(--panel); border: 1px solid var(--border); border-radius: 5px; padding: 0 5px; font-family: Consolas, monospace; font-size: 12.5px; color: #79c0ff; }
 
   #dolGumb {
     position: absolute; right: 26px; bottom: 150px; display: none;
@@ -66,7 +72,7 @@
   }
   #dolGumb:hover { border-color: var(--lucius); }
 
-  #prebira { font-size: 12px; color: var(--lucius); padding: 6px 16px; display: none; flex: 0 0 auto; background: #161b22; border-left: 3px solid var(--lucius); border-radius: 6px; margin: 4px 14px; }
+  #prebira { font-size: 12px; color: var(--lucius); padding: 6px 16px; display: none; flex: 0 0 auto; background: var(--panel); border-left: 3px solid var(--lucius); border-radius: 6px; margin: 4px 14px; }
 
   .zetoni { display: flex; flex-wrap: wrap; padding: 6px 14px; border-top: 1px solid var(--border); flex: 0 0 auto; }
   /* orodna vrstica */
@@ -75,32 +81,32 @@
     font-size: 11px; color: var(--dim); background: transparent; border: 1px solid var(--border);
     border-radius: 6px; padding: 3px 8px; cursor: pointer; user-select: none;
   }
-  .orodje:hover { border-color: var(--lucius); color: var(--lucius); background: #fff8f0; }
+  .orodje:hover { border-color: var(--lucius); color: var(--lucius); background: var(--panel); }
   .sporocilo .dejanja { display: flex; gap: 6px; margin-top: 4px; font-size: 10px; }
   .sporocilo .dejanja span { color: var(--faint); cursor: pointer; padding: 1px 4px; }
   .sporocilo .dejanja span:hover { color: var(--lucius); }
   .zet {
-    font-size: 11.5px; color: #c9d1d9; background: #21262d; border: 1px solid var(--border);
+    font-size: 11.5px; color: var(--text); background: var(--panel); border: 1px solid var(--border);
     border-radius: 12px; padding: 3px 10px; margin: 3px 6px 3px 0; cursor:pointer; user-select: none;
   }
-  .zet:hover { background: var(--lucius); color: #fff; }
+  .zet:hover { background: var(--lucius); color: var(--bg); }
 
   .vnos { display: flex; padding: 8px 14px 4px 14px; flex: 0 0 auto; }
   #besedilo {
     flex: 1; height: 58px; resize: none;
-    background: #fff; color: var(--text);
+    background: var(--panel); color: var(--text);
     border: 1px solid var(--border); border-radius: 10px; padding: 9px 11px;
     font: 13.5px/1.45 "Segoe UI", sans-serif; outline: none;
   }
   #besedilo:focus { border-color: var(--lucius); box-shadow: 0 0 0 3px rgba(247,156,29,.12); }
-  #poslji { width: 106px; margin-left: 8px; background: var(--lucius); color: #fff;
+  #poslji { width: 106px; margin-left: 8px; background: var(--lucius); color: var(--bg);
     border: none; border-radius: 10px; font: 600 13px "Segoe UI"; cursor: pointer; }
   #poslji:hover { background: var(--lucius-svetlo); }
   #poslji:disabled { background: #30363d; color: var(--dim); cursor: default; }
   /* mikrofon vizualizacija */
   #mikrofonPanel {
     display: none; padding: 6px 14px; border-top: 1px solid var(--border); flex: 0 0 auto;
-    background: #161b22; border-radius: 8px 8px 0 0; margin: 0 14px 4px 14px;
+    background: var(--panel); border-radius: 8px 8px 0 0; margin: 0 14px 4px 14px;
   }
   #mikrofonPanel.sposilen { display: block; }
   .mikrofonVrstica { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
@@ -117,6 +123,25 @@
   .zvokStolpec { width: 4px; border-radius: 2px; transition: height .08s; }
   .noga { font-size: 10px; color: var(--dim); text-align: center; padding: 4px 0 8px 0; flex: 0 0 auto; border-top: 1px solid var(--border); }
 </style>
+
+<style>
+  #nastavitve {
+    display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 280px;
+    background: var(--panel); border-left: 2px solid var(--lucius); z-index: 100;
+    padding: 20px; overflow-y: auto;
+  }
+  #nastavitve.odprto { display: block; }
+  #nastavitve h3 { color: var(--lucius); margin: 20px 0 8px 0; font-size: 14px; }
+  #nastavitve .vrsta { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; }
+  #nastavitve .vrsta label { font-size: 12.5px; color: var(--text); }
+  #nastavitve select, #nastavitve input[type="range"] { width: 120px; }
+  #nastavitve select { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; font-size: 12px; }
+  .nastavitevZapri {
+    position: absolute; top: 10px; right: 12px; font-size: 18px; color: var(--dim);
+    cursor: pointer; padding: 4px 8px; border: none; background: none;
+  }
+  .nastavitevZapri:hover { color: var(--lucius); }
+</style>
 </head>
 <body>
 
@@ -128,7 +153,7 @@
   </div>
   <div class="desno">
     <span class="zelena"></span><span id="varuhTxt">varuh diha</span><br>
-    <span id="licencaTxt">VBL —</span><br><span id="glasBtn" style="cursor:pointer;color:#f79c1d;" onclick="preklopiGlas()">glas: DA</span> · <span style="cursor:pointer;color:#f79c1d;" onclick="izgovoriZadnje()">izgovori zadnje</span>
+    <span style="cursor:pointer;color:var(--lucius);font-size:16px;" onclick="odpriNastavitve()">&#9881;</span> <span id="licencaTxt">VBL —</span><br><span id="glasBtn" style="cursor:pointer;color:#f79c1d;" onclick="preklopiGlas()">glas: DA</span> · <span style="cursor:pointer;color:#f79c1d;" onclick="izgovoriZadnje()">izgovori zadnje</span>
   </div>
 </header>
 
@@ -164,8 +189,8 @@
   style="
     width: 140px; height: 48px; margin-left: 8px;
     background: var(--lucius);
-    color: #fff;
-    border: 3px solid #7c2d12;
+    color: var(--bg);
+    border: 3px solid var(--lucius);
     border-radius: 12px;
     font: 700 13px 'Segoe UI';
     cursor: pointer;
@@ -465,6 +490,38 @@ function izgovori(besedilo) {
   return true;
 }
 if ("speechSynthesis" in window) { speechSynthesis.onvoiceschanged = function () {}; speechSynthesis.getVoices(); }
+function odpriNastavitve() {
+  var p = document.getElementById("nastavitve");
+  p.classList.add("odprto");
+  var tema = localStorage.getItem("luciusTema") || "temno";
+  document.getElementById("izbiraTema").value = tema;
+  document.getElementById("izbiraGlas").value = localStorage.getItem("luciusGlas") !== "0" ? "1" : "0";
+  document.getElementById("izbiraSamodejno").value = samodejnoPosiljanje ? "1" : "0";
+  var pisava = localStorage.getItem("luciusPisava") || "14";
+  document.getElementById("pisavaSlider").value = pisava;
+  document.body.style.fontSize = pisava + "px";
+}
+function zapriNastavitve() { document.getElementById("nastavitve").classList.remove("odprto"); }
+function nastaviTemo() {
+  var t = document.getElementById("izbiraTema").value;
+  document.documentElement.dataset.tema = t;
+  localStorage.setItem("luciusTema", t);
+}
+function nastaviGlas() {
+  var v = document.getElementById("izbiraGlas").value;
+  localStorage.setItem("luciusGlas", v);
+  var b = document.getElementById("glasBtn");
+  b.textContent = (v === "1") ? "glas: DA" : "glas: NE";
+}
+function nastaviSamodejno() {
+  var v = document.getElementById("izbiraSamodejno").value;
+  samodejnoPosiljanje = (v === "1");
+  localStorage.setItem("luciusSamodejno", v);
+}
+function nastaviGlasnost(v) {
+  localStorage.setItem("luciusGlasnost", v);
+  fetch("/povej?text=Glasnost%20" + v + "%20odstotkov");
+}
 function osvezi() { naloziKlepet(); naloziStanje(); }
 function prekopirajZadnje() {
   if (zadnjiLuciusGol) {
@@ -505,10 +562,66 @@ document.getElementById("besedilo").addEventListener("keydown", function (e) {
 document.getElementById("klepet").addEventListener("scroll", naloziKlepet);
 
 document.getElementById("glasBtn").textContent = glasVklopljen() ? "glas: DA" : "glas: NE";
+var shranjenaTema = localStorage.getItem("luciusTema") || "temno";
+document.documentElement.dataset.tema = shranjenaTema;
+if (localStorage.getItem("luciusSamodejno") === "0") samodejnoPosiljanje = false;
 naloziStanje();
 naloziKlepet();
 setInterval(naloziKlepet, 3000);
 setInterval(naloziStanje, 15000);
 </script>
+
+<div id="nastavitve">
+  <button class="nastavitevZapri" onclick="zapriNastavitve()">&#10005;</button>
+  <h3>&#9881; Nastavitve</h3>
+
+  <div class="vrsta">
+    <label>Tema:</label>
+    <select id="izbiraTema" onchange="nastaviTemo()">
+      <option value="temno">temna (za oči)</option>
+      <option value="svetlo">svetla</option>
+    </select>
+  </div>
+
+  <h3>Glas</h3>
+  <div class="vrsta">
+    <label>Samodejni glas:</label>
+    <select id="izbiraGlas" onchange="nastaviGlas()">
+      <option value="1">DA</option>
+      <option value="0">NE</option>
+    </select>
+  </div>
+  <div class="vrsta">
+    <label>Glasnost (SAPI %):</label>
+    <input type="range" id="glasnostSlider" min="10" max="100" value="75"
+           oninput="document.getElementById('glasnostVal').textContent=this.value+'%'"
+           onchange="nastaviGlasnost(this.value)">
+    <span id="glasnostVal" style="font-size:11px;color:var(--dim);">75%</span>
+  </div>
+
+  <h3>Pogovor</h3>
+  <div class="vrsta">
+    <label>Samodejno pošlji:</label>
+    <select id="izbiraSamodejno" onchange="nastaviSamodejno()">
+      <option value="1">DA (2s tišine)</option>
+      <option value="0">NE (samo POŠLJI)</option>
+    </select>
+  </div>
+
+  <h3>Pisava</h3>
+  <div class="vrsta">
+    <label>Velikost:</label>
+    <input type="range" id="pisavaSlider" min="10" max="20" value="14"
+           oninput="document.body.style.fontSize=this.value+'px'; localStorage.setItem('luciusPisava',this.value)">
+  </div>
+
+  <h3>Diagnostika</h3>
+  <div class="vrsta">
+    <button style="width:100%;padding:8px;background:var(--lucius);color:var(--bg);border:none;border-radius:8px;font:600 12px 'Segoe UI';cursor:pointer;" onclick="fetch('/povej?text=Diagnoza%20telesa').then(()=>location.reload())">ZAGNI DIAGNOZO</button>
+  </div>
+  <div class="vrsta">
+    <button style="width:100%;padding:8px;background:var(--border);color:var(--text);border:none;border-radius:8px;font:600 12px 'Segoe UI';cursor:pointer;" onclick="naloziKlepet();naloziStanje();">&#8635; OSVEŽI VSE</button>
+  </div>
+</div>
 </body>
 </html>
