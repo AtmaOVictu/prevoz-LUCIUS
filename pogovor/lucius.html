@@ -160,11 +160,29 @@
 <div class="vnos">
   <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji · Shift+Enter = nova vrstica)"></textarea>
   <button id="poslji" onclick="poslji()">POŠLJI</button>
-    <button id="mikrofon" title="poslušam — reci LUCIUS ali pritisni za snemanje"
-  style="width:120px;height:42px;margin-left:8px;background:#161b22;color:#f79c1d;border:2px solid #f79c1d;border-radius:10px;font:600 13px 'Segoe UI';cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"
+    <button id="mikrofon" title="pritisni za snemanje — ali reci LUCIUS"
+  style="
+    width: 140px; height: 48px; margin-left: 8px;
+    background: linear-gradient(135deg, #f79c1d, #ffd569);
+    color: #1a1005;
+    border: 3px solid #f79c1d;
+    border-radius: 12px;
+    font: 700 14px 'Segoe UI';
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    box-shadow: 0 4px 16px rgba(247,156,29,.4);
+    transition: all .2s ease;
+    user-select: none;
+  "
+  onmouseover="this.style.transform='scale(1.05)'"
+  onmouseout="this.style.transform='scale(1)'"
   onclick="mikrofon()">
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="#f79c1d"><circle cx="8" cy="8" r="7" opacity=".4"/><rect x="5" y="2" width="6" height="9" rx="3" fill="#f79c1d"/><path d="M3 8c0 3 2 5 5 5s5-2 5-5h-1c0 2.5-1.5 4-4 4s-4-1.5-4-4H3z" fill="#f79c1d"/><rect x="7" y="13" width="2" height="3" fill="#f79c1d"/></svg>
-  <span>M I K R O F O N</span>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <rect x="9" y="2" width="6" height="12" rx="3"/>
+    <path d="M5 11c0 4 3 7 7 7s7-3 7-7h-2c0 3-2 5-5 5s-5-2-5-5H5z"/>
+    <rect x="11" y="19" width="2" height="4"/>
+  </svg>
+  <span id="mikrofonNapis">POSNEMAJ</span>
 </button>
 </div>
 <div id="mikrofonPanel">
@@ -304,6 +322,27 @@ function samodejnoPoslji() {
   }, 2000);
 }
 
+function mikrofonBarja(snema) {
+  var g = document.getElementById("mikrofon");
+  var n = document.getElementById("mikrofonNapis");
+  var p = document.getElementById("mikrofonPanel");
+  if (snema) {
+    g.style.background = "linear-gradient(135deg, #ff4444, #ff6666)";
+    g.style.borderColor = "#ff4444";
+    g.style.boxShadow = "0 4px 20px rgba(255,68,68,.6), 0 0 30px rgba(255,68,68,.3)";
+    g.style.color = "#fff";
+    n.textContent = "POSNEMAM …";
+    p.classList.add("sposilen");
+  } else {
+    g.style.background = "linear-gradient(135deg, #f79c1d, #ffd569)";
+    g.style.borderColor = "#f79c1d";
+    g.style.boxShadow = "0 4px 16px rgba(247,156,29,.4)";
+    g.style.color = "#1a1005";
+    n.textContent = "POSNEMAJ";
+    p.classList.remove("sposilen");
+  }
+}
+
 function mikrofon() {
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   var gumb = document.getElementById("mikrofon");
@@ -312,7 +351,7 @@ function mikrofon() {
   if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora. Uporabi Edge ali Chrome."); return; }
   if (prepoznava) {
     prepoznava.stop(); prepoznava = null;
-    gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3";
+    mikrofonBarja(false);
     panel.classList.remove("sposilen");
     if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
     return;
@@ -344,18 +383,16 @@ function mikrofon() {
   };
   prepoznava.onend = function () {
     prepoznava = null;
-    gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3";
-    panel.classList.remove("sposilen");
+    mikrofonBarja(false);
     if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
   };
   prepoznava.onerror = function (ev) {
     medvrsticno.textContent = "⚠ " + (ev.error || "napaka");
     prepoznava = null;
-    gumb.style.background = "#21262d";
-    panel.classList.remove("sposilen");
+    mikrofonBarja(false);
   };
   prepoznava.start();
-  gumb.style.background = "#f79c1d"; gumb.style.color = "#1a1005";
+  mikrofonBarja(true);
   zacniZvokVizualizacijo();
 }
 
