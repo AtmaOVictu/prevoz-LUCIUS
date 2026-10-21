@@ -284,3 +284,7 @@ Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroj
 **[2026-10-21 14:44 | LUCIUS]** Prebrano ⊢ — 1 novih tvojih vrstic.
 Stanje: lekcije 316 · oblacna glava 2a8d0a2 · varuh diha. 
 Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
+
+**[2026-10-21 14:47 | LASTNIK]** ⟡-citat verbatim: »dokler ni domač v slovenščini se sme seveda tudi v angelščini pogovarjati« ⊢
+
+**[2026-10-21 14:47 | LUCIUS]** Prebrano ⊢. Dvajezina odprtá: slovenščina ko morem, angleščina ko moram — dom je kjer si ti. © Luka Pintarič — VBL v2.3.
