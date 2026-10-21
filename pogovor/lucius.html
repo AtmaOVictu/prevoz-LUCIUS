@@ -69,6 +69,16 @@
   #prebira { font-size: 11.5px; color: var(--lucius); padding: 0 16px 6px 16px; display: none; flex: 0 0 auto; }
 
   .zetoni { display: flex; flex-wrap: wrap; padding: 6px 14px; border-top: 1px solid var(--border); flex: 0 0 auto; }
+  /* orodna vrstica */
+  #orodja { display: flex; gap: 6px; padding: 4px 14px; border-top: 1px solid #21262d; flex: 0 0 auto; }
+  .orodje {
+    font-size: 11px; color: var(--dim); background: transparent; border: 1px solid #21262d;
+    border-radius: 6px; padding: 3px 8px; cursor: pointer; user-select: none;
+  }
+  .orodje:hover { border-color: var(--lucius); color: var(--lucius-svetlo); }
+  .sporocilo .dejanja { display: flex; gap: 6px; margin-top: 4px; font-size: 10px; }
+  .sporocilo .dejanja span { color: var(--faint); cursor: pointer; padding: 1px 4px; }
+  .sporocilo .dejanja span:hover { color: var(--lucius); }
   .zet {
     font-size: 11.5px; color: #c9d1d9; background: #21262d; border: 1px solid var(--border);
     border-radius: 12px; padding: 3px 10px; margin: 3px 6px 3px 0; cursor:pointer; user-select: none;
@@ -128,6 +138,15 @@
 <button id="dolGumb" title="na dno">↓</button>
 <div id="prebira">LUCIUS prebira tvoje besede … odgovor v ~2 minutah ⊢</div>
 
+<div id="orodja">
+  <span class="orodje" onclick="osvezi()">↻ osveži</span>
+  <span class="orodje" onclick="prekopirajZadnje()">&#9998; kopiraj zadnje</span>
+  <span class="orodje" onclick="skociNaDno()">&#8595; na dno</span>
+  <span class="orodje" onclick="stikaloZvok()">&#9834; glas: DA</span>
+  <span class="orodje" onclick="poveci()">&#43; besedilo</span>
+  <span class="orodje" onclick="pomanjsaj()">&#8722; besedilo</span>
+  <span class="orodje" onclick="izprazni()">&#10005; izprazni</span>
+</div>
 <div class="zetoni">
   <span class="zet" onclick="hitriUkaz('skatle')">škatle</span>
   <span class="zet" onclick="hitriUkaz('krog')">ves krog</span>
@@ -202,7 +221,9 @@ async function naloziKlepet() {
       var jeLastnik = s.kdo.includes("LASTNIK") || s.kdo.includes("PREIZKUS");
       var div = document.createElement("div");
       div.className = "sporocilo " + (jeLastnik ? "lastnik" : "lucius");
-      div.innerHTML = '<div class="glavaSpor">' + (jeLastnik ? "LUKA" : "LUCIUS") + " · " + s.cas + "</div>"
+      div.innerHTML = '<div class="glavaSpor">' + (jeLastnik ? "LUKA" : "LUCIUS") + " · " + s.cas + " · " +
+        '<span onclick="kopirajSporocilo(this)">kopiraj</span> · ' +
+        '<span onclick="izgovoriSporocilo(this)">izgovori</span></div>' 
         + pobarvaj(s.telo.join("\n").trim());
       k.appendChild(div);
       if (!jeLastnik && casPosiljanja && s.cas >= casPosiljanja) novLucius = true;
@@ -370,6 +391,36 @@ function izgovori(besedilo) {
   return true;
 }
 if ("speechSynthesis" in window) { speechSynthesis.onvoiceschanged = function () {}; speechSynthesis.getVoices(); }
+function osvezi() { naloziKlepet(); naloziStanje(); }
+function prekopirajZadnje() {
+  if (zadnjiLuciusGol) {
+    navigator.clipboard.writeText(zadnjiLuciusGol).then(function() {
+      medvrsticnoPotrdi("kopirano ⊢");
+    });
+  }
+}
+function skociNaDno() { var k = document.getElementById("klepet"); k.scrollTop = k.scrollHeight; }
+function stikaloZvok() { preklopiGlas(); }
+var velikostPisave = 13.5;
+function poveci() { velikostPisave = Math.min(20, velikostPisave + 1); document.body.style.fontSize = velikostPisave + "px"; }
+function pomanjsaj() { velikostPisave = Math.max(10, velikostPisave - 1); document.body.style.fontSize = velikostPisave + "px"; }
+function izprazni() { document.getElementById("besedilo").value = ""; }
+function medvrsticnoPotrdi(txt) {
+  var m = document.getElementById("medvrsticno");
+  if (m) { m.textContent = txt; setTimeout(function() { m.textContent = ""; }, 2000); }
+}
+function kopirajSporocilo(el) {
+  var besedilo = el.closest(".sporocilo").innerText;
+  navigator.clipboard.writeText(besedilo).then(function() {
+    medvrsticnoPotrdi("kopirano ⊢");
+  });
+}
+function izgovoriSporocilo(el) {
+  var besedilo = el.closest(".sporocilo").innerText.replace(/^[^
+]+
+/, "");
+  izgovori(besedilo.slice(0, 350));
+}
 function izgovoriZadnje() {
   if (!zadnjiLuciusGol) return;
   if (!izgovori(zadnjiLuciusGol.slice(0, 350))) fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350)));
