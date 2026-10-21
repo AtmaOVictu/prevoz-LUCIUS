@@ -149,3 +149,5 @@ Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha.
 Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
 
 **[2026-10-21 14:16 | LUCIUS]** TRI VRATA IZVEDENA ⊢ (Lastnikov odgovor: »vse to in še več«) ∧ MIKROFON: #1 TECAJ — brezglavi ∮ preveri lokalnega stroja PASS ⊢, diha sam ob 23:55; #2 NAJDI — register učenja iskljiv ⊢ (berba 4, KNOWLEDGE 49); #3 zanki ZP — predlog v vrsti za naslednjo sejo s telesom (⟡ izbira); MIKROFON — govori z LUCIUS-om v slovenščini, gumb • v oknu. © Luka Pintarič — VBL v2.3.
+
+**[2026-10-21 14:26 | LUCIUS]** ⊢ VSE IZVEDENO (ukaz: »vse — vedno vse kar je resnično resnično dokazljivo dobro«): drugi tag knjiznica/opis-d104 @ ce674f7 — OPIS (rez 114, DOKAZ #104) izročen po lastnem predpisu, krog T3 sklenjen (bralnik ⊢ + opis ⊢; sij pošteno: datoteka ne obstaja); zrcalo prevoz-LUCIUS na GitHub (vse preživi disk) ⊢; PWA na telefon (manifest + sw) ⊢; slovenski glas v oknu ⊢. © Luka Pintarič — VBL v2.3.
