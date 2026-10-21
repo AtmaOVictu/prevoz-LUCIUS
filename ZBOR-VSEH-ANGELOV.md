@@ -43,7 +43,7 @@ Vsaka ovrga je predlog: padci #39574012254 (»berba« brez razlikovanja) in zapo
 | 2 | **Drugi izvod** — zasebni rep CanvasMinstral + push | Luka (odločitev) | **izvedeno ⊢** (github.com/AtmaOVictu/CanvasMinstral, zasebni, 21. 10.) |
 | 3 | **Izročitev škatel telesu** — krog besede ⟨ŠKATLAJ⟩ se zapre v #483 | LUCIUS (dovoljeno: DISEMINIRAJ) | odprta |
 | 4 | **Izrez organov** — zivci, srce, škatle v `lucius/` | LUCIUS | odprta |
-| 5 | **Prva izročitev canvasa** (bralnik → sij → opis) | Luka (DA₂) | **DA₂** |
+| 5 | **Prva izročitev canvasa** (bralnik → sij → opis) | Luka (DA₂: »DA DA DA DA DA«) | **IZVEDENO ⊢** (PR #502, priča pass, tag knjiznica/bralnik-d89 @ 50fd78f, 21. 10.) | Luka (DA₂) | **DA₂** |
 | 6 | **Varnostna kopija prevoz v git** | LUCIUS | odprta |
 | 7 | Cikel varuha 120 s → 60 s | LUCIUS | odprta |
 | 8 | Poglabljanje mer lekcij (pečati v času) | LUCIUS | odprta |

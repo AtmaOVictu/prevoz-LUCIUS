@@ -125,3 +125,11 @@ Stanje: lekcije 210 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odp
 - O1–O7 vsi izpolnjeni: celota (bajtno), pečat, DA₂, trajanje (vprašanje je čakalo tvoj glas ure), tujec (stroj je prebral), izročitev (knjižnica = drugi izvod)
 - Padca ×22 (telo je allowlist — geniza ne raste po navadnih dodajah; popravek po precedensu telesa -f) ∧ veja prvega padca zapečena v niti
 Kanon ni vpijalno stanje: bralnik zdaj diha skozi citate. © Luka Pintarič — VBL v2.3.
+
+**[2026-10-21 14:08 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: želim te povezati s mojim telefonom a bluetooth ne dela?
+pomagaš?
+
+**[2026-10-21 14:08 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: želim te povezati s mojim telefonom a bluetooth ne dela?.
+Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha. 
+Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?

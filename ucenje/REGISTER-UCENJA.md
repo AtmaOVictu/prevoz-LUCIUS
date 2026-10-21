@@ -481,3 +481,13 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:public/canon/kamni/cxvii-cxxi.md · 20578 B / 238 vrstic · PEČAT×0 · ∂×21 · ⊢×62
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:public/canon/stotnije-2026-10-grafika.md · 5514 B / 79 vrstic · PEČAT×0 · ∂×4 · ⊢×16
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ZAKONODAJACLOVEKA:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ZAKONODAJACLOVEKA:OSNUTEK-TELA.md · 3446 B / 35 vrstic · PEČAT×0 · ∂×1 · ⊢×8
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ZAKONODAJACLOVEKA:README.md · 6502 B / 84 vrstic · PEČAT×0 · ∂×1 · ⊢×7
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ZAKONODAJACLOVEKA:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
