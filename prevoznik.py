@@ -860,12 +860,16 @@ def dih(objavi=False):
     except Exception as e:
         out(f"  pull: NAPAKA {e}")
 
-    # 1b. drugi izvod: lokalno telo diha z zrcalom (zbor sklep #2, 21. 10.)
+    # 1b. drugi izvod: lokalno telo diha z zrcalom (zbor #2; potisk DA, 21. 10. ⊢)
     try:
         r = run(["git", "pull", "--ff-only"], cwd=CANVAS, check=False)
         out("  pull (lokalno telo): " + ("sveze" if r.stdout.strip() else "brez spremembe"))
+        g = run(["git", "push", "origin", "master"], cwd=CANVAS, check=False)
+        predh = run(["git", "rev-list", "--count", "origin/master..master"], cwd=CANVAS, check=False)
+        if (predh.stdout.strip() or "0") != "0":
+            out("  push (lokalno telo): " + predh.stdout.strip() + " commitov v zrcalo ⊢")
     except Exception as e:
-        out(f"  pull (lokalno telo): NAPAKA {e}")
+        out(f"  pull/push (lokalno telo): NAPAKA {e}")
 
     # 2. izmere (po trupih, ne po spominu — Z-2)
     atma = glava(ATMA, "Atmavictu")

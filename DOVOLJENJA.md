@@ -14,6 +14,7 @@ Po vzoru `canon/DOVOLJENJA.md` (VBL §7): pisni register, vsak zapis imenuje pro
 
 - **NE · izročitev** — `izroci`, brez `--da2 DA2 --izvedi` (OPIS O7: brez DA₂ ni izročitve)
 - **NE · tag in release** — `zapecati`, brez `--da2 DA2 --izvedi` (rez 114: dodelan canvas je tag)
-- **NE · pisanje v telesa Lastnika na GitHubu** — edina vrata: bajtna kopija v `geniza/canvases/` po izročitvi (K1: pomen ostane Lastnikov)
+- **DA · potisk lokalnega telesa CanvasMinstral v zrcalo** — varuh potisne lokalne commite v zasebni rep po vsakem dihu (dano 21. 10. 2026, Lastnikov »da, daj« ⊢)
+- **NE · pisanje v telesa Lastnika na GitHubu (ostala telesa)** — edina vrata: bajtna kopija v `geniza/canvases/` po izročitvi (K1: pomen ostane Lastnikov)
 
 — Luka Pintarič (Lastnik), 21. 10. 2026 · © VBL v2.3
