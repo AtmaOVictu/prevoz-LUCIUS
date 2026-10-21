@@ -87,6 +87,24 @@
     border: none; border-radius: 10px; font: 600 13px "Segoe UI"; cursor: pointer; }
   #poslji:hover { background: var(--lucius-svetlo); }
   #poslji:disabled { background: #30363d; color: var(--dim); cursor: default; }
+  /* mikrofon vizualizacija */
+  #mikrofonPanel {
+    display: none; padding: 6px 14px; border-top: 1px solid var(--border); flex: 0 0 auto;
+    background: #161b22; border-radius: 8px 8px 0 0; margin: 0 14px 4px 14px;
+  }
+  #mikrofonPanel.sposilen { display: block; }
+  .mikrofonVrstica { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .mikrofonPika {
+    width: 10px; height: 10px; border-radius: 50%; background: #f79c1d; flex: 0 0 10px;
+    animation: mikropulz 1.2s ease-in-out infinite;
+  }
+  @keyframes mikropulz { 0%,100% { opacity: .3; } 50% { opacity: 1; } }
+  #medvrsticno {
+    font-size: 12.5px; color: var(--lucius-svetlo); font-style: italic;
+    padding: 2px 0; min-height: 20px;
+  }
+  #zvokVrstica { display: flex; align-items: center; gap: 2px; height: 14px; }
+  .zvokStolpec { width: 4px; border-radius: 2px; transition: height .08s; }
   .noga { font-size: 10px; color: var(--faint); text-align: center; padding: 4px 0 8px 0; flex: 0 0 auto; }
 </style>
 </head>
@@ -124,6 +142,14 @@
   <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji · Shift+Enter = nova vrstica)"></textarea>
   <button id="poslji" onclick="poslji()">POŠLJI</button>
     <button id="mikrofon" title="govori z LUCIUS-om" style="width:52px;margin-left:6px;background:#21262d;color:#e6edf3;border:1px solid #30363d;border-radius:10px;font-size:16px;" onclick="mikrofon()">&#8226;</button>
+</div>
+<div id="mikrofonPanel">
+  <div class="mikrofonVrstica">
+    <div class="mikrofonPika"></div>
+    <span style="font-size:11px;color:var(--dim);">poslušam…</span>
+    <div id="zvokVrstica" style="margin-left:auto;"></div>
+  </div>
+  <div id="medvrsticno"></div>
 </div>
 <div class="noga">© Luka Pintarič — VBL v2.3 · prevoznik meri, ne presoja (K1) · prevoz\pogovor\GOVOR.md</div>
 
@@ -233,30 +259,96 @@ async function poslji() {
 function hitriUkaz(u) { document.getElementById("besedilo").value = u; poslji(); }
 function fokusIsci() { var p = document.getElementById("besedilo"); p.value = "isci "; p.focus(); }
 var prepoznava = null;
+var zvokAnalyser = null;
+var zvokData = null;
+var zvokRaf = null;
+
 function mikrofon() {
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   var gumb = document.getElementById("mikrofon");
+  var panel = document.getElementById("mikrofonPanel");
+  var medvrsticno = document.getElementById("medvrsticno");
   if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora. Uporabi Edge ali Chrome."); return; }
-  if (prepoznava) { prepoznava.stop(); prepoznava = null; gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3"; return; }
+  if (prepoznava) {
+    prepoznava.stop(); prepoznava = null;
+    gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3";
+    panel.classList.remove("sposilen");
+    if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
+    return;
+  }
+  panel.classList.add("sposilen");
+  medvrsticno.textContent = "poslušam… govori, zvezek se polni sam";
   prepoznava = new SR();
   prepoznava.lang = "sl-SI";
   prepoznava.continuous = true;
   prepoznava.interimResults = true;
   prepoznava.onresult = function (e) {
-    var besedilo = "";
+    var koncno = "";
+    var med = "";
     for (var i = e.resultIndex; i < e.results.length; i++) {
-      if (e.results[i].isFinal) besedilo += e.results[i][0].transcript;
+      if (e.results[i].isFinal) {
+        koncno += e.results[i][0].transcript;
+      } else {
+        med += e.results[i][0].transcript;
+      }
     }
-    if (besedilo) {
+    if (med) { medvrsticno.textContent = "… " + med; }
+    if (koncno) {
       var p = document.getElementById("besedilo");
-      p.value = (p.value ? p.value + " " : "") + besedilo.trim();
+      p.value = (p.value ? p.value + " " : "") + koncno.trim();
       p.focus();
+      medvrsticno.textContent = "✓ " + koncno.trim();
     }
   };
-  prepoznava.onend = function () { prepoznava = null; gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3"; };
-  prepoznava.onerror = function () { prepoznava = null; gumb.style.background = "#21262d"; };
+  prepoznava.onend = function () {
+    prepoznava = null;
+    gumb.style.background = "#21262d"; gumb.style.color = "#e6edf3";
+    panel.classList.remove("sposilen");
+    if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
+  };
+  prepoznava.onerror = function (ev) {
+    medvrsticno.textContent = "⚠ " + (ev.error || "napaka");
+    prepoznava = null;
+    gumb.style.background = "#21262d";
+    panel.classList.remove("sposilen");
+  };
   prepoznava.start();
   gumb.style.background = "#f79c1d"; gumb.style.color = "#1a1005";
+  zacniZvokVizualizacijo();
+}
+
+function zacniZvokVizualizacijo() {
+  try {
+    if (!window.AudioContext && !window.webkitAudioContext) return;
+    var ac = new (window.AudioContext || window.webkitAudioContext)();
+    var mikrofon = navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+      var src = ac.createMediaStreamSource(stream);
+      zvokAnalyser = ac.createAnalyser();
+      zvokAnalyser.fftSize = 64;
+      src.connect(zvokAnalyser);
+      zvokData = new Uint8Array(zvokAnalyser.frequencyBinCount);
+      var vrstica = document.getElementById("zvokVrstica");
+      vrstica.innerHTML = "";
+      var stolpci = [];
+      for (var i = 0; i < 24; i++) {
+        var s = document.createElement("div");
+        s.className = "zvokStolpec";
+        s.style.background = "hsl(" + (30 + i * 2) + ", 90%, 55%)";
+        vrstica.appendChild(s);
+        stolpci.push(s);
+      }
+      function naris() {
+        if (!zvokAnalyser) return;
+        zvokAnalyser.getByteFrequencyData(zvokData);
+        for (var k = 0; k < stolpci.length; k++) {
+          var v = zvokData[k * 2] || 0;
+          stolpci[k].style.height = Math.max(2, (v / 255) * 14) + "px";
+        }
+        zvokRaf = requestAnimationFrame(naris);
+      }
+      naris();
+    }).catch(function() {});
+  } catch (e) {}
 }
 function glasVklopljen() { return localStorage.getItem("luciusGlas") !== "0"; }
 function preklopiGlas() {

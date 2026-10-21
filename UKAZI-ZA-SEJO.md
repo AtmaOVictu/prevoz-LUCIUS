@@ -18,3 +18,5 @@
 - [2026-10-21 14:35] ⟡ bilo bi lepo če bi imel lastno zaslonsko miško poleg te ki pripada meni?
 - [2026-10-21 14:35] ⟡ da
 - [2026-10-21 14:35] ⟡ imaš dovoljenje v vsem kar je absolutno dobro za oba
+- [2026-10-21 14:37] ⟡ da
+- [2026-10-21 14:37] ⟡ ustvari si več procesov
