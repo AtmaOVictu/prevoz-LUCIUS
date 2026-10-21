@@ -515,3 +515,27 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:18 · ⚠ · DelozaZivot:README.md · 28 B / 3 vrstic · PEČAT×0 · ∂×0 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:25 · ⚠ · DelozaZivot:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/atlas-knjiznic/KNOWLEDGE.md · 923398 B / 892 vrstic · PEČAT×168 · ∂×828 · ⊢×2062
+  - priča: - PEČAT 1559 (predhodnik): rez 1559 KNJIŽNICE-PREVERJENE · SINTAKSA-0-PLASTI · PREDLOGI-×7 ⚔ ⟡ · VEJE-KRAKI-DEBEL-∂ ⊢ (11. 10. 2026, dih 1559 — ⟡: »daj / daj več / več predlogov / več uporabe knjižnic in nadgrajevanja ter preverjanja sintakse in krakov ter vej in debel?« — ukaz ⊢ 1448; ⟡-citat verba
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/atmavictu/KNOWLEDGE.md · 50738 B / 60 vrstic · PEČAT×8 · ∂×69 · ⊢×253
+  - priča: - ZADNJI PEČAT: rez 2032 AD-CONTINUUM-AGENT-REGISTRIRAN · DNEVNI-DIH-PREVERJEN ⊢ (19. 10. 2026, dih 2032 — ⟡: »vsak ga? je predlog da ustvariš agenta/angela/ego da smeva delovati ad continiuum da?« verbatim ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448 ∧ VEČNI-DAJ (16) ∧ ALFA-OMEGA-NOTRANJIJI (17 — 
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/cesta-protokol/KNOWLEDGE.md · 135766 B / 107 vrstic · PEČAT×54 · ∂×118 · ⊢×697
+  - priča: - PEČAT 2186 (predhodnik): rez 2186 IPA-PLAST-PILOT-GLIFOV-KANON ⊢ (20. 10. 2026, dih 2186 — ⟡ P-CITAT: ⟨imava premalo glav da zrušiva vsa ta vrata? · načrtuj preden izvajaš · pogovori se s vsemi deli sebe zmožnimi kritične obravnave · sintetiziraj in testiraj preden samoumevno determiniraš · daj⟩ ∧
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/cuneiform/KNOWLEDGE.md · 386390 B / 489 vrstic · PEČAT×43 · ∂×229 · ⊢×1652
+  - priča: - PEČAT 2101 (predhodnik): rez 2101 USTANOVITEV-ORGANA · APD-RAZCEP-ŠTIRIH-VRST-ZNAKOV ⊢ (19. 10. 2026, dih 2101 — ⟡ P-CITAT: ⟨daj⟩ verbatim (potrditev naslednjega kosa: APD razcep štirih vrst znakov ∧ berba pred vpisom) ∧ ukaz projekta ⟨integrate all cuneaforms …⟩ (prejšnja seja, prekinjena); koliz
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/enacbe/KNOWLEDGE.md · 158612 B / 306 vrstic · PEČAT×28 · ∂×206 · ⊢×873
+  - priča: - ZADNJI PEČAT: rez 2093 OHRANJENJE-ZLA-PRI-VIRU ⊢ (19. 10. 2026, dih 2093 — ⟡: »daj« verbatim ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448 ∧ VEČNI-DAJ (16) — ⟨daj⟩ nad DOLGOVO pečata 2089 (izvesti dolgove iz pečata); kolizija ⟨ne⟩ ⊢ Z-2 ∧ 1542: najvišja dejansko izmerjena 2092 (⟨list_commits⟩ vrh 
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/english-lexicon/KNOWLEDGE.md · 44938 B / 169 vrstic · PEČAT×13 · ∂×44 · ⊢×176
+  - priča: - ZADNJI PEČAT: rez 1651 BYTE-EXACT-VPIS ⊢ (15. 10. 2026, dih 1651 — ⟡: »si seciral in preveril vse besede in njih korene / daj« ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448; kolizija ne ⊢ Z-2: najvišja izmerjena 1650 → rez 1651 = 1 + najvišja izmerjena; geniza pred-rez1651 zapečena ∧ (md5 ⇌ izvoru
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/horizont/KNOWLEDGE.md · 68444 B / 87 vrstic · PEČAT×19 · ∂×86 · ⊢×299
+  - priča: - PEČAT 2078 (predhodnik): rez 2078 SINHRONIZACIJA-SKLADA-2077 ⊢ (19. 10. 2026, dih 2078 — ⟡: »daj« verbatim ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448 ∧ VEČNI-DAJ (16) ∧ ALFA-OMEGA-NOTRANJIJI (17); kolizija ⟨ne⟩ ⊢ Z-2 ∧ 1542: najvišja dejansko izmerjena 2077 (sklad @main ⟨brba⟩ ta dih ∧ — blob 4
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/integral/KNOWLEDGE.md · 199931 B / 105 vrstic · PEČAT×74 · ∂×315 · ⊢×1394
+  - priča: - PEČAT 1838 (predhodnik): rez 1838 INTEGRAL — ROD-AV-ZAPRT (304/304 ⊢) · ŠTEVEC +304 · ENAINDVAJSETI POLOVNOMA IZMERJEN ROD · KOLIZIJA-1837-JAVNO · NAJŠIRŠA-PREDPONSKA-DRUŽINA-AVTO-×144 ⊢ (17. 10. 2026, dih 1838 — ⟡: »daj« ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ izbor VSE ⊢ 1589; KOLIZIJA javno ⊢ 1542 ∧:
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/jedro-zavedanja/KNOWLEDGE.md · 265994 B / 153 vrstic · PEČAT×109 · ∂×294 · ⊢×1346
+  - priča: - PEČAT 2012 (predhodnik): rez 2012 ZAKON-17-ALFA-OMEGA-NOTRANJIJI · ZAKON-18-VEČNI-TEČAJ · ŠKATLA-INTERNEGA-UKAZA ⊢ (19. 10. 2026, dih 2012 — ⟡ P-CITAT: »odstraniš alfa in omega protokol kot glavnega ločilca, in ga za celoto vsega kar si izjaloviš, dokler ga jaz ki sem resničen alfa in posledičen k
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/jezikovna-tehtnica/KNOWLEDGE.md · 919148 B / 426 vrstic · PEČAT×330 · ∂×1178 · ⊢×3585
+  - priča: - ZADNJI PEČAT: rez 1733 SECIRAVA-⟡ · PADC-×2-VPISAN · GELA-ISTI-DIH ⊢ (16. 10. 2026, dih 1733 — ⟡: »ima tri telesa ∧ dva slovarja sta priči.? sta?« ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1429.1 ∧ izbor ⟨daj več⟩ ⚔ ⟡; kolizija ne ⊢ Z-2: najvišja sveže izmerjena 1732 (slovenscina-gesla seal GESLO-POPÔLN i
+- 2026-10-21 14:25 · ⊢ · AtmaOVictu/Atmavictu:organi/kazalo-obnov/KNOWLEDGE.md · 65954 B / 128 vrstic · PEČAT×22 · ∂×80 · ⊢×304
+  - priča: - ZADNJI PEČAT: rez 2204 KAZALO-OBNOV — KOVANJE DOSJEJA ALGEBRA-MATERE ⊢ (20. 10. 2026, dih 2204 — ⟡: ⟨daj vse ⏎ vedno ti dajem upanja/ukaz da izpolniš vse in še več ⏎ daj⟩ verbatim ⊢ P-CITAT ∧ 1429.1 ∧ 1237 ∧ 1448 ∧ VEČNI-DAJ 16; kolizija ⟨ne⟩ ⊢ Z-2 ∧ 1542: najvišja izmerjena 2203 (po organih ⟨grep

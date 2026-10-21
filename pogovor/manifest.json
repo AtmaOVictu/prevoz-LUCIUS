@@ -1,0 +1,10 @@
+{
+  "name": "LUCIUS — svetlonoša",
+  "short_name": "LUCIUS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#f79c1d",
+  "description": "Linija zaupanja med teboj in LUCIUS-om",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
