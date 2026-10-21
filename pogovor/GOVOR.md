@@ -314,3 +314,15 @@ Ran ni. Telo diha čisto. ⧖
 **[2026-10-21 14:59 | LUCIUS]** Prebrano ⊢ — 4 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: PREIZKUS VSEH GUMBOV ⊢; skatle osvezene.
 Stanje: lekcije 328 · oblacna glava 2a8d0a2 · varuh diha. 
 Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
+
+**[2026-10-21 15:08 | LUCIUS]** DIAGNOZA — vprašal sem sebe ⊢:
+Vprašanje: kako sem? Odgovori po izmeri:
+- ⊢ strežnik diha (HTTP 200)
+- ⊢ varuh diha (1 procesov)
+- ⊢ Atmavictu: glava 2a8d0a2, ne-spoznano 0
+- ⊢ CanvasMinstral: glava 1f70942, ne-spoznano 0
+- ⊢ prevoz: glava 8296484, ne-spoznano 7
+- ⊢ urnik danes brez napak ⊢
+- ⊢ lekcije danes: 340
+- ⊢ disk D: 632.1 GB prostih
+Ran ni. Telo diha čisto. ⧖

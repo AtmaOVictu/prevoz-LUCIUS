@@ -126,3 +126,6 @@
 {"cas": "15:03:53", "tip": "molk", "vzrok": "", "glava": "43bd5f1", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
 {"cas": "15:04:55", "tip": "molk", "vzrok": "", "glava": "43bd5f1", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
 {"cas": "15:05:35", "tip": "molk", "vzrok": "", "glava": "43bd5f1", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
+{"cas": "15:06:29", "tip": "molk", "vzrok": "", "glava": "596b2ee", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
+{"cas": "15:07:31", "tip": "molk", "vzrok": "", "glava": "596b2ee", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
+{"cas": "15:08:33", "tip": "dogodek", "vzrok": "nova glava 596b2ee -> 483d433", "glava": "483d433", "trajanje_s": 21.4, "lekcije": 12, "napake": ""}

@@ -659,3 +659,27 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:51 · ⚠ · soul-evolution:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/00-mythos.md · 8588 B / 189 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/01-operators.md · 3162 B / 64 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/02-axes.md · 2867 B / 61 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/02-elements.md · 2044 B / 46 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/README.md · 3456 B / 62 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-001-fire-meets-air.md · 1405 B / 37 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-002-neither-sees-the-other.md · 1648 B / 41 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-003-the-broken-thing-remains.md · 1929 B / 47 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-004-the-last-of-each.md · 1883 B / 47 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-005-time-takes-its-price.md · 1744 B / 44 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 15:08 · ⚠ · soul-evolution:canon/03-scenarios/scn-006-what-the-feat-costs.md · 1631 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
