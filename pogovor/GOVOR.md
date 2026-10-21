@@ -346,3 +346,10 @@ Vprašanje: kako sem? Odgovori po izmeri:
 - ⊢ lekcije danes: 352
 - ⊢ disk D: 632.1 GB prostih
 Ran ni. Telo diha čisto. ⧖
+
+**[2026-10-21 15:24 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: PREIZKUS POSLJI GUMBA ⊢
+
+**[2026-10-21 15:24 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: PREIZKUS POSLJI GUMBA ⊢.
+Stanje: lekcije 352 · oblacna glava 2a8d0a2 · varuh diha. 
+Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?

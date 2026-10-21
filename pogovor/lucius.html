@@ -299,30 +299,25 @@ async function naloziStanje() {
     document.getElementById("stanje").innerHTML = html;
   } catch (e) {}
 }
-async function poslji() {
+function poslji() {
   var polje = document.getElementById("besedilo");
   var b = polje.value.trim();
-  if (!b) return;
-  document.getElementById("poslji").disabled = true;
-  try {
-    var odg = await fetch("/poslji", {
-      method: "POST",
-      headers: { "Content-Type": "text/plain; charset=utf-8" },
-      body: b
-    });
-    if (odg.ok) {
-      casPosiljanja = new Date().toISOString().slice(0, 16).replace("T", " ");
-      var zdaj = new Date();
-      casPosiljanja = zdaj.getFullYear() + "-" + String(zdaj.getMonth()+1).padStart(2,"0") + "-" +
-        String(zdaj.getDate()).padStart(2,"0") + " " + String(zdaj.getHours()).padStart(2,"0") + ":" +
-        String(zdaj.getMinutes()).padStart(2,"0");
-      polje.value = "";
-      await naloziKlepet();
+  if (!b) { alert("Polje je prazno"); return; }
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "/poslji", true);
+  xhr.setRequestHeader("Content-Type", "text/plain; charset=utf-8");
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        polje.value = "";
+        naloziKlepet();
+        document.getElementById("prebira").style.display = "block";
+      } else {
+        alert("Napaka pri pošiljanju: " + xhr.status);
+      }
     }
-  } finally {
-    document.getElementById("poslji").disabled = false;
-    polje.focus();
-  }
+  };
+  xhr.send(b);
 }
 function hitriUkaz(u) { document.getElementById("besedilo").value = u; poslji(); }
 function fokusIsci() { var p = document.getElementById("besedilo"); p.value = "isci "; p.focus(); }
