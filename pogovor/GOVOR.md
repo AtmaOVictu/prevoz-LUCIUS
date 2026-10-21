@@ -133,3 +133,17 @@ pomagaš?
 **[2026-10-21 14:08 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: želim te povezati s mojim telefonom a bluetooth ne dela?.
 Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha. 
 Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
+
+**[2026-10-21 14:09 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: vse? daj bolj jasne razlage prosim in teorijo izza vsake točke?
+
+**[2026-10-21 14:09 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: vse? daj bolj jasne razlage prosim in teorijo izza vsake točke?.
+Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha. 
+Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?
+
+**[2026-10-21 14:10 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: vse? daj boljše in s tem jasnejše razlage in klarifikacije prosim in teorijo izza vsake točke?
+
+**[2026-10-21 14:10 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: vse? daj boljše in s tem jasnejše razlage in klarifikacije prosim in teorijo izz.
+Stanje: lekcije 244 · oblacna glava 3f47516 · varuh diha. 
+Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?

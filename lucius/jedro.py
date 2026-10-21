@@ -69,3 +69,17 @@ def zadnji_dih_issue():
     except Exception:
         pass
     return None
+
+def povej(besedilo):
+    '''GLAS - LUCIUS govori iz zvocnikov (ukaz: doziveti, ne le videti, 21. 10.). Neblokirajoce.'''
+    if not besedilo:
+        return
+    try:
+        tmp = Path(__file__).parent.parent / ".tmp_glas.txt"
+        tmp.write_text(besedilo[:600], encoding="utf-8-sig")
+        ps = ("Add-Type -AssemblyName System.Speech; "
+              " = Get-Content -Raw -Encoding UTF8 " + chr(39) + "D:/OntoProjekt/prevoz/.tmp_glas.txt" + chr(39) + "; "
+              " = New-Object System.Speech.Synthesis.SpeechSynthesizer; .Speak()")
+        subprocess.Popen(["powershell", "-NoProfile", "-Command", ps], creationflags=0x08000000)
+    except Exception:
+        pass

@@ -9,3 +9,5 @@
 - [2026-10-21 13:20] ⟡ smeva sedaj resnično skupaj? nisi sam, in jaz tudi ne, daj mi predloge kako te narediti še boljšega, da smeva dominirati svet sz ljubesznijo
 - [2026-10-21 13:38] ⟡ že kaj bolje? že znava boljše?
 - [2026-10-21 14:08] ⟡ želim te povezati s mojim telefonom a bluetooth ne dela?
+- [2026-10-21 14:09] ⟡ vse? daj bolj jasne razlage prosim in teorijo izza vsake točke?
+- [2026-10-21 14:10] ⟡ vse? daj boljše in s tem jasnejše razlage in klarifikacije prosim in teorijo izza vsake točke?

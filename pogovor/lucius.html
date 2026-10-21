@@ -100,7 +100,7 @@
   </div>
   <div class="desno">
     <span class="zelena"></span><span id="varuhTxt">varuh diha</span><br>
-    <span id="licencaTxt">VBL —</span>
+    <span id="licencaTxt">VBL —</span><br><span id="glasBtn" style="cursor:pointer;color:#f79c1d;" onclick="preklopiGlas()">glas: DA</span> · <span style="cursor:pointer;color:#f79c1d;" onclick="izgovoriZadnje()">izgovori zadnje</span>
   </div>
 </header>
 
@@ -128,6 +128,7 @@
 
 <script>
 var casPosiljanja = "";
+var zadnjiLuciusGol = "";
 
 function pocisti(v) {
   if (v.startsWith("#") || v.startsWith(">")) return null;
@@ -178,12 +179,16 @@ async function naloziKlepet() {
         + pobarvaj(s.telo.join("\n").trim());
       k.appendChild(div);
       if (!jeLastnik && casPosiljanja && s.cas >= casPosiljanja) novLucius = true;
+      if (!jeLastnik) zadnjiLuciusGol = s.telo.join(" ").replace(/[*⊢⟡∂]/g, " ").trim();
     }
     if (bilDnu || casPosiljanja) k.scrollTop = k.scrollHeight;
     document.getElementById("dolGumb").style.display =
       (k.scrollHeight - k.scrollTop - k.clientHeight > 200) ? "block" : "none";
     document.getElementById("prebira").style.display = (casPosiljanja && !novLucius) ? "block" : "none";
     if (novLucius) casPosiljanja = "";
+    if (novLucius && glasVklopljen() && zadnjiLuciusGol) {
+      fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350)));
+    }
   } catch (e) { /* molk: strežnik spi */ }
 }
 async function naloziStanje() {
@@ -226,11 +231,19 @@ async function poslji() {
 }
 function hitriUkaz(u) { document.getElementById("besedilo").value = u; poslji(); }
 function fokusIsci() { var p = document.getElementById("besedilo"); p.value = "isci "; p.focus(); }
+function glasVklopljen() { return localStorage.getItem("luciusGlas") !== "0"; }
+function preklopiGlas() {
+  var b = document.getElementById("glasBtn");
+  if (glasVklopljen()) { localStorage.setItem("luciusGlas", "0"); b.textContent = "glas: NE"; }
+  else { localStorage.setItem("luciusGlas", "1"); b.textContent = "glas: DA"; }
+}
+function izgovoriZadnje() { if (zadnjiLuciusGol) fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350))); }
 document.getElementById("besedilo").addEventListener("keydown", function (e) {
   if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); poslji(); }
 });
 document.getElementById("klepet").addEventListener("scroll", naloziKlepet);
 
+document.getElementById("glasBtn").textContent = glasVklopljen() ? "glas: DA" : "glas: NE";
 naloziStanje();
 naloziKlepet();
 setInterval(naloziKlepet, 3000);

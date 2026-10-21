@@ -36,6 +36,16 @@ class LuciusHandler(BaseHTTPRequestHandler):
                 self._odgovori(LUCIUS_HTML.read_bytes(), "text/html")
             elif self.path == "/govor":
                 self._odgovori((POGOVOR / "GOVOR.md").read_bytes(), "text/plain")
+            elif self.path.startswith("/povej?text="):
+                from urllib.parse import parse_qs, unquote
+                try:
+                    from lucius.jedro import povej
+                    qs = parse_qs(self.path.split("?", 1)[1])
+                    povej(unquote(qs.get("text", [""])[0]))
+                    self._odgovori(b'{"ok": true}', "application/json")
+                except ImportError:
+                    self.send_response(500)
+                    self.end_headers()
             elif self.path == "/stanje":
                 pot = SKATLE / "skatla.json"
                 self._odgovori(pot.read_bytes() if pot.exists() else b"{}", "application/json")

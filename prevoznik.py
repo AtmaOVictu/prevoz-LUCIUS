@@ -305,9 +305,20 @@ def varuh(cikel_s=60, utrip_min=55, enkrat=False):
             lekcije = stevilo_lekcij() - pred
             zadnji_dih_cas = datetime.now(CEST)
             try:
+                if tip == "dogodek":
+                    povej("Telo je zadihalo. " + vzrok)
+                elif tip == "utrip":
+                    povej("Utrip. " + vzrok)
+            except Exception:
+                pass
+            try:
                 pismo()
             except Exception as e:
                 out(f"  pismo: NAPAKA {e}")
+            try:
+                povej("Pismo je napisano, Luka. V njem so predlogi in vprasanje dneva.")
+            except Exception:
+                pass
         zadnja_glava = glava
         try:
             odgovori()
@@ -523,6 +534,11 @@ def odgovori():
                 NL + "Vprasanje: " + vprasanje_dneva() + NL)
         with open(gov, "a", encoding="utf-8") as f:
             f.write(NL + telo)
+        try:
+            govor = telo.replace("**", " ").replace("⊢", "").replace("⟡", "").replace("∂", "delta")
+            povej(govor[:400])
+        except Exception:
+            pass
     stanje_f.write_text(json.dumps(stanje, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
