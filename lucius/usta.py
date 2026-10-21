@@ -32,7 +32,7 @@ class LuciusHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         try:
-            if self.path in ("/", "/lucius") and LUCIUS_HTML.exists():
+            if self.path.split("?")[0] in ("/", "/lucius") and LUCIUS_HTML.exists():
                 self._odgovori(LUCIUS_HTML.read_bytes(), "text/html")
             elif self.path == "/govor":
                 self._odgovori((POGOVOR / "GOVOR.md").read_bytes(), "text/plain")
