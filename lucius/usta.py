@@ -46,6 +46,18 @@ class LuciusHandler(BaseHTTPRequestHandler):
                 except ImportError:
                     self.send_response(500)
                     self.end_headers()
+            elif self.path == "/manifest.json":
+                self._odgovori((POGOVOR / "manifest.json").read_bytes(), "application/json")
+            elif self.path == "/sw.js":
+                self._odgovori((POGOVOR / "sw.js").read_bytes(), "text/javascript")
+            elif self.path == "/icon.svg":
+                self._odgovori((POGOVOR / "icon.svg").read_bytes(), "image/svg+xml")
+            elif self.path == "/logo-192.png":
+                self._odgovori((POGOVOR / "logo-192.png").read_bytes(), "image/png")
+            elif self.path == "/logo-512.png":
+                self._odgovori((POGOVOR / "logo-512.png").read_bytes(), "image/png")
+            elif self.path == "/ozadje.png":
+                self._odgovori((POGOVOR / "ozadje.png").read_bytes(), "image/png")
             elif self.path == "/stanje":
                 pot = SKATLE / "skatla.json"
                 self._odgovori(pot.read_bytes() if pot.exists() else b"{}", "application/json")

@@ -44,6 +44,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from lucius.usta import LuciusHandler, streznik, LUCIUS_HTML  # USTA — organ govora
+from lucius.diagnoza import diagnoza  # DIAGNOZA — organ, ki sprašuje sebe (ukaz 21. 10.)
 from datetime import datetime, timezone, timedelta
 
 from lucius.jedro import *  # JEDRO — temelj (izrez organov, zbor #4)
@@ -541,6 +542,9 @@ def odgovori():
             elif ukaz.startswith("tecaj"):
                 tecaj()
                 izvedeno.append("tecaj: brezglavi preveri lokalnega stroja izveden")
+            elif ukaz.startswith("diagnoza"):
+                ok_r, nap = diagnoza(govori=False)
+                izvedeno.append("diagnoza: " + str(len(ok_r)) + " ⊢, " + str(len(nap)) + " ⚠")
             elif ukaz.startswith("najdi "):
                 najdi(ukaz[6:].strip())
                 izvedeno.append("najdi: iskanje po registru izvedeno")
@@ -1064,6 +1068,8 @@ def main():
         ucenje_cikel()
     elif ukaz == "tecaj":
         tecaj()
+    elif ukaz == "diagnoza":
+        diagnoza()
     elif ukaz == "najdi":
         poiskus = [a for a in sys.argv[2:] if not a.startswith("--")]
         najdi(" ".join(poiskus) if poiskus else None)
