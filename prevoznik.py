@@ -419,9 +419,12 @@ def poroci():
         out("  poroci: (register prazen)")
         return
     zadnji = {}
+    prejsnji = {}
     for line in jsonl.read_text(encoding="utf-8").splitlines():
         try:
             v = json.loads(line)
+            if v["vir"] in zadnji:
+                prejsnji[v["vir"]] = zadnji[v["vir"]]
             zadnji[v["vir"]] = v
         except Exception:
             continue
@@ -431,12 +434,13 @@ def poroci():
         f.write("# POROCILO UCENJA — " + danes + "\n\n"
                 "Produkcija prevoznika: zadnja izmera vsakega telesa v krogu. Meritve, ne pomeni (K1).\n"
                 "© Luka Pintarič — VBL v2.3 (korenina 4: priča ima ime).\n\n"
-                "| Telo (repo:pot) | B | vrstic | PEČAT× | ∂× | ⊢× | znaka |\n"
-                "|---|---|---|---|---|---|---|\n")
+                "| Telo (repo:pot) | B | ΔB | vrstic | PEČAT× | ∂× | ⊢× | znaka |\n"
+                "|---|---|---|---|---|---|---|---|\n")
         for vir in sorted(zadnji):
             v = zadnji[vir]
             m = v["mere"]
-            f.write(f"| {vir} | {m['bajti']} | {m['vrstice']} | {m['pecati']} | {m['∂']} | {m['⊢']} | {v['znaka']} |\n")
+            db = m["bajti"] - prejsnji[vir]["mere"]["bajti"] if vir in prejsnji else 0
+            f.write(f"| {vir} | {m['bajti']} | {db:+d} | {m['vrstice']} | {m['pecati']} | {m['∂']} | {m['⊢']} | {v['znaka']} |\n")
         skupno_b = sum(zadnji[v]["mere"]["bajti"] for v in zadnji)
         f.write(f"\nTeles izmerjenih: {len(zadnji)} · skupno {skupno_b} B · dan {danes}\n")
     out(f"  PRODUKCIJA: {tel.name} — {len(zadnji)} teles, {skupno_b} B")
@@ -862,8 +866,10 @@ def dih(objavi=False):
 
     # 1b. drugi izvod: lokalno telo diha z zrcalom (zbor #2; potisk DA, 21. 10. ⊢)
     try:
-        r = run(["git", "pull", "--ff-only"], cwd=CANVAS, check=False)
-        out("  pull (lokalno telo): " + ("sveze" if r.stdout.strip() else "brez spremembe"))
+        gl_pred = git(["rev-parse", "HEAD"], CANVAS)
+        run(["git", "pull", "--ff-only"], cwd=CANVAS, check=False)
+        gl_po = git(["rev-parse", "HEAD"], CANVAS)
+        out("  pull (lokalno telo): " + (gl_pred if gl_pred == gl_po else gl_pred[:7] + " -> " + gl_po[:7] + " (sveze)"))
         g = run(["git", "push", "origin", "master"], cwd=CANVAS, check=False)
         predh = run(["git", "rev-list", "--count", "origin/master..master"], cwd=CANVAS, check=False)
         if (predh.stdout.strip() or "0") != "0":
