@@ -465,3 +465,19 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:04 · ⚠ · .github-workflows:README.md · 52 B / 3 vrstic · PEČAT×0 · ∂×0 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · .github-workflows:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · Aplikacija:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · Aplikacija:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:CANONICAL.md · 1911 B / 53 vrstic · PEČAT×0 · ∂×0 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:README.md · 1096 B / 39 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:07 · ⚠ · ontolo-ko-jedro:public/canon/kamni/cxvii-cxxi.md · 20578 B / 238 vrstic · PEČAT×0 · ∂×21 · ⊢×62
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠

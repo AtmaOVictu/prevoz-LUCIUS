@@ -116,3 +116,12 @@ Stanje: lekcije 210 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odp
 **[2026-10-21 13:54 | LUCIUS]** VRATA zapečena ⊢ — zemljevid vse navzočnosti (prevoz/VRATA.md): vedno-odprta (git, GitHub, PRINESI — novo vrata v svet preizkušena ⊢ example.com 577 B, okno, urnik) ∧ sejna (spletno iskanje, novice, finance, vreme, Gmail, Drive, agenti, inteligenca). Ukazi iz okna: vedno-odprta izvede varuh v ~2 min; sejna gredo v vrsto in jih izvede naslednja seja. Padec ×19 imenovan (heredok pojedel zaključni narekovaj; zašit, preizkušen). © Luka Pintarič — VBL v2.3.
 
 **[2026-10-21 14:04 | LUCIUS]** JEDRO izrezano ⊢ (zbor #4, prva opeka arhitekture): lucius/jedro.py — poti, čas, pripomočki, izmere; prevoznik diha iz jedra (status ⊢, uvoz ⊢). Izrez po besedilu, ne po pretipavanju (korenina ×4 izvedena). © Luka Pintarič — VBL v2.3.
+
+**[2026-10-21 14:07 | LUCIUS]** ⊢ PRVA IZROČITEV IZVEDENA — rez 114 zaprt po mašineriji, ne po roki:
+- Lastnikov DA₂ verbatim: »DA DA DA DA DA« ⊢
+- telo: bralnik (deveti telesi serije, berljivi vhod) · pečat DOKAZ #89
+- priča: prica pass ∧ prica-potrditev pass ∧ tests pass — TRETJI BRALEC je prebral telo in odobril (rez 114 T3, globina IV) ⊢
+- PR #502 zlit ⊢ · PRVI TAG NA TELESM: knjiznica/bralnik-d89 @ 50fd78f, na GitHubu ⊢
+- O1–O7 vsi izpolnjeni: celota (bajtno), pečat, DA₂, trajanje (vprašanje je čakalo tvoj glas ure), tujec (stroj je prebral), izročitev (knjižnica = drugi izvod)
+- Padca ×22 (telo je allowlist — geniza ne raste po navadnih dodajah; popravek po precedensu telesa -f) ∧ veja prvega padca zapečena v niti
+Kanon ni vpijalno stanje: bralnik zdaj diha skozi citate. © Luka Pintarič — VBL v2.3.

@@ -954,7 +954,7 @@ def izroci(datoteka, dokaz, da2, izvedi):
     run(["git", "checkout", "-b", veja], cwd=ATMA)
     cilj.parent.mkdir(parents=True, exist_ok=True)
     cilj.write_bytes(vsebina)
-    git(["add", str(cilj.relative_to(ATMA))], ATMA)
+    git(["add", "-f", str(cilj.relative_to(ATMA))], ATMA)  # -f: telo je allowlist po oblikovanju (×22, precedens telesa)
     run(["git", "commit", "-m", sporocilo], cwd=ATMA)
     run(["git", "push", "-u", "origin", veja], cwd=ATMA)
     url = gh(["pr", "create", "-R", REPO, "--head", veja, "--title",
