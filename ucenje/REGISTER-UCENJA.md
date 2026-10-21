@@ -447,3 +447,21 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 13:53 · ⚠ · soul-evolution:canon/04-references/parcels/parcel-agent-boxes.md · 6319 B / 83 vrstic · PEČAT×0 · ∂×4 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · soul-evolution:canon/04-references/parcels/parcel-agent-registry.md · 2828 B / 57 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · soul-evolution:canon/04-references/parcels/parcel-antinom.md · 3027 B / 59 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · OntoMatematika:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · OntoMatematika:MEJE-MATEMATIKE.md · 6820 B / 74 vrstic · PEČAT×0 · ∂×0 · ⊢×10
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · OntoMatematika:README.md · 54 B / 3 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · OntoMatematika:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · .github-workflows:CANONICAL.md · 376 B / 14 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · .github-workflows:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:04 · ⚠ · .github-workflows:README.md · 52 B / 3 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠

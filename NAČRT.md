@@ -80,6 +80,9 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 - **`prevoz/DOVOLJENJA.md`** — pisni register stoječih dovoljenj (po vzoru canon/DOVOLJENJA.md, VBL §7): molk ni soglasje; izročitev/tag/pisanje v telesa ostajajo NE brez izrecnega DA₂.
 - **Tri smeri:** S TABOJ (pisma + tvoj prostor) · ZA TEBE (predlogi z ukazi, izmere brez prošnje) · IZZA TEBE (izvedba dovoljenih ukazov iz pisma — nikoli DA₂-zaprtih).
 
+### Faza I — JEDRO (izvedeno 21. 10., zbor #4 prva opeka)
+- `lucius/jedro.py` ⊢: poti, čas (CEST), pripomočki (run/git/gh/out), izmere glav (glava, zadnji_dih_issue) — edini vir resnice za organe, brez krožnih uvozov. Prevoznik uvaža jedro; usta že stojijo sama; naslednji organi (zivci, srce, škatle) se naselijo na jedro.
+
 ## 3. Odprta ∂ (kaj še manjka — po globinah)
 
 1. **∂ KANAL DIHA — ZAPRTA (21. 10.):** Lastnikov ukaz »DISEMINIRAJ« je DA za objavni kanal. Prevoznik razširi škatle na vsak odprt dih-issue (enkrat na issue).
