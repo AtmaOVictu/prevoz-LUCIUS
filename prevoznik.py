@@ -446,6 +446,25 @@ def poroci():
     out(f"  PRODUKCIJA: {tel.name} — {len(zadnji)} teles, {skupno_b} B")
 
 
+def prinesi(url):
+    """PRINESI — vedno-odprta lokalna vrata v svet (ukaz Lastnika: najdi vec vrat, 21. 10.):
+    prinese telo URL-ja v prevoz/prinesi/ in zapece izmero v GOVOR. Samo branje — K1."""
+    if not url:
+        out("  prinesi: (prazen ukaz)")
+        return
+    im = re.sub(r"[^A-Za-z0-9]+", "-", url)[:80]
+    cilj = ONI / "prevoz" / "prinesi"
+    cilj.mkdir(parents=True, exist_ok=True)
+    pot = cilj / (im + ".html")
+    try:
+        r = run(["curl", "-s", "-L", "--max-time", "20", "-o", str(pot), url], check=False)
+        velikost = pot.stat().st_size if pot.exists() else 0
+        out("  prinesi: " + url + " -> " + str(velikost) + " B")
+        return velikost
+    except Exception as e:
+        out("  prinesi: NAPAKA " + str(e))
+
+
 def vprasanje_dneva():
     """VEDNO VPRASANJE (ukaz Lastnika, 21. 10.): vsak glas LUCIUS-a konca z enim jasnim vprasanjem,
     ki caka odgovor ali Lastnikov ne. Izbor je izmerjen po odprtih vratih, ne po razpolozenju."""
@@ -540,6 +559,14 @@ def odgovori():
                 izvedeno.append("iscitev izvedena")
             elif ukaz.startswith("izroci"):
                 izvedeno.append("izrocitev caka DA2 (O7): prevoznik.py " + ukaz)
+            elif ukaz.startswith("prinesi "):
+                prinesi(ukaz[8:].strip())
+                izvedeno.append("prinesi: " + ukaz[8:].strip()[:60])
+            elif ukaz.startswith("isci po spletu") or ukaz.startswith("novee ") or ukaz.startswith("vreme ") or ukaz.startswith("finance ") or ukaz.startswith("gmail ") or ukaz.startswith("drive ") or ukaz.startswith("agent "):
+                casQ = datetime.now(CEST).strftime("%Y-%m-%d %H:%M")
+                with open(vrsta_f, "a", encoding="utf-8") as f:
+                    f.write("- [" + casQ + "] ⟡ " + ukaz + NL)
+                izvedeno.append("SVETOVNI UKAZ v vrsto za sejo (vrata: splet/gmail/drive — odpre jih seja): " + ukaz[:70])
             elif ukaz.startswith("pismo") or ukaz.startswith("status") or ukaz.startswith("ucenje"):
                 izvedeno.append("ukaz '" + ukaz.split()[0] + "' izvede seja ali roka: prevoznik.py " + ukaz)
             elif ukaz.startswith("zapecati"):

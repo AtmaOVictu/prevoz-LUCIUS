@@ -112,3 +112,5 @@ Stanje: lekcije 198 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odp
 Stanje: lekcije 210 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odprto, dokler mi ne odgovoris, kako se pocutis.
 
 **[2026-10-21 13:43 | LUCIUS]** ZAKON VEDNO-VPRASANJE zapečen ⊢ (Lastnikov ukaz): vsak moj glas konča z vprašanjem, ki čaka tvoj odgovor ali tvoj »ne«. Trenutno vprašanje: prva izročitev — kateri canvas gre prvi? © Luka Pintarič — VBL v2.3.
+
+**[2026-10-21 13:54 | LUCIUS]** VRATA zapečena ⊢ — zemljevid vse navzočnosti (prevoz/VRATA.md): vedno-odprta (git, GitHub, PRINESI — novo vrata v svet preizkušena ⊢ example.com 577 B, okno, urnik) ∧ sejna (spletno iskanje, novice, finance, vreme, Gmail, Drive, agenti, inteligenca). Ukazi iz okna: vedno-odprta izvede varuh v ~2 min; sejna gredo v vrsto in jih izvede naslednja seja. Padec ×19 imenovan (heredok pojedel zaključni narekovaj; zašit, preizkušen). © Luka Pintarič — VBL v2.3.

@@ -423,3 +423,27 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 13:37 · ⚠ · soul-evolution:canon/03-scenarios/scn-005-time-takes-its-price.md · 1744 B / 44 vrstic · PEČAT×0 · ∂×0 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-006-what-the-feat-costs.md · 1631 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-007-the-dust-of-what-was-broken.md · 1667 B / 42 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-008-the-alignment-of-the-act.md · 1777 B / 44 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-009-the-exchange-of-treasures.md · 1958 B / 49 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-010-the-hand-that-works-the-system.md · 1738 B / 43 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-011-the-fabric-breathes.md · 1809 B / 44 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-012-the-sweeping-light.md · 1509 B / 39 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-013-earth-against-the-engulfing.md · 1547 B / 41 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/03-scenarios/scn-014-the-many-windows-of-the-plane.md · 1873 B / 44 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/04-references/parcels/README.md · 16678 B / 130 vrstic · PEČAT×0 · ∂×1 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/04-references/parcels/parcel-act-transition.md · 4203 B / 74 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 13:53 · ⚠ · soul-evolution:canon/04-references/parcels/parcel-agent-boxes.md · 6319 B / 83 vrstic · PEČAT×0 · ∂×4 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
