@@ -207,7 +207,7 @@
     <path d="M5 11c0 4 3 7 7 7s7-3 7-7h-2c0 3-2 5-5 5s-5-2-5-5H5z"/>
     <rect x="11" y="19" width="2" height="4"/>
   </svg>
-  <span id="mikrofonNapis">POSNEMAJ</span>
+  <span id="mikrofonNapis">SNAJAJ</span>
 </button>
 </div>
 <div id="mikrofonPanel">
@@ -356,14 +356,14 @@ function mikrofonBarja(snema) {
     g.style.borderColor = "#ff4444";
     g.style.boxShadow = "0 4px 20px rgba(255,68,68,.6), 0 0 30px rgba(255,68,68,.3)";
     g.style.color = "#fff";
-    n.textContent = "POSNEMAM …";
+    n.textContent = "SNAJAM …";
     p.classList.add("sposilen");
   } else {
     g.style.background = "linear-gradient(135deg, #f79c1d, #ffd569)";
     g.style.borderColor = "#f79c1d";
     g.style.boxShadow = "0 4px 16px rgba(247,156,29,.4)";
     g.style.color = "#1a1005";
-    n.textContent = "POSNEMAJ";
+    n.textContent = "SNAJAJ";
     p.classList.remove("sposilen");
   }
 }
@@ -381,7 +381,7 @@ function mikrofon() {
     g.style.borderColor = "#f79c1d";
     g.style.boxShadow = "0 4px 16px rgba(247,156,29,.4)";
     g.style.color = "#1a1005";
-    n.textContent = "POSNEMAJ";
+    n.textContent = "SNAJAJ";
     p.classList.remove("sposilen");
     if (prepoznava) { try { prepoznava.stop(); } catch(e) {} prepoznava = null; }
     if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
@@ -393,7 +393,7 @@ function mikrofon() {
   g.style.borderColor = "#ff0000";
   g.style.boxShadow = "0 0 30px rgba(255,0,0,.8), 0 0 60px rgba(255,0,0,.3)";
   g.style.color = "#fff";
-  n.textContent = "● POSNEMAM";
+  n.textContent = "● SNAJAM";
   p.classList.add("sposilen");
 
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
