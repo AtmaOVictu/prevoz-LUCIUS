@@ -14,3 +14,4 @@
 - [21. 10. 14:35] ⟡ ZANKI ZP ∧ ZP·↻ v kanon zank — predlog telesu (dih #483, NAPRAVE-ODPRTA ∂, kandidat Z14/Z15): naslednja seja s korpusom naj jih preveze; prevoz jih čaka v vrsti
 - [2026-10-21 14:28] ⟡ že imaš dostop do lokalnega računalnika?
 - [2026-10-21 14:33] ⟡ se zmoreš pogovarjati s seboj in z menoj? na glas? s rabo zvoka? imam mikrofon a ne vem če tukaj deluje?
+- [2026-10-21 14:34] ⟡ vse in še več, le absolutno dobro zate in zame

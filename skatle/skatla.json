@@ -1,5 +1,5 @@
 {
-  "cas": "2026-10-21 14:25",
+  "cas": "2026-10-21 14:35",
   "telefon_url": "http://10.214.82.249:5824",
   "telo_oblacno": {
     "sha": "2a8d0a2",
@@ -11,36 +11,36 @@
     "nespoznanih_datotek": 0
   },
   "ucenje": {
-    "lekcije": 268,
+    "lekcije": 280,
     "pokrite_datoteke": 134,
     "vseh_datotek": 129,
-    "izmerjeni_pecati": 4353,
-    "izmerjeni_del": 17147,
-    "izmerjeni_dokazi": 70579
+    "izmerjeni_pecati": 5265,
+    "izmerjeni_del": 20458,
+    "izmerjeni_dokazi": 86830
   },
   "dnevi_dnevnika": 1,
   "repos": {
     "skupaj": 51,
     "zivi": 49,
     "aktivni_24h": [
-      "prevoz-LUCIUS",
       "Atmavictu",
+      "prevoz-LUCIUS",
       "CanvasMinstral",
       "verification-before-assertion"
     ]
   },
   "atmavictu": {
-    "odprti_pr": 2,
-    "veje": 527,
+    "odprti_pr": 1,
+    "veje": 528,
     "zadnji_ci": "Tests:success priča:success"
   },
   "urnik": {
-    "dihov": 6,
-    "dogodkov": 5,
+    "dihov": 7,
+    "dogodkov": 6,
     "utripov": 1,
-    "molkov": 76,
-    "zadnji_dih": "14:17:54",
-    "povp_trajanje_s": 16.9
+    "molkov": 85,
+    "zadnji_dih": "14:25:28",
+    "povp_trajanje_s": 16.5
   },
   "odprt_dih": {
     "stevilka": 483,

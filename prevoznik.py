@@ -952,6 +952,15 @@ def dih(objavi=False):
     for _ in range(LEKCIJ_NA_DIH):
         ucenje_cikel()
     skatle()
+    try:
+        ok_r, nap_r = diagnoza(govori=False)
+        if nap_r:
+            povej("Diagnoza je nasla rane: " + "; ".join(nap_r[:2]))
+            out("  diagnoza (dih): " + str(len(nap_r)) + " ran ⚠")
+        else:
+            out("  diagnoza (dih): cisto ⊢ (" + str(len(ok_r)) + " meritev)")
+    except Exception as e:
+        out(f"  diagnoza (dih): NAPAKA {e}")
 
     # 5. objava (samo z --objavi): lokalni odmev v oblacnem glasu
     if objavi and dih_issue:
