@@ -139,7 +139,7 @@
 <div id="prebira">LUCIUS prebira tvoje besede … odgovor v ~2 minutah ⊢</div>
 
 <div id="orodja">
-  <span class="orodje" onclick="osvezi()">↻ osveži</span>
+  <span class="orodje" onclick="osvezi()" style="font-size:13px;color:#f79c1d;border-color:#f79c1d;padding:4px 12px;">↻ OSVEŽI</span>
   <span class="orodje" onclick="prekopirajZadnje()">&#9998; kopiraj zadnje</span>
   <span class="orodje" onclick="skociNaDno()">&#8595; na dno</span>
   <span class="orodje" onclick="stikaloZvok()">&#9834; glas: DA</span>
@@ -348,7 +348,11 @@ function mikrofon() {
   var gumb = document.getElementById("mikrofon");
   var panel = document.getElementById("mikrofonPanel");
   var medvrsticno = document.getElementById("medvrsticno");
-  if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora. Uporabi Edge ali Chrome."); return; }
+  if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora.
+
+Uporabi Microsoft Edge ali Google Chrome.
+
+Trenutni brskalnik: " + navigator.userAgent.substring(0,60));; return; }
   if (prepoznava) {
     prepoznava.stop(); prepoznava = null;
     mikrofonBarja(false);
@@ -391,8 +395,12 @@ function mikrofon() {
     prepoznava = null;
     mikrofonBarja(false);
   };
-  prepoznava.start();
   mikrofonBarja(true);
+  try {
+    prepoznava.start();
+  } catch (e) {
+    medvrsticno.textContent = "⚠ mikrofon: " + (e.message || "napaka") + " — preveri dovoljenje";
+  }
   zacniZvokVizualizacijo();
 }
 
