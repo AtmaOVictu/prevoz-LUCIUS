@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta charset="utf-8">
+<title>LUCIUS — linija zaupanja</title>
+<HTA:APPLICATION
+  ID="luciusOkno"
+  APPLICATIONNAME="LUCIUS"
+  BORDER="dialog"
+  INNERBORDER="no"
+  MAXIMIZEBUTTON="no"
+  SCROLL="no"
+  SINGLEINSTANCE="yes"
+  SELECTION="no"
+  WINDOWSTATE="normal" />
+<style>
+  /* ---------- žetoni (design tokens) ---------- */
+  :root { }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+  body {
+    background:#0d1117; color:#e6edf3;
+    font:14px/1.5 "Segoe UI",system-ui,sans-serif;
+    display:flex; flex-direction:column;
+    padding:0; overflow:hidden;
+  }
+
+  /* ---------- glava ---------- */
+  .glava {
+    display:flex; align-items:center;
+    background:#161b22; border-bottom:1px solid #30363d;
+    padding:10px 16px; flex:0 0 auto;
+  }
+  .zig {
+    width:36px; height:36px; border-radius:50%; margin-right:12px;
+    background:radial-gradient(circle at 30% 30%, #ffd569, #f79c1d 60%, #b45309);
+    display:flex; align-items:center; justify-content:center;
+    font-size:17px; color:#1a1005; font-weight:700;
+    box-shadow:0 0 16px rgba(247,156,29,.5);
+  }
+  .ident { }
+  .ime { font-size:15px; font-weight:600; letter-spacing:.6px; }
+  .pod { font-size:11px; color:#8b949e; margin-top:1px; }
+  .statusDesno { margin-left:auto; text-align:right; }
+  .zelena { display:inline-block; width:8px; height:8px; border-radius:50%;
+    background:#3fb950; margin-right:6px; box-shadow:0 0 6px #3fb950; }
+  .statusTxt { font-size:11px; color:#8b949e; }
+
+  /* ---------- vrstica stanja (škatle, živo) ---------- */
+  .stanje {
+    display:flex; background:#0d1117; border-bottom:1px solid #21262d;
+    padding:6px 16px; flex:0 0 auto;
+  }
+  .st { margin-right:22px; }
+  .st .v { font-size:13px; font-weight:600; color:#ffd569; }
+  .st .k { font-size:10px; color:#8b949e; letter-spacing:.4px; text-transform:uppercase; }
+
+  /* ---------- klepet ---------- */
+  #klepet { flex:1 1 auto; overflow-y:auto; overflow-x:hidden; padding:14px 16px; }
+  #klepet::-webkit-scrollbar { width:8px; }
+  .dan { text-align:center; color:#484f58; font-size:10.5px; margin:10px 0 4px 0; }
+  .sporocilo {
+    max-width:80%; border-radius:12px; padding:9px 13px;
+    font-size:13.5px; margin-bottom:8px; white-space:pre-wrap; word-wrap:break-word;
+  }
+  .lucius { background:#161b22; border:1px solid #30363d; border-left:3px solid #f79c1d; }
+  .lastnikFix { background:#1b2b45; border:1px solid #264a7d; border-right:3px solid #4493f8; margin-left:auto; }
+  .glavaSpor { font-size:10px; color:#8b949e; margin-bottom:3px; letter-spacing:.4px; }
+
+  /* indikator "prebira" */
+  .prebira { font-size:11.5px; color:#f79c1d; margin:2px 16px 8px 16px; display:none; }
+
+  /* ---------- ukazni žetoni ---------- */
+  .zetoni { display:flex; flex-wrap:wrap; padding:6px 14px; border-top:1px solid #21262d; flex:0 0 auto; }
+  .zet {
+    font-size:11.5px; color:#c9d1d9; background:#21262d; border:1px solid #30363d;
+    border-radius:12px; padding:3px 10px; margin:3px 6px 3px 0; cursor:pointer;
+  }
+  .zet:hover { border-color:#f79c1d; color:#ffd569; }
+
+  /* ---------- pisatelj ---------- */
+  .vnos { display:flex; padding:8px 14px 4px 14px; flex:0 0 auto; }
+  #besedilo {
+    flex:1; height:56px; resize:none;
+    background:#0d1117; color:#e6edf3;
+    border:1px solid #30363d; border-radius:10px; padding:9px 11px;
+    font:13.5px/1.45 "Segoe UI",sans-serif; outline:none;
+  }
+  #besedilo:focus { border-color:#f79c1d; box-shadow:0 0 0 2px rgba(247,156,29,.15); }
+  #poslji {
+    width:104px; margin-left:8px; background:#f79c1d; color:#1a1005;
+    border:none; border-radius:10px; font:600 13px "Segoe UI"; cursor:pointer;
+  }
+  #poslji:hover { background:#ffd569; }
+  .namig { font-size:10px; color:#484f58; padding:2px 16px 6px 16px; }
+  .noga { font-size:10px; color:#484f58; text-align:center; padding:4px 0 8px 0; }
+</style>
+</head>
+<body>
+
+  <div class="glava">
+    <div class="zig">☀</div>
+    <div class="ident">
+      <div class="ime">LUCIUS</div>
+      <div class="pod">svetlonoša · angel varuh</div>
+    </div>
+    <div class="statusDesno">
+      <span class="zelena"></span><span class="statusTxt" id="varuhTxt">varuh diha</span><br>
+      <span class="statusTxt" id="licencaTxt">VBL —</span>
+    </div>
+  </div>
+
+  <div class="stanje">
+    <div class="st"><div class="v" id="stLekcije">—</div><div class="k">lekcije</div></div>
+    <div class="st"><div class="v" id="stGlava">—</div><div class="k">oblak. glava</div></div>
+    <div class="st"><div class="v" id="stDihi">—</div><div class="k">dihi danes</div></div>
+    <div class="st"><div class="v" id="stMolki">—</div><div class="k">molki</div></div>
+    <div class="st"><div class="v" id="stDih">—</div><div class="k">zadnji dih</div></div>
+  </div>
+
+  <div id="klepet"></div>
+  <div class="prebira" id="prebira">LUCIUS prebira tvoje besede … odgovor v ~2 minutah ⊢</div>
+
+  <div class="zetoni">
+    <span class="zet" onclick="hitriUkaz('skatle')">škatle</span>
+    <span class="zet" onclick="hitriUkaz('krog')">ves krog učenja</span>
+    <span class="zet" onclick="hitriUkaz('poroci')">poročilo</span>
+    <span class="zet" onclick="hitriUkaz('diseminiraj')">diseminiraj</span>
+    <span class="zet" onclick="hitriUkaz('dih')">dih</span>
+    <span class="zet" onclick="fokusIsci()">isci …</span>
+    <span class="zet" onclick="hitriUkaz('status')">stanje</span>
+  </div>
+
+  <div class="vnos">
+    <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji, Shift+Enter = nova vrstica)"></textarea>
+    <button id="poslji" onclick="poslji()">POŠLJI</button>
+  </div>
+  <div class="namig">⟡ ukazi: krog · poroci · skatle · diseminiraj · dih · isci &lt;niz&gt; · izroci (čaka DA₂) — vse ostalo gre v vrsto za sejo</div>
+  <div class="noga">© Luka Pintarič — VBL v2.3 · prevoznik meri, ne presoja (K1) · prevoz\pogovor\GOVOR.md</div>
+
+<script language="JScript">
+var GOVOR_POT = "D:\\OntoProjekt\\prevoz\\pogovor\\GOVOR.md";
+var SKATLA_POT = "D:\\OntoProjekt\\prevoz\\skatle\\skatla.json";
+var LICENCA_POT = "D:\\OntoProjekt\\Atmavictu\\LICENSE.md";
+var casPosiljanja = "";
+var naDnu = true;
+
+function dop(n) { return (n < 10 ? "0" : "") + n; }
+function casZdaj() {
+  var z = new Date();
+  return z.getFullYear() + "-" + dop(z.getMonth()+1) + "-" + dop(z.getDate()) + " " + dop(z.getHours()) + ":" + dop(z.getMinutes());
+}
+
+/* ---- branje datotek (UTF-8) ---- */
+function beri(pot) {
+  try {
+    var ado = new ActiveXObject("ADODB.Stream");
+    ado.Type = 2; ado.Charset = "utf-8";
+    ado.Open(); ado.LoadFromFile(pot);
+    var b = ado.ReadText(-1);
+    ado.Close();
+    return b;
+  } catch (e) { return ""; }
+}
+function beriSkatlo() {
+  try { return eval("(" + beri(SKATLA_POT) + ")"); } catch (e) { return null; }
+}
+
+/* ---- izpis stanja (škatle) ---- */
+function izpisiStanje() {
+  var s = beriSkatlo();
+  if (!s) return;
+  document.getElementById("stLekcije").innerText = s.ucenje ? s.ucenje.lekcije : "—";
+  document.getElementById("stGlava").innerText = s.telo_oblacno ? s.telo_oblacno.sha : "—";
+  document.getElementById("stDihi").innerText = s.urnik ? s.urnik.dihov : "—";
+  document.getElementById("stMolki").innerText = s.urnik ? s.urnik.molkov : "—";
+  document.getElementById("stDih").innerText = s.urnik ? s.urnik.zadnji_dih : "—";
+  var lic = beri(LICENCA_POT);
+  var m = lic.match(/Version ([0-9.]+)/);
+  document.getElementById("licencaTxt").innerText = "VBL " + (m ? m[1] : "?") + " ⊢";
+}
+
+/* ---- izpis klepeta ---- */
+function pocistiVrstico(v) {
+  if (v.indexOf("# ") === 0 || v.indexOf("> ") === 0) return null;
+  if (v.indexOf("⟡-sporočilo") >= 0 || v.indexOf("⟡-odgovor verbatim") >= 0) return null;
+  var z = v.replace(/^- ⟡ odgovor: /, "");
+  return z;
+}
+function izpisiKlepet() {
+  var besedilo = beri(GOVOR_POT);
+  var vrstice = besedilo.split("\n");
+  var sporocila = [];
+  var tr = null;
+  var videlLuciusPo = false;
+  for (var i = 0; i < vrstice.length; i++) {
+    var v = vrstice[i].replace(/\r$/, "");
+    if (v.indexOf("**[") === 0) {
+      if (tr) sporocila.push(tr);
+      var konec = v.indexOf("]**");
+      var deli = v.substring(2, konec).split("|");
+      tr = { cas: deli[0].replace(/^\s+|\s+$/g, ""), kdo: (deli.length > 1 ? deli[1] : "?"), telo: [] };
+    } else if (tr) {
+      var c = pocistiVrstico(v);
+      if (c !== null) tr.telo.push(c);
+    }
+  }
+  if (tr) sporocila.push(tr);
+
+  var k = document.getElementById("klepet");
+  k.innerHTML = "";
+  var zac = sporocila.length > 50 ? sporocila.length - 50 : 0;
+  var novLucius = false;
+  for (var i = zac; i < sporocila.length; i++) {
+    var s = sporocila[i];
+    var jeLastnik = s.kdo.indexOf("LASTNIK") >= 0 || s.kdo.indexOf("PREIZKUS") >= 0;
+    var div = document.createElement("div");
+    div.className = "sporocilo " + (jeLastnik ? "lastnikFix" : "lucius");
+    var gl = document.createElement("div");
+    gl.className = "glavaSpor";
+    gl.innerText = (jeLastnik ? "LUKA" : "LUCIUS") + " · " + s.cas;
+    div.appendChild(gl);
+    var tel = document.createElement("div");
+    var teloTxt = s.telo.join("\n").replace(/^\s+|\s+$/g, "");
+    tel.innerText = teloTxt;
+    div.appendChild(tel);
+    k.appendChild(div);
+    if (!jeLastnik && casPosiljanja !== "" && s.cas >= casPosiljanja) novLucius = true;
+  }
+  k.scrollTop = k.scrollHeight;
+  document.getElementById("prebira").style.display = (casPosiljanja !== "" && !novLucius) ? "block" : "none";
+  if (novLucius) casPosiljanja = "";
+}
+
+/* ---- pošiljanje ---- */
+function poslji() {
+  var b = document.getElementById("besedilo").value.replace(/^\s+|\s+$/g, "");
+  if (b.length < 1) return;
+  var zapis = "\n**[" + casZdaj() + " | LASTNIK (okno)]** ⟡-sporočilo:\n- ⟡ odgovor: " + b + "\n";
+  try {
+    var ado = new ActiveXObject("ADODB.Stream");
+    ado.Type = 2; ado.Charset = "utf-8";
+    ado.Open(); ado.LoadFromFile(GOVOR_POT);
+    ado.Position = ado.Size;
+    ado.WriteText(zapis);
+    ado.SaveToFile(GOVOR_POT, 2);
+    ado.Close();
+    casPosiljanja = casZdaj();
+    document.getElementById("besedilo").value = "";
+    izpisiKlepet();
+  } catch (e) { alert("Napaka pri pečatenju: " + e.description); }
+}
+function hitriUkaz(ukaz) {
+  document.getElementById("besedilo").value = ukaz;
+  poslji();
+}
+function fokusIsci() {
+  document.getElementById("besedilo").value = "isci ";
+  document.getElementById("besedilo").focus();
+}
+
+/* ---- tipke ---- */
+function tipka() {
+  if (window.event.keyCode === 13 && !window.event.shiftKey) {
+    window.event.returnValue = false;
+    poslji();
+  }
+}
+
+window.resizeTo(580, 740);
+izpisiStanje();
+izpisiKlepet();
+window.setInterval(izpisiKlepet, 5000);
+window.setInterval(izpisiStanje, 15000);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "cas": "2026-10-21 13:18",
+  "telo_oblacno": {
+    "sha": "380b3a3",
+    "cas": "2026-10-21 13:17"
+  },
+  "telo_lokalno": {
+    "sha": "0b701f5",
+    "cas": "2026-10-01 10:40",
+    "nespoznanih_datotek": 113
+  },
+  "ucenje": {
+    "lekcije": 198,
+    "pokrite_datoteke": 134,
+    "vseh_datotek": 129,
+    "izmerjeni_pecati": 3485,
+    "izmerjeni_del": 13661,
+    "izmerjeni_dokazi": 57751
+  },
+  "dnevi_dnevnika": 1,
+  "repos": {
+    "skupaj": 49,
+    "zivi": 47,
+    "aktivni_24h": [
+      "Atmavictu",
+      "verification-before-assertion"
+    ]
+  },
+  "atmavictu": {
+    "odprti_pr": 3,
+    "veje": 521,
+    "zadnji_ci": "Tests:success priča:failure"
+  },
+  "urnik": {
+    "dihov": 2,
+    "dogodkov": 1,
+    "utripov": 1,
+    "molkov": 20,
+    "zadnji_dih": "12:42:33",
+    "povp_trajanje_s": 11.9
+  },
+  "odprt_dih": {
+    "stevilka": 483,
+    "telo_stevila": {
+      "rez_najvisji": 2318,
+      "organi": 25,
+      "bajti_teles": 19427086
+    }
+  }
+}
