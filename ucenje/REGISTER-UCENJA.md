@@ -491,3 +491,27 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
 - 2026-10-21 14:07 · ⚠ · ZAKONODAJACLOVEKA:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
   - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · ZAKONODAJACLOVEKA:USTANOVNI-ZAPIS.md · 4117 B / 41 vrstic · PEČAT×0 · ∂×1 · ⊢×3
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:ABSOLUTE-TEST.md · 2095 B / 30 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:JEZIKI.md · 971 B / 18 vrstic · PEČAT×0 · ∂×0 · ⊢×5
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:PREDLOGA.md · 1320 B / 31 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:PROSNJA-MNOZICE-EN.md · 3971 B / 48 vrstic · PEČAT×0 · ∂×1 · ⊢×14
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:PROSNJA-MNOZICE.md · 6953 B / 80 vrstic · PEČAT×0 · ∂×3 · ⊢×25
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:README-SL.md · 5329 B / 65 vrstic · PEČAT×0 · ∂×1 · ⊢×8
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:README.md · 5415 B / 63 vrstic · PEČAT×0 · ∂×1 · ⊢×8
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · SYMBOLON-KATHOLIKON:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · DelozaZivot:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:18 · ⚠ · DelozaZivot:README.md · 28 B / 3 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠

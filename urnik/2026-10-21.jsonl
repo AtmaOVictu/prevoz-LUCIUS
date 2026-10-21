@@ -73,3 +73,5 @@
 {"cas": "14:15:16", "tip": "molk", "vzrok": "", "glava": "50fd78f", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
 {"cas": "14:16:18", "tip": "molk", "vzrok": "", "glava": "50fd78f", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
 {"cas": "14:16:52", "tip": "molk", "vzrok": "", "glava": "50fd78f", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}
+{"cas": "14:17:54", "tip": "dogodek", "vzrok": "nova glava 50fd78f -> 7defb90", "glava": "7defb90", "trajanje_s": 19.6, "lekcije": 12, "napake": ""}
+{"cas": "14:19:16", "tip": "molk", "vzrok": "", "glava": "7defb90", "trajanje_s": 0.0, "lekcije": 0, "napake": ""}

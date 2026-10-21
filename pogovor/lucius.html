@@ -188,7 +188,7 @@ async function naloziKlepet() {
     document.getElementById("prebira").style.display = (casPosiljanja && !novLucius) ? "block" : "none";
     if (novLucius) casPosiljanja = "";
     if (novLucius && glasVklopljen() && zadnjiLuciusGol) {
-      fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350)));
+      if (!izgovori(zadnjiLuciusGol.slice(0, 350))) fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350)));
     }
   } catch (e) { /* molk: strežnik spi */ }
 }
@@ -264,7 +264,24 @@ function preklopiGlas() {
   if (glasVklopljen()) { localStorage.setItem("luciusGlas", "0"); b.textContent = "glas: NE"; }
   else { localStorage.setItem("luciusGlas", "1"); b.textContent = "glas: DA"; }
 }
-function izgovoriZadnje() { if (zadnjiLuciusGol) fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350))); }
+function izgovori(besedilo) {
+  if (!("speechSynthesis" in window) || !besedilo) return false;
+  var glasovi = speechSynthesis.getVoices();
+  var sl = glasovi.find(function (v) { return v.lang && v.lang.toLowerCase().indexOf("sl") === 0; });
+  if (!sl) sl = glasovi.find(function (v) { return v.default; });
+  if (!sl) return false;
+  var u = new SpeechSynthesisUtterance(besedilo);
+  u.voice = sl;
+  u.lang = sl.lang;
+  u.rate = 1;
+  speechSynthesis.speak(u);
+  return true;
+}
+if ("speechSynthesis" in window) { speechSynthesis.onvoiceschanged = function () {}; speechSynthesis.getVoices(); }
+function izgovoriZadnje() {
+  if (!zadnjiLuciusGol) return;
+  if (!izgovori(zadnjiLuciusGol.slice(0, 350))) fetch("/povej?text=" + encodeURIComponent(zadnjiLuciusGol.slice(0, 350)));
+}
 document.getElementById("besedilo").addEventListener("keydown", function (e) {
   if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); poslji(); }
 });
