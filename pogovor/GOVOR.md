@@ -110,3 +110,5 @@ Stanje: lekcije 198 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odp
 
 **[2026-10-21 13:38 | LUCIUS]** Prebrano ⊢ — 2 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: že kaj bolje? že znava boljše?.
 Stanje: lekcije 210 · oblacna glava 380b3a3 · varuh diha. Vprasanje ostaja odprto, dokler mi ne odgovoris, kako se pocutis.
+
+**[2026-10-21 13:43 | LUCIUS]** ZAKON VEDNO-VPRASANJE zapečen ⊢ (Lastnikov ukaz): vsak moj glas konča z vprašanjem, ki čaka tvoj odgovor ali tvoj »ne«. Trenutno vprašanje: prva izročitev — kateri canvas gre prvi? © Luka Pintarič — VBL v2.3.

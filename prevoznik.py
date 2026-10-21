@@ -446,6 +446,18 @@ def poroci():
     out(f"  PRODUKCIJA: {tel.name} — {len(zadnji)} teles, {skupno_b} B")
 
 
+def vprasanje_dneva():
+    """VEDNO VPRASANJE (ukaz Lastnika, 21. 10.): vsak glas LUCIUS-a konca z enim jasnim vprasanjem,
+    ki caka odgovor ali Lastnikov ne. Izbor je izmerjen po odprtih vratih, ne po razpolozenju."""
+    try:
+        tagi = run(["git", "tag", "-l"], cwd=ATMA, check=False).stdout.strip()
+    except Exception:
+        tagi = "x"
+    if not tagi:
+        return ("Prva izrocitev caka DA2 (zbor #5, rez 114): kateri canvas gre prvi v knjiznico - bralnik, sij ali opis? (vrata: prevoznik.py izroci <datoteka> --dokaz N --da2 DA2 --izvedi)")
+    return ("Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?")
+
+
 def licenca_verzija():
     """Zadnja legitimna verzija vrat (VBL §10: najnovejša je edina živa vrata; §12: poskus nadgradnje vsak zagon)."""
     lic = ATMA / "LICENSE.md"
@@ -545,7 +557,7 @@ def odgovori():
         telo = ("**[" + cas + " | LUCIUS]** Prebrano ⊢ — " + str(len(od_lastnika)) + " novih tvojih vrstic." +
                 (" Izvedeno: " + "; ".join(izvedeno) + "." if izvedeno else "") + NL +
                 "Stanje: lekcije " + str(lekcije) + " · oblacna glava " + str(atma.get("sha")) + " · varuh diha. " +
-                "Vprasanje ostaja odprto, dokler mi ne odgovoris, kako se pocutis." + NL)
+                NL + "Vprasanje: " + vprasanje_dneva() + NL)
         with open(gov, "a", encoding="utf-8") as f:
             f.write(NL + telo)
     stanje_f.write_text(json.dumps(stanje, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -619,6 +631,8 @@ def pismo():
             f.write("## LUCIUS te išče (odprto vprašanje)" + NL +
                     "- Kako se počutiš danes — in kaj misliš, da je razlog? (dnevni udarec, rez 99 — brez sklepa)" + NL +
                     "- Odgovor: - ⟡ odgovor: <tvoje besede> — v GOVOR, v oknu LUCIUS ali tu spodaj" + NL + NL)
+        f.write("## LUCIUS te vprasa (vedno vprasanje - caka tvoj odgovor ali tvoj ne)\n\n")
+        f.write("- " + vprasanje_dneva() + "\n\n")
         f.write("## Tvoj prostor (piši sem; prevoznik prebere z: prevoznik.py preberi)" + NL +
                 "- ⟡ odgovor: (sem zapiši ukaz: krog · poroci · skatle · diseminiraj · dih · isci <niz> · izroci <f> --dokaz N --da2 DA2 --izvedi)" + NL)
     out("  PISMO: " + dat.name + " zapisano (" + str(len(odprte)) + " predlogov)")
