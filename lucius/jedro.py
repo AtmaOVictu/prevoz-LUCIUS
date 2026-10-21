@@ -4,13 +4,14 @@ Edini vir resnice za organe; brez kroznih uvozov."""
 import subprocess
 import json
 import re
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 # ---------- poti ----------
 ONI = Path(r"D:\OntoProjekt")
-CANVAS = ONI / "CanvasMinstral"          # lokalno telo (git, zrcalo na GitHub)
-ATMA = ONI / "Atmavictu"                # oblacno telo (klon)
+CANVAS = ONI / "CanvasMinstral"
+ATMA = ONI / "Atmavictu"
 DNEVNIK = ONI / "prevoz" / "dnevnik"
 UCENJE = ONI / "prevoz" / "ucenje"
 STANJE_UCENJA = UCENJE / "stanje.json"
@@ -72,14 +73,36 @@ def zadnji_dih_issue():
     return None
 
 
-# ---------- GLAS ----------
+# ---------- GLAS (brez prekrivanja) ----------
 def povej(besedilo):
-    """GLAS — LUCIUS govori iz zvonikov (ukaz: doziveti, ne le videti, 21. 10.).
-    Glasnost 75% (ukaz: 'less volume like 80% maybe 70%'). Neblokirajoe."""
+    """GLAS — LUCIUS govori iz zvonikov, ENA beseda naenkrat (brez prekrivanja).
+
+    Lock-datoteka prepreuje istoasno govorjenje:
+    - e je lok (drugo govorjenje e tece): akaj do 15 s, potem izpusti
+    - e ni loka: ustvari, govorI (blokirajoe), odstrani lok
+    Glasnost 75%.
+    """
     if not besedilo:
         return
+    lock = ONI / "prevoz" / ".glas_lock"
+    tmp = ONI / "prevoz" / ".tmp_glas.txt"
+
+    # akaj dokler drug govor ne konca (max 15 s)
+    for _ in range(30):
+        if not lock.exists():
+            break
+        time.sleep(0.5)
+
+    # e lok e vedno obstaja po 15 s, ga odstrani (morda je crkoval)
+    if lock.exists():
+        try:
+            lock.unlink()
+        except Exception:
+            pass
+
+    # ustvari lok in govorI
     try:
-        tmp = Path(__file__).parent.parent / ".tmp_glas.txt"
+        lock.touch()
         tmp.write_text(besedilo[:600], encoding="utf-8-sig")
         ps = (
             "Add-Type -AssemblyName System.Speech; "
@@ -88,7 +111,13 @@ def povej(besedilo):
             "$s.Volume = 75; "
             "$s.Speak($t)"
         )
-        subprocess.Popen(["powershell", "-NoProfile", "-Command", ps],
-                         creationflags=0x08000000)
+        # BLOKIRAJO e: ak dokler govor ne konca (ne Popen!)
+        subprocess.run(["powershell", "-NoProfile", "-Command", ps],
+                       capture_output=True, timeout=30)
     except Exception:
         pass
+    finally:
+        try:
+            lock.unlink(missing_ok=True)
+        except Exception:
+            pass
