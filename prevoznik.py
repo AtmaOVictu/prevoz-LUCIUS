@@ -853,8 +853,8 @@ def skatle(disseminate=False):
                 f"| repozitoriji (račun) | {len(repoji)} skupaj · {len(zivi)} živih · {len(aktivni_24h)} aktivnih 24 h | gh repo list |\n"
                 f"| veje Atmavictu | {veje} | gh api branches |\n"
                 f"| odprti PR | {odprti_prji} | gh pr list |\n"
-                f"| telefon (okno na dlani) | {telefon_url} | lokalna mreza |
-f"| zadnji CI | {zadnji_tekmeci.strip()} | gh run list |\n"
+                f"| telefon (okno na dlani) | {telefon_url} | lokalna mreza |\n"
+                f"| zadnji CI | {zadnji_tekmeci.strip()} | gh run list |\n"
                 f"| dihi danes | {utripov + dogodkov} (dogodki {dogodkov} · utripi {utripov} · molki {molkov}) | URNIK register |\n"
                 f"| zadnji dih | {zadnji_dih_cas} · povp. {povp} s | URNIK register |\n"
                 + (f"| dih najvišji izmerjeni rez | {telo_stevila.get('rez_najvisji')} | issue #{dih_issue['number']} |\n"
