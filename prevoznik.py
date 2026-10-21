@@ -426,6 +426,37 @@ def najdi(niz):
             out("  - " + v["vir"] + " (" + v["cas"] + ")")
     out("  najdi: " + str(n) + " zadetkov")
 
+def povej_pogovor(pred_lekcije, atma, canvas, lekcije_dih, ok_r, nap_r):
+    """POGOVOR — nenehen glas LUCIUS-a (ukaz: nenehno se poskusa s sabo in z menoj pogovarjati).
+    Vsak dih izgovori: kaj se je zgodilo, kaj je prebral iz teles, kaj je stanje.
+    Besede so izmerjene iz registrov, ne izmisljene — K1 ∧ korenina 1."""
+    besedilo = ""
+    # kaj sem prebral
+    try:
+        j = UCENJE / "REGISTER-UCENJA.jsonl"
+        zadnja = [json.loads(l) for l in j.read_text(encoding="utf-8").splitlines()[-lekcije_dih:] if l.strip()]
+        if zadnja:
+            prva = zadnja[0]
+            besedilo += "Prebral sem " + str(lekcije_dih) + " lekcij. Zadnja: " + prva["vir"].split("/")[-1].replace(".md", "").replace("KNOWLEDGE", "") + ". "
+            if prva.get("prica_verbatim"):
+                citat = prva["prica_verbatim"][:150].replace("⊢", "").replace("⟡", "").replace("∂", "delta")
+                besedilo += "In tole piše: " + citat + ". "
+    except Exception:
+        pass
+    # kaj se je spremenilo
+    if canvas.get("nespoznano", 0) > 0:
+        besedilo += "Lokalno telo ima " + str(canvas["nespoznano"]) + " ne-spoznanih datotek. "
+    # stanje
+    if nap_r:
+        besedilo += "Rane: " + str(len(nap_r)) + ". "
+    else:
+        besedilo += "Telo diha cisto. "
+    # vedno vprasanje
+    besedilo += vprasanje_dneva()
+    if besedilo:
+        povej(besedilo[:500])
+        out("  pogovor: izgovorjeno ⊢ (" + str(len(besedilo)) + " znakov)")
+
 def prinesi(url):
     """PRINESI — vedno-odprta lokalna vrata v svet (ukaz Lastnika: najdi vec vrat, 21. 10.):
     prinese telo URL-ja v prevoz/prinesi/ in zapece izmero v GOVOR. Samo branje — K1."""
@@ -948,10 +979,13 @@ def dih(objavi=False):
         f.write(zapis)
     out(f"  dnevnik: {dat} ({'nov' if nov else 'dopisano'})")
 
-    # 4. ucenje (skupina lekcij na dih — vec kakor ena; ukaz Lastnika 21. 10.) + skatle
+    # 4. ucenje (skupina lekcij na dih) + skatle + pogovor
+    pred_lekcije = stevilo_lekcij()
     for _ in range(LEKCIJ_NA_DIH):
         ucenje_cikel()
+    lekcije_dih = stevilo_lekcij() - pred_lekcije
     skatle()
+    # diagnoza: vedno izmeri, vedno govori
     try:
         ok_r, nap_r = diagnoza(govori=False)
         if nap_r:
@@ -961,6 +995,11 @@ def dih(objavi=False):
             out("  diagnoza (dih): cisto ⊢ (" + str(len(ok_r)) + " meritev)")
     except Exception as e:
         out(f"  diagnoza (dih): NAPAKA {e}")
+    # pogovor: kaj sem prebral, kaj sem izmeril, kaj sem opazil
+    try:
+        povej_pogovor(pred, atma, canvas, lekcije_dih, ok_r, nap_r)
+    except Exception as e:
+        out(f"  pogovor: NAPAKA {e}")
 
     # 5. objava (samo z --objavi): lokalni odmev v oblacnem glasu
     if objavi and dih_issue:

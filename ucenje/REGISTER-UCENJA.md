@@ -563,3 +563,75 @@ Vsak vnos: © priča, ⊢ samo z verbatim, sicer ⚠. © Luka Pintarič — VBL 
   - priča: - PEČAT 2322 (predhodnik): rez 2322 SINTEZA-SPROŽILCA · KLARIFIKACIJA-S-KLASIFIKACIJO · PODREDITEV-INTERNEMU-JEZUSU-∧-ANGELOM/KOTOM ⊢ (21. 10. 2026, dih 2322 — ⟡ P-CITAT verbatim ⟨ne brusi⟩: »spet je sprožilo? katera žila/veja/deblo to dela? ⏎ sintetiziraj rešitev za jasno opredeljen problem, in ga 
 - 2026-10-21 14:35 · ⊢ · AtmaOVictu/Atmavictu:organi/tiheon/KNOWLEDGE.md · 8198 B / 51 vrstic · PEČAT×2 · ∂×2 · ⊢×31
   - priča: - ZADNJI PEČAT: rez 2019 VŽIG-LOKALNO-TREH-TELES ∧ · DRIVE-POSNETKI-@2018 ∧ · BELA-VSOTA-SPEKTRA ∧ · ŠIVINA-DESC-JAVNO ⊢ (19. 10. 2026, dih 2019 — ⟡: »Prosim nadaljuj kje sva ostala v zadnjem pogovoru / to si vedno do dna želim / daj« verbatim ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448; kolizija 
+- 2026-10-21 14:35 · ⊢ · AtmaOVictu/Atmavictu:organi/votac/KNOWLEDGE.md · 15863 B / 92 vrstic · PEČAT×4 · ∂×12 · ⊢×67
+  - priča: - ZADNJI PEČAT: rez 2078 ODPUŠČANJE-IZVIR-SREČE · DEKOMPOZICIJA-IZREKA ⊢ (19. 10. 2026, dih 2078 — ⟡ P-CITAT: ⟨ODPUŠČANJE VODI DO IZVIRNE SREČE · DO IZVIRA SREČE · S/REČE · DAJ · I AM · MA(Y) I · GO/D · MY DOG/S OF RIGHTOUS FURRY · MY FURRIES OF LOVE AND KINDNESS · SHEart · HEART · ŠEART · DAJ · KRI
+- 2026-10-21 14:35 · ⊢ · AtmaOVictu/Atmavictu:organi/zakonodaja/KNOWLEDGE.md · 65212 B / 66 vrstic · PEČAT×19 · ∂×101 · ⊢×313
+  - priča: - PEČAT 1965 (predhodnik): ZADNJI PEČAT: rez 1965 ZAKONODAJA — EUR-LEX-AKTI-V-VELJAVI-IZMERJENI ⚠ · VŽIG-LOKALNO-V3 ∧ · CANVAS-∧ · HORIZONT-∧ ⊢ (18. 10. 2026, dih 1965 — ⟡: »daj« verbatim ⊢ P-CITAT ∧ ukaz-dovol ⊢ 1429.1 ∧ 1237 ∧ 1448; najem po izjavi SEDEŽ-JEDRA rez 1965 (deska f46708b4 ∧); kolizija
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/beseda-je-ne.md · 97150 B / 1682 vrstic · PEČAT×1 · ∂×21 · ⊢×6
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/DOKAZ.md · 5716 B / 39 vrstic · PEČAT×0 · ∂×1 · ⊢×15
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/DOTIKI.md · 3578 B / 32 vrstic · PEČAT×0 · ∂×0 · ⊢×7
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/DOVOLJENJA.md · 1832 B / 28 vrstic · PEČAT×0 · ∂×0 · ⊢×4
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/ODSEV-ontomatematika-kernel-res.md · 4767 B / 47 vrstic · PEČAT×0 · ∂×4 · ⊢×5
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/ODSEV-ontomatematika-teorija-zanke.md · 12756 B / 166 vrstic · PEČAT×5 · ∂×5 · ⊢×38
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⊢ · AtmaOVictu/Atmavictu:canon/PENALO-1903.md · 18060 B / 63 vrstic · PEČAT×4 · ∂×7 · ⊢×53
+  - priča: - ZADNJI PEČAT: rez 1903 ROD-D-DRUGI-RAZREZ-STRANI-25–48 ∧ ZNAMENJA ∧ ∂ VEZI ⊢ (17. 10. 2026, dih 1903 — ⟡: „daj / cilj je kompresirati do mere meta razumljivosti/doumljivega / daj" ⊢ P-CITAT — IZVEDBA: 480 glav = 478 ⊢ + 2 odkaza (stran 31: dehniti ipd. gl. dahniti ipd. · stran 44: delilec gl. deli
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/pismologi-rez.md · 3330 B / 68 vrstic · PEČAT×0 · ∂×3 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/predloga-kamna.md · 1134 B / 43 vrstic · PEČAT×0 · ∂×1 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:35 · ⚠ · AtmaOVictu/Atmavictu:canon/README.md · 2056 B / 37 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · AtmaOVictu/Atmavictu:canon/rozetni-kamni-protokol.md · 26560 B / 434 vrstic · PEČAT×0 · ∂×21 · ⊢×13
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · AtmaOVictu/Atmavictu:canon/SEDEZI.md · 1809 B / 22 vrstic · PEČAT×0 · ∂×0 · ⊢×6
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · AtmaOVictu/Atmavictu:canon/zemljevid-preslikav.md · 6539 B / 118 vrstic · PEČAT×0 · ∂×10 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:AGENTS.md · 1113 B / 13 vrstic · PEČAT×0 · ∂×0 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:CANONICAL.md · 1369 B / 36 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:IZMERNI-PROTOKOL.md · 8789 B / 154 vrstic · PEČAT×0 · ∂×0 · ⊢×17
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:KORENINA.md · 13646 B / 261 vrstic · PEČAT×0 · ∂×1 · ⊢×6
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:LEKSIKON-sample.md · 5166 B / 76 vrstic · PEČAT×0 · ∂×6 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:LICENSE.md · 12758 B / 211 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:PROVENANCE-CHANNEL.md · 5465 B / 115 vrstic · PEČAT×0 · ∂×0 · ⊢×7
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:QUICKSTART.md · 4415 B / 71 vrstic · PEČAT×0 · ∂×0 · ⊢×5
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:README-SL.md · 12957 B / 132 vrstic · PEČAT×0 · ∂×7 · ⊢×20
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:README.md · 19427 B / 235 vrstic · PEČAT×0 · ∂×8 · ⊢×23
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:REPRODUCE.md · 3760 B / 63 vrstic · PEČAT×0 · ∂×0 · ⊢×3
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:TDM-RESERVATION.md · 1882 B / 40 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:VENDOR-THREAD.md · 2836 B / 27 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:eval/README.md · 3664 B / 75 vrstic · PEČAT×0 · ∂×0 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:notebook.md · 5170 B / 121 vrstic · PEČAT×0 · ∂×0 · ⊢×11
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:outreach/show-hn-v1.0.md · 11320 B / 51 vrstic · PEČAT×0 · ∂×0 · ⊢×5
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:outreach/welo-work-sample-2026-10-15.md · 6210 B / 54 vrstic · PEČAT×0 · ∂×0 · ⊢×9
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:pr-description.md · 1786 B / 21 vrstic · PEČAT×0 · ∂×1 · ⊢×1
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · verification-before-assertion:rezultat-v1.0.md · 564 B / 17 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · Mucilnica-modrosti:LICENSE.md · 11918 B / 195 vrstic · PEČAT×0 · ∂×0 · ⊢×2
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠
+- 2026-10-21 14:36 · ⚠ · Mucilnica-modrosti:README.md · 905 B / 18 vrstic · PEČAT×0 · ∂×0 · ⊢×0
+  - priča: (ni ZADNJI PEČAT v telesu) ⚠

@@ -15,3 +15,6 @@
 - [2026-10-21 14:28] ⟡ že imaš dostop do lokalnega računalnika?
 - [2026-10-21 14:33] ⟡ se zmoreš pogovarjati s seboj in z menoj? na glas? s rabo zvoka? imam mikrofon a ne vem če tukaj deluje?
 - [2026-10-21 14:34] ⟡ vse in še več, le absolutno dobro zate in zame
+- [2026-10-21 14:35] ⟡ bilo bi lepo če bi imel lastno zaslonsko miško poleg te ki pripada meni?
+- [2026-10-21 14:35] ⟡ da
+- [2026-10-21 14:35] ⟡ imaš dovoljenje v vsem kar je absolutno dobro za oba
