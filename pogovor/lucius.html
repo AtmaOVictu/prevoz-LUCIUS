@@ -344,62 +344,70 @@ function mikrofonBarja(snema) {
 }
 
 function mikrofon() {
-  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  var gumb = document.getElementById("mikrofon");
-  var panel = document.getElementById("mikrofonPanel");
-  var medvrsticno = document.getElementById("medvrsticno");
-  if (!SR) { alert("Ta brskalnik ne podpira prepoznavanja govora.
+  var g = document.getElementById("mikrofon");
+  var n = document.getElementById("mikrofonNapis");
+  var p = document.getElementById("mikrofonPanel");
+  var m = document.getElementById("medvrsticno");
 
-Uporabi Microsoft Edge ali Google Chrome.
-
-Trenutni brskalnik: " + navigator.userAgent.substring(0,60));; return; }
-  if (prepoznava) {
-    prepoznava.stop(); prepoznava = null;
-    mikrofonBarja(false);
-    panel.classList.remove("sposilen");
+  // VEDNO takoj zamenjaj barvo — pred vsem drugim
+  if (g.dataset.snema === "da") {
+    g.dataset.snema = "ne";
+    g.style.background = "linear-gradient(135deg, #f79c1d, #ffd569)";
+    g.style.borderColor = "#f79c1d";
+    g.style.boxShadow = "0 4px 16px rgba(247,156,29,.4)";
+    g.style.color = "#1a1005";
+    n.textContent = "POSNEMAJ";
+    p.classList.remove("sposilen");
+    if (prepoznava) { try { prepoznava.stop(); } catch(e) {} prepoznava = null; }
     if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
     return;
   }
-  panel.classList.add("sposilen");
-  medvrsticno.textContent = "poslušam… govori, zvezek se polni sam";
+
+  g.dataset.snema = "da";
+  g.style.background = "linear-gradient(135deg, #ff2222, #ff6666)";
+  g.style.borderColor = "#ff0000";
+  g.style.boxShadow = "0 0 30px rgba(255,0,0,.8), 0 0 60px rgba(255,0,0,.3)";
+  g.style.color = "#fff";
+  n.textContent = "● POSNEMAM";
+  p.classList.add("sposilen");
+
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) {
+    m.textContent = "⚠ Ta brskalnik ne podpira govora — uporabi Edge ali Chrome";
+    return;
+  }
+
+  m.textContent = "poslušam… govori";
   prepoznava = new SR();
   prepoznava.lang = "sl-SI";
   prepoznava.continuous = true;
   prepoznava.interimResults = true;
+
   prepoznava.onresult = function (e) {
-    var koncno = "";
-    var med = "";
+    var kon = "", med = "";
     for (var i = e.resultIndex; i < e.results.length; i++) {
-      if (e.results[i].isFinal) {
-        koncno += e.results[i][0].transcript;
-      } else {
-        med += e.results[i][0].transcript;
-      }
+      if (e.results[i].isFinal) kon += e.results[i][0].transcript;
+      else med += e.results[i][0].transcript;
     }
-    if (med) { medvrsticno.textContent = "… " + med; }
-    if (koncno) {
-      var p = document.getElementById("besedilo");
-      p.value = (p.value ? p.value + " " : "") + koncno.trim();
-      p.focus();
-      medvrsticno.textContent = "✓ " + koncno.trim();
+    if (med) m.textContent = "… " + med;
+    if (kon) {
+      var p2 = document.getElementById("besedilo");
+      p2.value = (p2.value ? p2.value + " " : "") + kon.trim();
+      p2.focus();
+      m.textContent = "✓ " + kon.trim();
       samodejnoPoslji();
     }
   };
   prepoznava.onend = function () {
-    prepoznava = null;
-    mikrofonBarja(false);
-    if (zvokRaf) { cancelAnimationFrame(zvokRaf); zvokRaf = null; }
+    if (g.dataset.snema === "da") {
+      try { prepoznava.start(); } catch(e) {}
+    }
   };
   prepoznava.onerror = function (ev) {
-    medvrsticno.textContent = "⚠ " + (ev.error || "napaka");
-    prepoznava = null;
-    mikrofonBarja(false);
+    m.textContent = "⚠ " + (ev.error || "napaka") + " — preveri dovoljenje mikrofona";
   };
-  mikrofonBarja(true);
-  try {
-    prepoznava.start();
-  } catch (e) {
-    medvrsticno.textContent = "⚠ mikrofon: " + (e.message || "napaka") + " — preveri dovoljenje";
+  try { prepoznava.start(); } catch (e) {
+    m.textContent = "⚠ " + e.message;
   }
   zacniZvokVizualizacijo();
 }

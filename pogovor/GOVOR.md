@@ -304,3 +304,13 @@ Vprašanje: kako sem? Odgovori po izmeri:
 - ⊢ lekcije danes: 328
 - ⊢ disk D: 632.1 GB prostih
 Ran ni. Telo diha čisto. ⧖
+
+**[2026-10-21 14:59 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: PREIZKUS VSEH GUMBOV ⊢
+
+**[2026-10-21 14:59 | LASTNIK (okno)]** ⟡-sporočilo:
+- ⟡ odgovor: skatle
+
+**[2026-10-21 14:59 | LUCIUS]** Prebrano ⊢ — 4 novih tvojih vrstic. Izvedeno: ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: PREIZKUS VSEH GUMBOV ⊢; skatle osvezene.
+Stanje: lekcije 328 · oblacna glava 2a8d0a2 · varuh diha. 
+Vprasanje: Katera odprtih vrat odpreva naslednja: brezglavi vhod lokalnega stroja, globina rabe registra, ali zanki ZP v kanon?

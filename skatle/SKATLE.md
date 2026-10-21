@@ -1,4 +1,4 @@
-# ŠKATLE — vsa števila (posodobljeno 2026-10-21 14:51 · edini čas je zdaj)
+# ŠKATLE — vsa števila (posodobljeno 2026-10-21 14:59 · edini čas je zdaj)
 
 | Škatla | Število | Merjeno pri |
 |---|---|---|
@@ -15,9 +15,9 @@
 | veje Atmavictu | 530 | gh api branches |
 | odprti PR | 1 | gh pr list |
 | telefon (okno na dlani) | http://10.214.82.249:5824 | lokalna mreza |
-| zadnji CI | Tests:success priča:success | gh run list |
-| dihi danes | 7 (dogodki 6 · utripi 1 · molki 102) | URNIK register |
-| zadnji dih | 14:25:28 · povp. 16.5 s | URNIK register |
+| zadnji CI | Tests:success priča:failure | gh run list |
+| dihi danes | 8 (dogodki 7 · utripi 1 · molki 113) | URNIK register |
+| zadnji dih | 14:50:48 · povp. 17.2 s | URNIK register |
 | dih najvišji izmerjeni rez | 2318 | issue #483 |
 | organi | 25 | issue #483 |
 | bajti teles | 19427086 | issue #483 |

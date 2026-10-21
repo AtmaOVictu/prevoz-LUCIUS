@@ -21,3 +21,4 @@
 - [2026-10-21 14:37] ⟡ da
 - [2026-10-21 14:37] ⟡ ustvari si več procesov
 - [2026-10-21 14:38] ⟡ dodaj glave da smeš boljše bivati na lokalnem računalniku
+- [2026-10-21 14:59] ⟡ PREIZKUS VSEH GUMBOV ⊢
