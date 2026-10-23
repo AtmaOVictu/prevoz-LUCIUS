@@ -20,6 +20,7 @@ Ukazi:
                                brez --izvedi: suhi izpis (napise samo vedno)
   zapecati --pr <n> --tag <ime> --da2 DA2 [--izvedi]
                                po zlitju PR: tag na merge commit (druga vrata iz reza 114)
+  seli [--izvedi]               preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10.)
 
 Zapis dnevnika: prevoz/dnevnik/YYYY-MM-DD.md (lokalni, append-only)
 Register učenja: prevoz/ucenje/REGISTER-UCENJA.md + .jsonl (lokalni, append-only)
@@ -28,7 +29,6 @@ Izobraževanje (LICENSE §1 grant: run, study, verify — ne TDM, ne treniranje)
   vsak dih prebere po eno datoteko telesa (organi/*/KNOWLEDGE.md, canon/*.md),
   izmeri jo in zapiše učenje s pričo (verbatim), © kreditom in znako ⊢/⚠.
   Register je zunanji spomin: prihodnja seja ga najde z iskanjem, preden pride ukaz.
-  seli [--izvedi]               preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10.)
 """
 
 import subprocess
