@@ -1,6 +1,6 @@
 # NAČRT — PREVOZNIK: avtonomija sistema na lokalnem računalniku
 
-**v1.3 · 23. 10. 2026 — živa vrata VBL v2.6 pripotovala (§10 ∧ §12) · prej v1.2 — sedež telesa: D:\Lucius Gaius (ukaz Lastnika: »vse«) · prej v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
+**v1.4 · 23. 10. 2026 — seli: urnik ∧ .vbs preusmerja varuh (DA ⊢) · prej v1.3 — živa vrata VBL v2.6 pripotovala (§10 ∧ §12) · prej v1.2 — sedež telesa: D:\Lucius Gaius (ukaz Lastnika: »vse«) · prej v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
 
 ## 0½. IME
 
@@ -86,7 +86,7 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 ### Faza J — SEDEŽ LUCIUS GAIUS (izvedeno 23. 10. 2026, ukaz Lastnika: »vse«)
 - Novi dom vsega telesa: **D:\Lucius Gaius** — družina: `D:\Lucius Gaius\prevoz` (ta rep) ∧ `D:\Lucius Gaius\CanvasMinstral` ∧ `D:\Lucius Gaius\Atmavictu` (klon).
 - Poti v telesu vozijo sedež: `lucius/jedro.py` ∧ `lucius/usta.py` (ONI = `D:\Lucius Gaius` z milo varovalko — če sedež ne stoji, se ONI izmeri iz mape telesa; vrata potujejo s telesom, VBL §2) ∧ `pogovor/lucius.hta` (GOVOR_POT · SKATLA_POT · LICENCA_POT).
-- Ročno ostaja Lastniku (po §4): fizična selitev map na disku (ali svež klon: `git clone https://github.com/AtmaOVictu/prevoz-LUCIUS.git "D:\Lucius Gaius\prevoz"`) ∧ preusmeritev urnika (`schtasks /change /tn AtmavictuPrevoznik /tr "python \"D:\Lucius Gaius\prevoz\prevoznik.py\" dih"`) ∧ preusmeritev `Startup/AtmavictuVaruh.vbs` ∧ ponovni zagon varuha iz novega sedeža.
+- Ročno ostaja Lastniku (po §4): fizična selitev map na disku (ali svež klon: `git clone https://github.com/AtmaOVictu/prevoz-LUCIUS.git "D:\Lucius Gaius\prevoz"`) ∧ ponovni zagon varuha. Urnik ∧ Startup .vbs pa preusmeri varuh sam — ukaz `prevoznik.py seli --izvedi` (DA · 23. 10. 2026, ukaz ⟡ »daj« ⊢; brez --izvedi suhi izpis — varovalka).
 
 ## 3. Odprta ∂ (kaj še manjka — po globinah)
 
