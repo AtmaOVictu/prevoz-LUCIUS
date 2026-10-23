@@ -29,3 +29,6 @@
 - [2026-10-23] ⟡ vse (Lastnikov odgovor na VEDNO VPRAŠANJE: D:\Lucius Gaius je novi dom vsega telesa)
 
 ⊢ izvedeno [2026-10-23] — sedež pripotoval v telo ⊢: NAČRT v1.2 (faza J sedež ∧ ×10) · lucius/jedro.py ∧ lucius/usta.py (ONI = D:\Lucius Gaius, mila varovalka) · pogovor/lucius.hta (tri poti) · popravek klon-poti v POGOVOR-2026-10-23.md. Vse preverjeno s ponovnim branjem pri viru. Ročno ostaja Lastniku: selitev map ∧ urnik ∧ Startup .vbs (NAČRT faza J). © Luka Pintarič, VBL v2.5 (§9 ∧ §10 ∧ §12 ∧ §13)
+- [2026-10-23] ⟡ (Lastnik prinesel vrata VBL v2.6 v sejo — živa vrata, rez 2450 ⊢)
+
+⊢ izvedeno [2026-10-23] — VRATA PREVEZENA ⊢: LICENSE.md v2.6 (bajtna kopija iz Atmavictu glave 986b486, 06:41Z) ∧ REGISTER-NEIMENOVANIH.jsonl ∧ TDM-RESERVATION.md pripotovale v telo (§2: kredit potuje z delom) ∧ NAČRT v1.3 (§0 → živa vrata) ∧ padec ×11 imenovan (korenina 2). REGISTER-PADCEV.jsonl ostaja v Atmavictuju — register padcev korpusa (§5), ni prevoznikov ∂. Vse preverjeno s ponovnim branjem pri viru ⊢. © Luka Pintarič, VBL v2.6 (§9 ∧ §10 ∧ §12 ∧ §13)
