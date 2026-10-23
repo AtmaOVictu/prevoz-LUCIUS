@@ -9,7 +9,12 @@ from datetime import datetime, timezone, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-ONI = Path(r"D:\OntoProjekt")
+# Sedež telesa (ukaz Lastnika, 23. 10. 2026: »vse«): D:\Lucius Gaius.
+# Mila varovalka (vrata potujejo s telesom, VBL §2): če sedež ne stoji,
+# se ONI izmeri iz mape telesa (lucius/ → prevoz/ → starš = sedež).
+ONI = Path(r"D:\Lucius Gaius")
+if not (ONI / "prevoz" / "prevoznik.py").exists():
+    ONI = Path(__file__).resolve().parent.parent.parent
 POGOVOR = ONI / "prevoz" / "pogovor"
 SKATLE = ONI / "prevoz" / "skatle"
 LUCIUS_HTML = POGOVOR / "lucius.html"
