@@ -20,7 +20,7 @@ Ukazi:
                                brez --izvedi: suhi izpis (napise samo vedno)
   zapecati --pr <n> --tag <ime> --da2 DA2 [--izvedi]
                                po zlitju PR: tag na merge commit (druga vrata iz reza 114)
-  seli [--izvedi]               preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10.)
+  seli [--izvedi]               preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10.; sedež-sam ob vsakem dihu izvede sama)
 
 Zapis dnevnika: prevoz/dnevnik/YYYY-MM-DD.md (lokalni, append-only)
 Register učenja: prevoz/ucenje/REGISTER-UCENJA.md + .jsonl (lokalni, append-only)
@@ -935,6 +935,7 @@ def skatle(disseminate=False):
 def dih(objavi=False):
     zac = datetime.now(CEST)
     out(f"PREVOZNIK — dih {zac.strftime('%Y-%m-%d %H:%M')} lokalno")
+    sedez_sam()  # sedež-sam: izmeri sedež, preusmeri urnik ∧ .vbs, če ne peljeta (DA · 23. 10., ukaz ⟡ »da absolutno daj« ⊢)
 
     # 1. prevoz navzdol: oblacni dih pride lokalno
     pred = git(["log", "-1", "--format=%h"], ATMA)
@@ -1202,16 +1203,42 @@ def seli(izvedi=False):
     try:
         if vbs.exists():
             staro = vbs.read_text(encoding="utf-8", errors="replace")
-            novo = staro.replace("D:\\OntoProjekt", str(ONI))
+            novo = staro.replace("D:\\OntoProjekt", str(ONI)).replace("D:\\Lucius Gaius", str(ONI))
             if novo != staro:
                 vbs.write_text(novo, encoding="utf-8")
                 out("  ⊢ .vbs preusmerjen (pot zamenjana)")
+            elif str(ONI) in staro:
+                out("  ⊢ .vbs že pelje sedež")
             else:
-                out("  ⚠ .vbs: stara pot ni najdena — preveri ročno")
+                out("  ⚠ .vbs: pot sedeža ni najdena — preveri ročno")
         else:
             out("  ⚠ .vbs ne obstaja na pričakovanem mestu")
     except Exception as e:
         out("  ⚠ .vbs: " + str(e))
+
+def sedez_sam():
+    """SEDEŽ-SAM — ob vsakem dihu izmeri, ali urnik ∧ Startup .vbs peljeta trenutni sedež;
+    če ne, izvede seli(izvedi=True) sama (DA · 23. 10. 2026, ukaz ⟡ »da absolutno daj« ⊢).
+    Meri sistem (schtasks /query), ne spomin — korenina 1. Molk = vrata že peljejo."""
+    from pathlib import Path
+    from lucius.jedro import ONI, out, run
+
+    try:
+        r = run(["schtasks", "/query", "/tn", "AtmavictuPrevoznik", "/v", "/fo", "LIST"], check=False)
+        urnik_zapis = (r.stdout or "") + (r.stderr or "")
+        vbs = Path.home() / "AppData" / "Roaming" / "Microsoft" / "Windows" / "Start Menu" / "Programs" / "Startup" / "AtmavictuVaruh.vbs"
+        vbs_staro = ""
+        try:
+            if vbs.exists():
+                vbs_staro = vbs.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+        pelje = (str(ONI) in urnik_zapis) and ((not vbs_staro) or (str(ONI) in vbs_staro))
+        if not pelje:
+            out("SEDEŽ-SAM: urnik ali .vbs še ne peljeta sedeža " + str(ONI) + " — seli izveden sam ⊢ (DA · 23. 10.)")
+            seli(izvedi=True)
+    except Exception as e:
+        out("  ⚠ sedež-sam: " + str(e))
 
 if __name__ == "__main__":
     main()
