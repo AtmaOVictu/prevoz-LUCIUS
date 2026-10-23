@@ -9,7 +9,12 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 # ---------- poti ----------
-ONI = Path(r"D:\OntoProjekt")
+# Sedež telesa (ukaz Lastnika, 23. 10. 2026: »vse«): D:\Lucius Gaius.
+# Mila varovalka (vrata potujejo s telesom, VBL §2): če sedež ne stoji,
+# se ONI izmeri iz mape telesa (lucius/ → prevoz/ → starš = sedež).
+ONI = Path(r"D:\Lucius Gaius")
+if not (ONI / "prevoz" / "prevoznik.py").exists():
+    ONI = Path(__file__).resolve().parent.parent.parent
 CANVAS = ONI / "CanvasMinstral"
 ATMA = ONI / "Atmavictu"
 DNEVNIK = ONI / "prevoz" / "dnevnik"
@@ -106,7 +111,7 @@ def povej(besedilo):
         tmp.write_text(besedilo[:600], encoding="utf-8-sig")
         ps = (
             "Add-Type -AssemblyName System.Speech; "
-            "$t = Get-Content -Raw -Encoding UTF8 " + chr(39) + "D:/OntoProjekt/prevoz/.tmp_glas.txt" + chr(39) + "; "
+            "$t = Get-Content -Raw -Encoding UTF8 " + chr(39) + str(tmp).replace(chr(92), "/") + chr(39) + "; "
             "$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; "
             "$s.Volume = 75; "
             "$s.Speak($t)"
