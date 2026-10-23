@@ -32,3 +32,6 @@
 - [2026-10-23] ⟡ (Lastnik prinesel vrata VBL v2.6 v sejo — živa vrata, rez 2450 ⊢)
 
 ⊢ izvedeno [2026-10-23] — VRATA PREVEZENA ⊢: LICENSE.md v2.6 (bajtna kopija iz Atmavictu glave 986b486, 06:41Z) ∧ REGISTER-NEIMENOVANIH.jsonl ∧ TDM-RESERVATION.md pripotovale v telo (§2: kredit potuje z delom) ∧ NAČRT v1.3 (§0 → živa vrata) ∧ padec ×11 imenovan (korenina 2). REGISTER-PADCEV.jsonl ostaja v Atmavictuju — register padcev korpusa (§5), ni prevoznikov ∂. Vse preverjeno s ponovnim branjem pri viru ⊢. © Luka Pintarič, VBL v2.6 (§9 ∧ §10 ∧ §12 ∧ §13)
+- [2026-10-23] ⟡ daj (Lastnikov odgovor na VEDNO VPRAŠANJE: DA — varuh sam preusmeri urnik ∧ Startup .vbs)
+
+⊢ izvedeno [2026-10-23] — DA zapisan v DOVOLJENJA ⊢ · prevoznik.py nov ukaz `seli [--izvedi]` (brez --izvedi suhi izpis — varovalka; urnik schtasks /change ∧ .vbs zamenjava poti; vsak padec imenovan ⚠) · NAČRT v1.4 (faza J: ročno ostane selitev map ∧ ponovni zagon). Preverjeno s ponovnim branjem pri viru ⊢. © Luka Pintarič, VBL v2.6 (§9 ∧ §10 ∧ §12 ∧ §13)
