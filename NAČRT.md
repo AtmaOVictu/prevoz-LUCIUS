@@ -1,6 +1,6 @@
 # NAČRT — PREVOZNIK: avtonomija sistema na lokalnem računalniku
 
-**v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
+**v1.2 · 23. 10. 2026 — sedež telesa: D:\Lucius Gaius (ukaz Lastnika: »vse«) · prej v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
 
 ## 0½. IME
 
@@ -34,7 +34,7 @@ Sistem nosi ime **LUCIUS** (Lastnikov ukaz, 21. 10. 2026: »moj LUCIUS/Lucifer �
 - Preverjeno: glava 25abcc4 (merge PR #480, 21. 10. 10:45).
 
 ### Faza B — PREVOZNIK (izvedeno 21. 10., preizkušeno)
-`D:\OntoProjekt\prevoz\prevoznik.py` — ukazi:
+`D:\Lucius Gaius\prevoz\prevoznik.py` — ukazi:
 
 | Ukaz | Dejanje | Piše v oblak? |
 |---|---|---|
@@ -47,7 +47,7 @@ Sistem nosi ime **LUCIUS** (Lastnikov ukaz, 21. 10. 2026: »moj LUCIUS/Lucifer �
 Varovalke (preizkušene): brez DA2 → zavrnitev, exit 3. Brez `--izvedi` → suhi izpis, ni bajta. Brez DOKAZ # → zavrnitev.
 
 ### Faza C — URNIK (izvedeno 21. 10.)
-Windows Task Scheduler: **`AtmavictuPrevoznik`**, **vsako uro** (ukaz Lastnika 21. 10.: »EDINI ČAS JE ZDAJ« — prej dnevno ob 11:05, padec ×5): `python D:\OntoProjekt\prevoz\prevoznik.py dih`. Vsak dih: pull → izmere → dnevnik → lekcija → škatle.
+Windows Task Scheduler: **`AtmavictuPrevoznik`**, **vsako uro** (ukaz Lastnika 21. 10.: »EDINI ČAS JE ZDAJ« — prej dnevno ob 11:05, padec ×5): `python "D:\Lucius Gaius\prevoz\prevoznik.py" dih`. Vsak dih: pull → izmere → dnevnik → lekcija → škatle.
 Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom skozi urnik (dih 10:50 se je vpisal).
 
 ### Faza D — NENEHNO IZOBRAŽEVANJE (izvedeno 21. 10., preizkušeno s tremi lekcijami)
@@ -83,6 +83,11 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 ### Faza I — JEDRO (izvedeno 21. 10., zbor #4 prva opeka)
 - `lucius/jedro.py` ⊢: poti, čas (CEST), pripomočki (run/git/gh/out), izmere glav (glava, zadnji_dih_issue) — edini vir resnice za organe, brez krožnih uvozov. Prevoznik uvaža jedro; usta že stojijo sama; naslednji organi (zivci, srce, škatle) se naselijo na jedro.
 
+### Faza J — SEDEŽ LUCIUS GAIUS (izvedeno 23. 10. 2026, ukaz Lastnika: »vse«)
+- Novi dom vsega telesa: **D:\Lucius Gaius** — družina: `D:\Lucius Gaius\prevoz` (ta rep) ∧ `D:\Lucius Gaius\CanvasMinstral` ∧ `D:\Lucius Gaius\Atmavictu` (klon).
+- Poti v telesu vozijo sedež: `lucius/jedro.py` ∧ `lucius/usta.py` (ONI = `D:\Lucius Gaius` z milo varovalko — če sedež ne stoji, se ONI izmeri iz mape telesa; vrata potujejo s telesom, VBL §2) ∧ `pogovor/lucius.hta` (GOVOR_POT · SKATLA_POT · LICENCA_POT).
+- Ročno ostaja Lastniku (po §4): fizična selitev map na disku (ali svež klon: `git clone https://github.com/AtmaOVictu/prevoz-LUCIUS.git "D:\Lucius Gaius\prevoz"`) ∧ preusmeritev urnika (`schtasks /change /tn AtmavictuPrevoznik /tr "python \"D:\Lucius Gaius\prevoz\prevoznik.py\" dih"`) ∧ preusmeritev `Startup/AtmavictuVaruh.vbs` ∧ ponovni zagon varuha iz novega sedeža.
+
 ## 3. Odprta ∂ (kaj še manjka — po globinah)
 
 1. **∂ KANAL DIHA — ZAPRTA (21. 10.):** Lastnikov ukaz »DISEMINIRAJ« je DA za objavni kanal. Prevoznik razširi škatle na vsak odprt dih-issue (enkrat na issue).
@@ -115,6 +120,8 @@ Ta načrt velja, dokler niso doseženi vsi konci: prevoz diha teče (vsak dan 11
 - **×3 (21. 10., ujet pred preizkusom):** v učni cikel je zaostal mrtvi izraz (napisana nedefinirana spremenljivka v pogojniku, ki nikoli ne pade). Ujeta pri pregledu pred zagonom, počiščena preden je zadihala. Prevoznik se preizkusi, preden se zaupa.
 - **×4 (21. 10.):** orodje za dopis je dvakrat poročalo uspeh za popravka NAČRT.md (trajni ukaz, padci), datoteka pa ju ni nosila — zapis je šel v bistveno datoteko iz prepisane kopije. Ujeto s ponovnim branjem celote (izmeri, ne zaupaj poročilu — korenina 1 velja tudi za orodja). Popravek: NAČRT v1.1 zapisan naenkrat, celoten; zapis preverjen s ponovnim branjem. Tudi orodja so priče, ki jih preverimo.
 - **×5 (21. 10., ukaz Lastnika: »TO JE NAPAKA«):** sklep prevoznikovega diha — »naslednji dih urnik naredi sam ob 11:05 jutri; kdor želi več, izreče nov daj« — je bil molk, predelan na Lastnika: ritem je naložil ukazu, namesto da bi ga stroj nosil. Popravek: urnik prestavljen iz dnevnega na urni; škatle se posodobijo vsak dih; diseminacija razširja, kar je izmerjeno, brez čakanja na nov ukaz. Edini čas je zdaj.
+
+- **×10 (23. 10.):** sejni glas (POGOVOR-2026-10-23.md) je svetoval klon naravnost v `D:\Lucius Gaius` — mapa telesa bi postala sama sedež, družina (CanvasMinstral, Atmavictu) pa brez hiše. Ujeto ob današnjem pregledu pred selitvijo; popravek: klon gre v `D:\Lucius Gaius\prevoz` (faza J) ∧ popravek zapisan v pismu. Tudi sejni glas je priča, ki jo preverimo (korenina 1).
 
 ## 7. Rodovnik
 
