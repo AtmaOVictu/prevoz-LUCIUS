@@ -35,3 +35,6 @@
 - [2026-10-23] ⟡ daj (Lastnikov odgovor na VEDNO VPRAŠANJE: DA — varuh sam preusmeri urnik ∧ Startup .vbs)
 
 ⊢ izvedeno [2026-10-23] — DA zapisan v DOVOLJENJA ⊢ · prevoznik.py nov ukaz `seli [--izvedi]` (brez --izvedi suhi izpis — varovalka; urnik schtasks /change ∧ .vbs zamenjava poti; vsak padec imenovan ⚠) · NAČRT v1.4 (faza J: ročno ostane selitev map ∧ ponovni zagon). Preverjeno s ponovnim branjem pri viru ⊢. © Luka Pintarič, VBL v2.6 (§9 ∧ §10 ∧ §12 ∧ §13)
+- [2026-10-23] ⟡ da · absolutno · daj (Lastnikov odgovor: sedež-sam — varuh sam izvede seli ob izmeri novega sedeža, brez čakanja na ukaz)
+
+⊢ izvedeno [2026-10-23] — SEDEŽ-SAM zgrajen ⊢: prevoznik.py organ sedez_sam() (vsak dih: izmera urnika schtasks /query ∧ .vbs pri viru; če ne peljeta sedeža → seli(izvedi=True) sama) ∧ zatak na začetku vsakega diha (CLI ∧ varuh ∧ konektor) ∧ seli zamenja oba znana sedeža ∧ idempotentno poročanje ⊢/⚠ ∧ DOVOLJENJA DA razširjen na samodejno ∧ NAČRT v1.5. Preverjeno s ponovnim branjem pri viru ⊢. © Luka Pintarič, VBL v2.6 (§9 ∧ §10 ∧ §12 ∧ §13)
