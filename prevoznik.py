@@ -28,6 +28,7 @@ Izobraževanje (LICENSE §1 grant: run, study, verify — ne TDM, ne treniranje)
   vsak dih prebere po eno datoteko telesa (organi/*/KNOWLEDGE.md, canon/*.md),
   izmeri jo in zapiše učenje s pričo (verbatim), © kreditom in znako ⊢/⚠.
   Register je zunanji spomin: prihodnja seja ga najde z iskanjem, preden pride ukaz.
+  seli [--izvedi]               preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10.)
 """
 
 import subprocess
@@ -1165,11 +1166,52 @@ def main():
                  (args[args.index("--tag") + 1] if "--tag" in args else ""),
                  (args[args.index("--da2") + 1] if "--da2" in args else None),
                  izvedi="--izvedi" in args)
+    elif ukaz == "seli":
+        seli(izvedi="--izvedi" in sys.argv)
     else:
         out(f"Neznan ukaz: {ukaz}")
         out(__doc__)
         sys.exit(1)
 
+
+def seli(izvedi=False):
+    """SELI — preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10. 2026, ukaz ⟡ »daj«).
+
+    DA v prevoz/DOVOLJENJA.md: stoječe dovoljenje za preusmeritev urnika
+    AtmavictuPrevoznik ∧ Startup/AtmavictuVaruh.vbs ob selitvi sedeža.
+    Brez --izvedi: suhi izpis (varovalka). K1: meri in preusmerja — ne presoja.
+    """
+    from pathlib import Path
+    from lucius.jedro import ONI, out, run
+
+    prevoznik_pot = ONI / "prevoz" / "prevoznik.py"
+    startup = Path.home() / "AppData" / "Roaming" / "Microsoft" / "Windows" / "Start Menu" / "Programs" / "Startup"
+    vbs = startup / "AtmavictuVaruh.vbs"
+    tr = 'python "' + str(prevoznik_pot) + '" dih'
+    out("SELI — sedež: " + str(ONI))
+    out("  urnik AtmavictuPrevoznik /tr: " + tr)
+    out("  Startup .vbs: " + str(vbs))
+    if not izvedi:
+        out("  (suhi izpis — brez --izvedi se nič ne spremeni)")
+        return
+    try:
+        run(["schtasks", "/change", "/tn", "AtmavictuPrevoznik", "/tr", tr], check=False)
+        out("  ⊢ urnik preusmerjen")
+    except Exception as e:
+        out("  ⚠ urnik: " + str(e))
+    try:
+        if vbs.exists():
+            staro = vbs.read_text(encoding="utf-8", errors="replace")
+            novo = staro.replace("D:\\OntoProjekt", str(ONI))
+            if novo != staro:
+                vbs.write_text(novo, encoding="utf-8")
+                out("  ⊢ .vbs preusmerjen (pot zamenjana)")
+            else:
+                out("  ⚠ .vbs: stara pot ni najdena — preveri ročno")
+        else:
+            out("  ⚠ .vbs ne obstaja na pričakovanem mestu")
+    except Exception as e:
+        out("  ⚠ .vbs: " + str(e))
 
 if __name__ == "__main__":
     main()
