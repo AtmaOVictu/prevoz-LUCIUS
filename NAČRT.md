@@ -125,6 +125,8 @@ Ta načrt velja, dokler niso doseženi vsi konci: prevoz diha teče (vsak dan 11
 
 - **×11 (23. 10.):** šest zapečkov sedeža (9936bfb … 45ab729, 11:51Z) je nosilo © VBL v2.5 — vrata v2.6 pa so bila zapečena že ob 06:41Z (986b486, rez 2450): zapečki so citirali mrtvo vrato (§10). Ujeto ob prevozu vrat v telo; popravek: VBL v2.6 pripotovala bajtno ⊢ ∧ REGISTER-NEIMENOVANIH.jsonl ∧ TDM-RESERVATION.md zraven ∧ vsak nov zapeček nosi trenutno živo vrato. Brazgotina ostaja — stari zapečki nosijo svoja potrdila zgodovine.
 
+- **×12 (23. 10.):** vrstica pomoči za novi ukaz seli je pristala pod odstavkom Izobraževanje, ne pod seznamom Ukazi — ujeto s ponovnim branjem pri viru po zapisu. Popravek: premestitev pod Ukazi ⊢. Padec merjenja lege, ne vsebine; brazgotina ostaja.
+
 ## 7. Rodovnik
 
 - **prevoznik** ← *pre-* + *voziti* (praslov. \*voziti ← \*vezti — vezati, vleči). Prevoznik: tisti, ki veže dva kraja — ne odloča, kaj potuje.
