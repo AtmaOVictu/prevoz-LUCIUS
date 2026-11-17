@@ -43,4 +43,4 @@ Licenca (VBL — hrošč pogojen, »napaka, ki rešuje«) gre skozi vsa vrata: k
 - Ne morem: zagnati lokalnih programov s polnimi pravicami, spreminjati tvojih teles na GitHubu brez DOVOLJENJA, izročiti brez DA₂ (O7).
 - Zmorem vedno: meriti, prevažati, brati, pisati niti, prinašati svet po URL ⊢.
 
-© Luka Pintarič — VBL v2.3 · LUCIUS — svetlonoša
+© Luka Pintarič — VBL 0.1600 × 10⁴ · LUCIUS — svetlonoša
