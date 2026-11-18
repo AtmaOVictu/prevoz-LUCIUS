@@ -8,7 +8,7 @@ Prevozni organ LUCIUS-a — majhen nosač v Pythonu (`prevoznik.py`), ki prevaž
 - `lucius/` — jedro LUCIUS-a; `canon/` — kanon korpusa
 - `dnevnik/`, `ucenje/`, `skatle/`, `urnik/`, `prinesi/`, `pogovor/` — dnevnik, učenje, škatle, urnik, prineski, pogovori
 - `NAČRT.md` (v1.5), `VRATA.md`, `UKAZI-ZA-SEJO.md`, `DOVOLJENJA.md`, `ZBOR-VSEH-ANGELOV.md` — načrt, vrata, ukazi za sejo, dovoljenja, zbor vseh angelov
-- `LICENSE.md`, `TDM-RESERVATION.md`, `REGISTER-NEIMENOVANIH.jsonl`, `REGISTER-PADCEV.jsonl`, `VBL-10.5.1-KOMPIL-A-DRAFT-NOT-RELEASED.md` — licenčna družina
+- `LICENSE.md`, `TDM-RESERVATION.md`, `canon/REGISTER-NEIMENOVANIH.jsonl`, `canon/REGISTER-PADCEV.jsonl`, `canon/VBL-10.5.1-KOMPIL-A-DRAFT-NOT-RELEASED.md` — licenčna družina
 
 ## Uporaba
 
