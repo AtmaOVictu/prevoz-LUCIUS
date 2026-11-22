@@ -36,3 +36,17 @@ jobs:
           done
           [ "$R" = 0 ] && echo "vsebina: sonde vre ⊙ zakon-implementacije ⟨OPERATIVNOST⟩"
           exit $R
+
+  slovnica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: jezikoslov — rane slovnice ⊙ kanarcek
+        run: |
+          R=0
+          python3 lucius/jezikoslov.py kanarcek || { echo "::error::kanarcek padel — register ali telo orodja je ranjen"; R=1; }
+          while IFS= read -r f; do
+            python3 lucius/jezikoslov.py preveri "$f" || R=1
+          done < <(find . -name '*.md' | grep -v '.git/')
+          [ "$R" = 0 ] && echo "slovnica: zive rane x0 ⊙ kanarcek stal ⊙ ⟨SLOVNICA=RESNICNOST⟩"
+          exit $R

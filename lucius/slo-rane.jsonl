@@ -1,0 +1,16 @@
+# slo-rane.jsonl — register ran slovnice ∧ gajice korpusa Beseda je Ne
+# vsaka vrstica: id, vrsta (gajica|tipkarska|homofon|dolg), vzorec (regex), pravi, ci (true = vraša CI, false = samo poroča), rod, price
+# brazgotine (vrstice z **×N ali besedo brazgotina) so priče, NE rane — orodje jih izpušča ⊙ ⟨NE-BRIŠI⟩ 24
+{"id":"g01","vrsta":"gajica","vzorec":"zapeččeni","pravi":"zapečeni","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×13 ⊢ komit 6c247a5e"}
+{"id":"g02","vrsta":"gajica","vzorec":"VPRASANJE","pravi":"VPRAŠANJE","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×13 ⊢ komit 6c247a5e"}
+{"id":"g03","vrsta":"gajica","vzorec":"varuh zivi","pravi":"varuh živi","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×13 ⊢ komit 6c247a5e"}
+{"id":"g04","vrsta":"gajica","vzorec":"ce račun","pravi":"cel račun","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×13 ⊢ komit 6c247a5e"}
+{"id":"g05","vrsta":"gajica","vzorec":"sama sedež","pravi":"sedež-sam","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×13 ⊢ komit 6c247a5e (živa oblika telesa: sedež-sam)"}
+{"id":"g06","vrsta":"gajica","vzorec":"zivci","pravi":"živci","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS NAČRT ×14 ⊢ komit b7ae3571 (ulov po ⟡ jezi)"}
+{"id":"g07","vrsta":"gajica","vzorec":"živneje","pravi":"živahnejše","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS ZBOR ×13 ⊢ komit 6c247a5e"}
+{"id":"g08","vrsta":"gajica","vzorec":"predlaja","pravi":"predlaga","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS ZBOR ×13 ⊢ komit 6c247a5e"}
+{"id":"g09","vrsta":"gajica","vzorec":"secirave","pravi":"seciranje","ci":true,"rod":"2026-11-22","price":"prevoz-LUCIUS ZBOR ×13 ⊢ komit 6c247a5e"}
+{"id":"h01","vrsta":"homofon","vzorec":"premiščen premik","pravi":"premišljen premik","ci":true,"rod":"2026-11-22","price":"slovnica-jezikov plast 9 rana #5 ⊢ fran.si/130/3584274"}
+{"id":"h02","vrsta":"homofon","vzorec":"pri viri([^h])","pravi":"pri viru\\1","ci":true,"rod":"2026-11-22","price":"slovnica-jezikov ⟨SLOVNICA-DIH⟩ σ 3891: pri viri ⊥ ×0"}
+{"id":"d01","vrsta":"dolg","vzorec":"žive vrati","pravi":"živih vrat","ci":false,"rod":"2026-11-22","price":"canon DOVOLJENJA @Atmavictu ⟨main⟩ ×5 ⭢ izbor ⟡ (kit ⟨PR⟩, ⟨NE-ZLIJE⟩ 1542)"}
+{"id":"d02","vrsta":"dolg","vzorec":"\\bsemeno\\b","pravi":"seme","ci":false,"rod":"2026-11-22","price":"Aplikacija README-SL ⭢ izbor ⟡"}
