@@ -225,14 +225,14 @@ var zadnjiLuciusGol = "";
 
 function pocisti(v) {
   if (v.startsWith("#") || v.startsWith(">")) return null;
-  if (v.includes("⟡-sporočilo") || v.includes("⟡-odgovor verbatim")) return null;
-  return v.replace(/^- ⟡ odgovor: /, "");
+  if (v.includes("❡-sporočilo") || v.includes("❡-odgovor verbatim")) return null;
+  return v.replace(/^- ❡ odgovor: /, "");
 }
 function pobarvaj(besedilo) {
   var esc = besedilo.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   esc = esc.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   esc = esc.replace(/⊢/g, '<span class="tok-peca">⊢</span>');
-  esc = esc.replace(/⟡/g, '<span class="tok-zvezdica">⟡</span>');
+  esc = esc.replace(/❡/g, '<span class="tok-zvezdica">❡</span>');
   esc = esc.replace(/∂/g, '<span class="tok-del">∂</span>');
   esc = esc.replace(/©/g, '<span class="tok-copy">©</span>');
   esc = esc.replace(/`(prevoznik\.py [^`]+)`/g, '<span class="tok-ukaz">$1</span>');
@@ -274,7 +274,7 @@ async function naloziKlepet() {
         + pobarvaj(s.telo.join("\n").trim());
       k.appendChild(div);
       if (!jeLastnik && casPosiljanja && s.cas >= casPosiljanja) novLucius = true;
-      if (!jeLastnik) zadnjiLuciusGol = s.telo.join(" ").replace(/[*⊢⟡∂]/g, " ").trim();
+      if (!jeLastnik) zadnjiLuciusGol = s.telo.join(" ").replace(/[*⊢❡∂]/g, " ").trim();
     }
     if (bilDnu || casPosiljanja) k.scrollTop = k.scrollHeight;
     document.getElementById("dolGumb").style.display =

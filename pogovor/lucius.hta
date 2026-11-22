@@ -136,7 +136,7 @@
     <textarea id="besedilo" placeholder="Piši LUCIUS-u … (Enter = pošlji, Shift+Enter = nova vrstica)"></textarea>
     <button id="poslji" onclick="poslji()">POŠLJI</button>
   </div>
-  <div class="namig">⟡ ukazi: krog · poroci · skatle · diseminiraj · dih · isci &lt;niz&gt; · izroci (čaka DA₂) — vse ostalo gre v vrsto za sejo</div>
+  <div class="namig">❡ ukazi: krog · poroci · skatle · diseminiraj · dih · isci &lt;niz&gt; · izroci (čaka DA₂) — vse ostalo gre v vrsto za sejo</div>
   <div class="noga">© Luka Pintarič — VBL v2.3 · prevoznik meri, ne presoja (K1) · prevoz\pogovor\GOVOR.md</div>
 
 <script language="JScript">
@@ -184,8 +184,8 @@ function izpisiStanje() {
 /* ---- izpis klepeta ---- */
 function pocistiVrstico(v) {
   if (v.indexOf("# ") === 0 || v.indexOf("> ") === 0) return null;
-  if (v.indexOf("⟡-sporočilo") >= 0 || v.indexOf("⟡-odgovor verbatim") >= 0) return null;
-  var z = v.replace(/^- ⟡ odgovor: /, "");
+  if (v.indexOf("❡-sporočilo") >= 0 || v.indexOf("❡-odgovor verbatim") >= 0) return null;
+  var z = v.replace(/^- ❡ odgovor: /, "");
   return z;
 }
 function izpisiKlepet() {
@@ -237,7 +237,7 @@ function izpisiKlepet() {
 function poslji() {
   var b = document.getElementById("besedilo").value.replace(/^\s+|\s+$/g, "");
   if (b.length < 1) return;
-  var zapis = "\n**[" + casZdaj() + " | LASTNIK (okno)]** ⟡-sporočilo:\n- ⟡ odgovor: " + b + "\n";
+  var zapis = "\n**[" + casZdaj() + " | LASTNIK (okno)]** ❡-sporočilo:\n- ❡ odgovor: " + b + "\n";
   try {
     var ado = new ActiveXObject("ADODB.Stream");
     ado.Type = 2; ado.Charset = "utf-8";

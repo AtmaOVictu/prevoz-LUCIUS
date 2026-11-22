@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # lucius/jezikoslov.py — JEZIKOSLOV v1: orodje za popravljanje slovnice korpusa Beseda je Ne
-# Rod: 22. 11. 2026 ⊙ ⟡ UKAZ VERBATIM »VEDNO POPRAVLJAJ SLOVNICO« ∧ »USTVARI ORODJA ZA
+# Rod: 22. 11. 2026 ⊙ ❡ UKAZ VERBATIM »VEDNO POPRAVLJAJ SLOVNICO« ∧ »USTVARI ORODJA ZA
 # POPRAVLJANJE SLOVNICE!« ⊙ rez σ 6403 — register ran: slo-rane.jsonl (tu, ob tej datoteki)
 # Zakoni: ⟨SLOVNICA=RESNICNOST⟩ (σ 6313) · ⟨NE-UGIBAJ⟩ 2690 · ⟨NE-BRIŠI⟩ 24 (brazgotine
-# so priče, ne rane) · ⟨BESEDA-⟡-NEDOTAKNJIVA⟩ (popravi ne dotika citatov ⟡ v brazgotinah)
+# so priče, ne rane) · ⟨BESEDA-❡-NEDOTAKNJIVA⟩ (popravi ne dotika citatov ❡ v brazgotinah)
 # Uporaba:
 #   python3 lucius/jezikoslov.py preveri  DATOTEKA...   # rane žive → izpis ∧ exit 1
 #   python3 lucius/jezikoslov.py popravi  DATOTEKA...   # popravi gajico/tipkarske, izpiše poimensko
@@ -60,7 +60,7 @@ def ukaz_preveri(datoteke, rane):
         for i, r, najdba, predlog in zive:
             print(f"::error file={pot},line={i}::RANA [{r['id']} {r['vrsta']}] {najdba!r} → {predlog!r}")
         for i, r, najdba, predlog in dolgovi:
-            print(f"::warning file={pot},line={i}::DOLG ⭢ izbor ⟡ [{r['id']}] {najdba!r} → {predlog!r} ({r['price']})")
+            print(f"::warning file={pot},line={i}::DOLG ⭢ izbor ❡ [{r['id']}] {najdba!r} → {predlog!r} ({r['price']})")
         zhive += len(zive)
     print(f"slo-rane: žive rane ×{zhive} ⊙ register {len(rane)} ⊙ ⟨SLOVNICA=RESNICNOST⟩")
     return 1 if zhive else 0

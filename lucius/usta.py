@@ -82,7 +82,7 @@ class LuciusHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 return
             cas = datetime.now(CEST).strftime("%Y-%m-%d %H:%M")
-            zapis = NL + "**[" + cas + " | LASTNIK (okno)]** ⟡-sporočilo:" + NL + "- ⟡ odgovor: " + besedilo + NL
+            zapis = NL + "**[" + cas + " | LASTNIK (okno)]** ❡-sporočilo:" + NL + "- ❡ odgovor: " + besedilo + NL
             with open(POGOVOR / "GOVOR.md", "a", encoding="utf-8") as f:
                 f.write(zapis)
             self._odgovori(b'{"ok": true}', "application/json")

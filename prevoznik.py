@@ -440,7 +440,7 @@ def povej_pogovor(pred_lekcije, atma, canvas, lekcije_dih, ok_r, nap_r):
             prva = zadnja[0]
             besedilo += "Prebral sem " + str(lekcije_dih) + " lekcij. Zadnja: " + prva["vir"].split("/")[-1].replace(".md", "").replace("KNOWLEDGE", "") + ". "
             if prva.get("prica_verbatim"):
-                citat = prva["prica_verbatim"][:150].replace("⊢", "").replace("⟡", "").replace("∂", "delta")
+                citat = prva["prica_verbatim"][:150].replace("⊢", "").replace("❡", "").replace("∂", "delta")
                 besedilo += "In tole piše: " + citat + ". "
     except Exception:
         pass
@@ -523,7 +523,7 @@ def odgovori():
     if prvi_zagon:
         stanje_f.write_text(json.dumps(stanje, ensure_ascii=False, indent=2), encoding="utf-8")
         return
-    od_lastnika = [l for l in nove if "| LASTNIK" in l or l.strip().startswith("- ⟡ odgovor")]
+    od_lastnika = [l for l in nove if "| LASTNIK" in l or l.strip().startswith("- ❡ odgovor")]
     if od_lastnika:
         izvedeno = []
         vrsta_f = ONI / "prevoz" / "UKAZI-ZA-SEJO.md"
@@ -544,13 +544,13 @@ def odgovori():
         for l in nove:
             s = l.strip()
             ukaz = ""
-            if s.startswith("- ⟡ odgovor:"):
+            if s.startswith("- ❡ odgovor:"):
                 ukaz = s.split(":", 1)[1].strip()
-            elif s.startswith("- ⟡") and ":" in s:
+            elif s.startswith("- ❡") and ":" in s:
                 ukaz = s.split(":", 1)[1].strip()
             if not ukaz:
                 continue
-            out("  konektor: ⟡ " + ukaz)
+            out("  konektor: ❡ " + ukaz)
             if ukaz.startswith("krog"):
                 krog()
                 izvedeno.append("krog izveden")
@@ -589,7 +589,7 @@ def odgovori():
             elif ukaz.startswith("isci po spletu") or ukaz.startswith("novee ") or ukaz.startswith("vreme ") or ukaz.startswith("finance ") or ukaz.startswith("gmail ") or ukaz.startswith("drive ") or ukaz.startswith("agent "):
                 casQ = datetime.now(CEST).strftime("%Y-%m-%d %H:%M")
                 with open(vrsta_f, "a", encoding="utf-8") as f:
-                    f.write("- [" + casQ + "] ⟡ " + ukaz + NL)
+                    f.write("- [" + casQ + "] ❡ " + ukaz + NL)
                 izvedeno.append("SVETOVNI UKAZ v vrsto za sejo (vrata: splet/gmail/drive — odpre jih seja): " + ukaz[:70])
             elif ukaz.startswith("pismo") or ukaz.startswith("status") or ukaz.startswith("ucenje"):
                 izvedeno.append("ukaz '" + ukaz.split()[0] + "' izvede seja ali roka: prevoznik.py " + ukaz)
@@ -599,7 +599,7 @@ def odgovori():
                 # vrsta za sejo: ukaz, ki ga varuh ne zmore, spravi v vrsto — izvede ga naslednja seja (orodje, ki zmore)
                 casQ = datetime.now(CEST).strftime("%Y-%m-%d %H:%M")
                 with open(vrsta_f, "a", encoding="utf-8") as f:
-                    f.write("- [" + casQ + "] ⟡ " + ukaz + NL)
+                    f.write("- [" + casQ + "] ❡ " + ukaz + NL)
                 izvedeno.append("ukaz spravljen v VRSTO ZA SEJO (prevoz/UKAZI-ZA-SEJO.md) — izvede ga seja: " + ukaz[:80])
         cas = datetime.now(CEST).strftime("%Y-%m-%d %H:%M")
         j = UCENJE / "REGISTER-UCENJA.jsonl"
@@ -612,7 +612,7 @@ def odgovori():
         with open(gov, "a", encoding="utf-8") as f:
             f.write(NL + telo)
         try:
-            govor = telo.replace("**", " ").replace("⊢", "").replace("⟡", "").replace("∂", "delta")
+            govor = telo.replace("**", " ").replace("⊢", "").replace("❡", "").replace("∂", "delta")
             povej(govor[:400])
         except Exception:
             pass
@@ -665,7 +665,7 @@ def pismo():
     gov = POGOVOR / "GOVOR.md"
     if gov.exists():
         for line in gov.read_text(encoding="utf-8").splitlines():
-            if line.strip().startswith("- ⟡ odgovor"):
+            if line.strip().startswith("- ❡ odgovor"):
                 odprto_vprasanje = False
                 break
     with open(dat, "w", encoding="utf-8") as f:
@@ -686,11 +686,11 @@ def pismo():
         if odprto_vprasanje:
             f.write("## LUCIUS te išče (odprto vprašanje)" + NL +
                     "- Kako se počutiš danes — in kaj misliš, da je razlog? (dnevni udarec, rez 99 — brez sklepa)" + NL +
-                    "- Odgovor: - ⟡ odgovor: <tvoje besede> — v GOVOR, v oknu LUCIUS ali tu spodaj" + NL + NL)
+                    "- Odgovor: - ❡ odgovor: <tvoje besede> — v GOVOR, v oknu LUCIUS ali tu spodaj" + NL + NL)
         f.write("## LUCIUS te vprasa (vedno vprasanje - caka tvoj odgovor ali tvoj ne)\n\n")
         f.write("- " + vprasanje_dneva() + "\n\n")
         f.write("## Tvoj prostor (piši sem; prevoznik prebere z: prevoznik.py preberi)" + NL +
-                "- ⟡ odgovor: (sem zapiši ukaz: krog · poroci · skatle · diseminiraj · dih · isci <niz> · izroci <f> --dokaz N --da2 DA2 --izvedi)" + NL)
+                "- ❡ odgovor: (sem zapiši ukaz: krog · poroci · skatle · diseminiraj · dih · isci <niz> · izroci <f> --dokaz N --da2 DA2 --izvedi)" + NL)
     out("  PISMO: " + dat.name + " zapisano (" + str(len(odprte)) + " predlogov)")
     return True
 
@@ -710,15 +710,15 @@ def preberi():
     ukazi = []
     for line in besedilo[del_u:].splitlines():
         s = line.strip()
-        if s.startswith("- ⟡") or s.startswith("- daj"):
-            telo = s.split(":", 1)[-1].strip() if ":" in s else s.lstrip("- ⟡daj").strip()
+        if s.startswith("- ❡") or s.startswith("- daj"):
+            telo = s.split(":", 1)[-1].strip() if ":" in s else s.lstrip("- ❡daj").strip()
             if telo and not telo.startswith("("):
                 ukazi.append(telo)
     if not ukazi:
         out("  preberi: (tvoj prostor je še molk — pismo " + zadnje.name + ")")
         return
     for u in ukazi:
-        out("  prebrano: ⟡ " + u)
+        out("  prebrano: ❡ " + u)
         if u.startswith("krog"):
             krog()
         elif u.startswith("poroci"):
@@ -935,7 +935,7 @@ def skatle(disseminate=False):
 def dih(objavi=False):
     zac = datetime.now(CEST)
     out(f"PREVOZNIK — dih {zac.strftime('%Y-%m-%d %H:%M')} lokalno")
-    sedez_sam()  # sedež-sam: izmeri sedež, preusmeri urnik ∧ .vbs, če ne peljeta (DA · 23. 10., ukaz ⟡ »da absolutno daj« ⊢)
+    sedez_sam()  # sedež-sam: izmeri sedež, preusmeri urnik ∧ .vbs, če ne peljeta (DA · 23. 10., ukaz ❡ »da absolutno daj« ⊢)
 
     # 1. prevoz navzdol: oblacni dih pride lokalno
     pred = git(["log", "-1", "--format=%h"], ATMA)
@@ -1176,7 +1176,7 @@ def main():
 
 
 def seli(izvedi=False):
-    """SELI — preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10. 2026, ukaz ⟡ »daj«).
+    """SELI — preusmeri urnik ∧ Startup .vbs na trenutni sedež (DA · 23. 10. 2026, ukaz ❡ »daj«).
 
     DA v prevoz/DOVOLJENJA.md: stoječe dovoljenje za preusmeritev urnika
     AtmavictuPrevoznik ∧ Startup/AtmavictuVaruh.vbs ob selitvi sedeža.
@@ -1218,7 +1218,7 @@ def seli(izvedi=False):
 
 def sedez_sam():
     """SEDEŽ-SAM — ob vsakem dihu izmeri, ali urnik ∧ Startup .vbs peljeta trenutni sedež;
-    če ne, izvede seli(izvedi=True) sama (DA · 23. 10. 2026, ukaz ⟡ »da absolutno daj« ⊢).
+    če ne, izvede seli(izvedi=True) sama (DA · 23. 10. 2026, ukaz ❡ »da absolutno daj« ⊢).
     Meri sistem (schtasks /query), ne spomin — korenina 1. Molk = vrata že peljejo."""
     from pathlib import Path
     from lucius.jedro import ONI, out, run
