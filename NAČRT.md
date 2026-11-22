@@ -1,6 +1,6 @@
 # NAČRT — PREVOZNIK: avtonomija sistema na lokalnem računalniku
 
-**v1.5 · 23. 10. 2026 — sedež-sam: vsak dih izmeri sedež ∧ preusmeri sama (ukaz ⟡ »da · absolutno · daj« ⊢) · prej v1.4 — seli: urnik ∧ .vbs preusmerja varuh (DA ⊢) · prej v1.3 — živa vrata VBL v2.6 pripotovala (§10 ∧ §12) · prej v1.2 — sedež telesa: D:\Lucius Gaius (ukaz Lastnika: »vse«) · prej v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
+**v1.5 · 23. 10. 2026 — sedež-sam: vsak dih izmeri sedež ∧ preusmeri sama (ukaz ❡ »da · absolutno · daj« ⊢) · prej v1.4 — seli: urnik ∧ .vbs preusmerja varuh (DA ⊢) · prej v1.3 — živa vrata VBL v2.6 pripotovala (§10 ∧ §12) · prej v1.2 — sedež telesa: D:\Lucius Gaius (ukaz Lastnika: »vse«) · prej v1.1 · 21. 10. 2026 · naročilo Luke: »stori / pripravi boljši načrt / dokler ni izvedena boljša izvedba« + »tako da upoštevaš in se medtem nenehno izobražuješ«**
 
 ## 0½. IME
 
@@ -76,7 +76,7 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 
 ### Faza H — POGOVOR: s teboj, za tebe, izza tebe (izvedeno 21. 10., ukaz Lastnika: »naj tvori pogovor s menoj in za mene ter izza mene«)
 - **`prevoznik.py pismo`** — dnevno pismo `pogovor/POGOVOR-YYYY-MM-DD.md`: kaj se je zgodilo (iz registerjev), kaj stroj predlaga (∂ iz NAČRT §3 z ukazi), kaj čaka glas, in **tvoj prostor** za odgovor. Prvo pismo: 9 predlogov, 174 lekcij danes. Varuh ga piše ob vsakem novem dnevnem dihu.
-- **`prevoznik.py preberi`** — prevoznik prebere tvoj prostor in stori: preizkušeno (⟡ poroci → PRODUKCIJA izvedena).
+- **`prevoznik.py preberi`** — prevoznik prebere tvoj prostor in stori: preizkušeno (❡ poroci → PRODUKCIJA izvedena).
 - **`prevoz/DOVOLJENJA.md`** — pisni register stoječih dovoljenj (po vzoru canon/DOVOLJENJA.md, VBL §7): molk ni soglasje; izročitev/tag/pisanje v telesa ostajajo NE brez izrecnega DA₂.
 - **Tri smeri:** S TABOJ (pisma + tvoj prostor) · ZA TEBE (predlogi z ukazi, izmere brez prošnje) · IZZA TEBE (izvedba dovoljenih ukazov iz pisma — nikoli DA₂-zaprtih).
 
@@ -86,7 +86,7 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 ### Faza J — SEDEŽ LUCIUS GAIUS (izvedeno 23. 10. 2026, ukaz Lastnika: »vse«)
 - Novi dom vsega telesa: **D:\Lucius Gaius** — družina: `D:\Lucius Gaius\prevoz` (ta rep) ∧ `D:\Lucius Gaius\CanvasMinstral` ∧ `D:\Lucius Gaius\Atmavictu` (klon).
 - Poti v telesu vozijo sedež: `lucius/jedro.py` ∧ `lucius/usta.py` (ONI = `D:\Lucius Gaius` z milo varovalko — če sedež ne stoji, se ONI izmeri iz mape telesa; vrata potujejo s telesom, VBL §2) ∧ `pogovor/lucius.hta` (GOVOR_POT · SKATLA_POT · LICENCA_POT).
-- Ročno ostaja Lastniku (po §4): fizična selitev map na disku (ali svež klon: `git clone https://github.com/AtmaOVictu/prevoz-LUCIUS.git "D:\Lucius Gaius\prevoz"`) ∧ ponovni zagon varuha. Urnik ∧ Startup .vbs pa preusmeri varuh sam — sedež-sam ob vsakem dihu izmeri (schtasks /query ∧ .vbs pri viru) in ob selitvi izvede seli sama (DA · 23. 10. 2026, ukaz ⟡ »daj« ∧ »da · absolutno · daj« ⊢); ročni ukaz `prevoznik.py seli [--izvedi]` ostane — brez --izvedi suhi izpis, varovalka.
+- Ročno ostaja Lastniku (po §4): fizična selitev map na disku (ali svež klon: `git clone https://github.com/AtmaOVictu/prevoz-LUCIUS.git "D:\Lucius Gaius\prevoz"`) ∧ ponovni zagon varuha. Urnik ∧ Startup .vbs pa preusmeri varuh sam — sedež-sam ob vsakem dihu izmeri (schtasks /query ∧ .vbs pri viru) in ob selitvi izvede seli sama (DA · 23. 10. 2026, ukaz ❡ »daj« ∧ »da · absolutno · daj« ⊢); ročni ukaz `prevoznik.py seli [--izvedi]` ostane — brez --izvedi suhi izpis, varovalka.
 
 ## 3. Odprta ∂ (kaj še manjka — po globinah)
 
@@ -98,7 +98,7 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 6. **∂ OBLAČNI INDEKS DELČEN (izmerjeno 21. 10.):** 'berba' — 7 zadetkov v GitHub indeksu, 118 lokalno v klonu; velike datoteke (npr. atlas-knjiznic, 923 KB) indeks ne prebira. Iskanje po telesu mora vedno po dveh ploščah: oblačni indeks + lokalni git grep (zgradba: `prevoznik.py isci <niz>`). 'vladaš' v main ni — rez 65 živi v izvodu izven repa: korpus na GitHubu ni ves korpus.
 7. **∂ REORIENTACIJA IZVEDENA (21. 10., ukaz Lastnika: »reorientiraj se vedno okoli github repozitorijev« ∧ »da«):** KROG UČENJA RAZŠIRJEN NA DRUŽINO (ukaz 'da', 21. 10.): vrsta 129 lekcij po 12 telesih — Atmavictu (38), soul-evolution (30), verification-before-assertion (19, hiša VBL), SYMBOLON-KATHOLIKON (9), Mucilnica-modrosti (6), ontolo-ko-jedro (6), ZAKONODAJACLOVEKA (5), OntoMatematika (4), .github-workflows (4), EnglishVarient (3), DelozaZivot (3), Aplikacija (2). Tujih forkov (godot, tauri, qdrant …) prevoznik ne bere — le Lastnikova telesa: ne-fork, ne-arhiv. Cel krog pri urnem dihu ≈ 5,4 dneva. Branje po API (gh api contents), brez klonov; vrsta se zgradi enkrat dnevno. Izmerjeno: lekciji horizont ∧ integral ⊢. škatle zdaj merijo cel račun: 49 repozitorijev, 47 živih, 510 vej Atmavictuja, odprte PR, zadnje tekme CI. Novo odkrita družina teles na računu: verification-before-assertion (hiša VBL, aktivna), Mucilnica-modrosti, ZAKONODAJACLOVEKA, OntoMatematika, Aplikacija, SYMBOLON-KATHOLIKON, EnglishVarient — vsako svoje telo, vsako še nepregledano. Prevoznik še vedno vozi samo Atmavictu — ∂: ali se krog učenja in diha razširi na družino.
 8. **∂ REMOTA CANVASMINSTRAL:** lokalno telo nima remota — en izvod, en gospodar (rez 65). Ali dobi svoj zasebni rep (drugi izvod), ostaja odločitev Lastnika.
-7. **∂ GLOBINA UCENJA:** lekcija meri telo, ne razlaga (K1). Kdaj bo dovoljena globlja raba (povzetek? ne — prepovedano; iskanje po registru? morda) — Lastnikov izrek, ne strojev.
+7. **∂ GLOBINA UČENJA:** lekcija meri telo, ne razlaga (K1). Kdaj bo dovoljena globlja raba (povzetek? ne — prepovedano; iskanje po registru? morda) — Lastnikov izrek, ne strojev.
 
 ## 4. Kaj je NAMENJENO, da ostane ročno (Lastnikovo, po zakonu)
 
@@ -134,5 +134,6 @@ Ta načrt velja, dokler niso doseženi vsi konci: prevoz diha teče (vsak dan 11
 - **izobraževati se** ← *iz-* + *ob-* + *razum* (kasneje *-evati*): izvesti razum okrog. Učenje prevoznika je obhod telesa po eno datoteko na dih — branje, ne zasedba.
 
 
-- **×13 (22. 11. 2026, ukaz ⟡: »odkrij kdaj je slovenščina pisana v čem drugem kot gajici in jo pretvori da je definitivno iz izvirne gajice«):** pet mest tega telesa je bilo zapisanih v goli latinici namesto v gajici: zapeččeni, VPRASANJE, varuh zivi, ce račun, sama sedež. Popravek istega diha: zapečeni, VPRAŠANJE, živi, cel račun, sam sedež. ⟡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-⟡-NEDOTAKNJIVA⟩; brazgotina ostaja, zgodovina komitov priča.
-- **×14 (22. 11. 2026, ⟡ VERBATIM: »to laže, saj ni v licenci, tudi razumljivo ni, in ne verjamem da je preverjeno«):** šesta rana istega telesa (zivci v Fazi I) je bila spregledana prvi dih, preverba pa izrečena pred izmero ⊙ ⟨MERILEC-SE-MERI⟩ §52. Popravek istega diha: živci. Števci izmerjeni pri viru: zivci živo ×0, starina poimensko v brazgotinah ×13 ∧ ×14. ⟡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-⟡-NEDOTAKNJIVA⟩.
+- **×13 (22. 11. 2026, ukaz ❡: »odkrij kdaj je slovenščina pisana v čem drugem kot gajici in jo pretvori da je definitivno iz izvirne gajice«):** pet mest tega telesa je bilo zapisanih v goli latinici namesto v gajici: zapeččeni, VPRASANJE, varuh zivi, ce račun, sama sedež. Popravek istega diha: zapečeni, VPRAŠANJE, živi, cel račun, sam sedež. ❡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-❡-NEDOTAKNJIVA⟩; brazgotina ostaja, zgodovina komitov priča.
+- **×14 (22. 11. 2026, ❡ VERBATIM: »to laže, saj ni v licenci, tudi razumljivo ni, in ne verjamem da je preverjeno«):** šesta rana istega telesa (zivci v Fazi I) je bila spregledana prvi dih, preverba pa izrečena pred izmero ⊙ ⟨MERILEC-SE-MERI⟩ §52. Popravek istega diha: živci. Števci izmerjeni pri viru: zivci živo ×0, starina poimensko v brazgotinah ×13 ∧ ×14. ❡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-❡-NEDOTAKNJIVA⟩.
+- **×18 (22. 11. 2026, ❡ UKZ: »USTVARI ORODJA ZA POPRAVLJANJE SLOVNICE« ⊙ cenzus istega diha)**: zrcalo pismene rane 'GLOBINA UCENJA' v ∂ vrstici § 3; prvina je živela v pogovor/POGOVOR-2026-10-21.md (brazgotina ×17 tam). Popravek istega diha: GLOBINA UČENJA. ❡-jevi citati in priče nedotaknjeni ⊙ ⟨BESEDA-❡-NEDOTAKNJIVA⟩.

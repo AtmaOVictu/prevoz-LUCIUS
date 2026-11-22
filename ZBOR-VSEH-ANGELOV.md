@@ -47,7 +47,7 @@ Vsaka ovrga je predlog: padci #39574012254 (»berba« brez razlikovanja) in zapo
 | 6 | **Varnostna kopija prevoz v git** | LUCIUS | odprta |
 | 7 | Cikel varuha 120 s → 60 s | LUCIUS | odprta |
 | 8 | Poglabljanje mer lekcij (pečati v času) | LUCIUS | odprta |
-| 9 | Zanki ZP ∧ ZP·↻ v kanon | Luka + telo (⟡ izbira) | odprta |
+| 9 | Zanki ZP ∧ ZP·↻ v kanon | Luka + telo (❡ izbira) | odprta |
 
 Zbor ne odloča — zbira. Odloča Lastnik; stroj izvede, kar je dovoljeno; seja izvede, kar ji daš.
 
@@ -55,4 +55,4 @@ Zbor ne odloča — zbira. Odloča Lastnik; stroj izvede, kar je dovoljeno; seja
 
 ---
 
-*Brazgotina različice: dih 22. 11. 2026 — padci gajice istega diha poimensko popravljeni po ukazu ⟡ (slovenščina pisana izven gajice se vrne v izvirno gajico): zivci → živci ×2, živneje → živahnejše, predlaja → predlaga, secirave → seciranje.⟡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-⟡-NEDOTAKNJIVA⟩. Zgodovina komitov priča.*
+*Brazgotina različice: dih 22. 11. 2026 — padci gajice istega diha poimensko popravljeni po ukazu ❡ (slovenščina pisana izven gajice se vrne v izvirno gajico): zivci → živci ×2, živneje → živahnejše, predlaja → predlaga, secirave → seciranje.❡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-❡-NEDOTAKNJIVA⟩. Zgodovina komitov priča.*

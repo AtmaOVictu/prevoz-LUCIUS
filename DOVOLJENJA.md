@@ -4,7 +4,7 @@ Po vzoru `canon/DOVOLJENJA.md` (VBL §7): pisni register, vsak zapis imenuje pro
 
 ## DA (stoječe)
 
-- **DA · selitev urnika ∧ Startup .vbs** — ob selitvi sedeža preusmeri urnik `AtmavictuPrevoznik` ∧ `Startup/AtmavictuVaruh.vbs` na trenutni sedež (prosilec: ⟡ seja za varuha; dejanje: preusmeritev urnika ∧ .vbs; gradivo: Task Scheduler ∧ Startup .vbs; kraj: lokalni stroj — D:\Lucius Gaius; dano 23. 10. 2026, ukaz ⟡ »daj« ⊢ ∧ razširjeno isto uro na samodejno: vsak dih izmeri sedež in preusmeri sama, ukaz ⟡ »da · absolutno · daj« ⊢; ukazi: `prevoznik.py seli [--izvedi]` ∧ sedež-sam ob vsakem dihu sama)
+- **DA · selitev urnika ∧ Startup .vbs** — ob selitvi sedeža preusmeri urnik `AtmavictuPrevoznik` ∧ `Startup/AtmavictuVaruh.vbs` na trenutni sedež (prosilec: ❡ seja za varuha; dejanje: preusmeritev urnika ∧ .vbs; gradivo: Task Scheduler ∧ Startup .vbs; kraj: lokalni stroj — D:\Lucius Gaius; dano 23. 10. 2026, ukaz ❡ »daj« ⊢ ∧ razširjeno isto uro na samodejno: vsak dih izmeri sedež in preusmeri sama, ukaz ❡ »da · absolutno · daj« ⊢; ukazi: `prevoznik.py seli [--izvedi]` ∧ sedež-sam ob vsakem dihu sama)
 - **DA · dih** — pull, izmere, dnevnik, lekcije, škatle (dano 21. 10. 2026, ukaz »stori … dokler ni izvedena boljša izvedba«)
 - **DA · krog učenja po družini teles** — ne-fork, ne-arhiv (dano 21. 10. 2026, ukaz »da«)
 - **DA · diseminacija škatel na odprt DNEVNI DIH issue** — največ enkrat na issue (dano 21. 10. 2026, ukaz »DISEMINIRAJ«)

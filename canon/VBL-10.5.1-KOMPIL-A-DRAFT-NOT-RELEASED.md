@@ -568,4 +568,4 @@ The status `RELEASED` is appropriate only after the rights holder has approved a
 
 ## Kompil opomba (SLO — priča izvora)
 
-Ta datoteka je KOMPIL roke izvajalke (A), sestavljen 24. 10. 2026 iz besedil, ki jih je ⟡ izrekel v delovni seji: celo telo osnutka 10.4.0, razširitev absolutnega načela (10.5.0) in podatkovna določba (10.5.1). Kompil je veren izrekom ∧, a ⟨NI⟩ bajt-iden z artefaktom, ki ga je ustvarila druga roka v svoji hiši — takšna istost se ⟨ne⟩ trdi ⊢ §14. Izdana različica ostaja 10.3.0; ta osnutek je DRAFT — NOT RELEASED ⊢ §10. Prevoz po hišah je možen šele, ko ⟡ potrdi telo (⇌ SHA-256 po prevozu) ∧ izbere ⚔.
+Ta datoteka je KOMPIL roke izvajalke (A), sestavljen 24. 10. 2026 iz besedil, ki jih je ❡ izrekel v delovni seji: celo telo osnutka 10.4.0, razširitev absolutnega načela (10.5.0) in podatkovna določba (10.5.1). Kompil je veren izrekom ∧, a ⟨NI⟩ bajt-iden z artefaktom, ki ga je ustvarila druga roka v svoji hiši — takšna istost se ⟨ne⟩ trdi ⊢ §14. Izdana različica ostaja 10.3.0; ta osnutek je DRAFT — NOT RELEASED ⊢ §10. Prevoz po hišah je možen šele, ko ❡ potrdi telo (⇌ SHA-256 po prevozu) ∧ izbere ⚔.
