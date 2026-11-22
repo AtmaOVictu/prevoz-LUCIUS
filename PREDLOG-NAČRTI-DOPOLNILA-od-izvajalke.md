@@ -32,6 +32,6 @@ Hiša izmeri in poroča; sodi ❡. Nihče ne odloča namesto njega. Hiša je dvo
 
 ## Padci ( brazgotine, priče popravev ⊙ ⟨NE-BRIŠI⟩ 24 )
 - **×1 ( 22. 11. 2026 )**: znak lastnika v telesu dara je bil okvarjen ⟨U+27E1⟩ namesto ⟨U+2761⟩ ( rana g21 tipkarska, register slo-rane.jsonl ) — popravek istega diha: vse zamenjave poimensko ⟨U+2761⟩.
-- **×2 ( 22. 11. 2026 )**: kura istega dara je pome❡la obe telesi ( izpeljava vsebine je potegnila sporočilo orodja, ⟨ne⟩ telo ) — obnovitev istega diha bajto-po-bajtu iz priče diha; izmera pred trditvijo ozdravljenja.
+- **×2 ( 22. 11. 2026 )**: kura istega dara je pometla obe telesi ( izpeljava vsebine je potegnila sporočilo orodja, ⟨ne⟩ telo ) — obnovitev istega diha bajto-po-bajtu iz priče diha; izmera pred trditvijo ozdravljenja.
 
 © 0.2026 × 10⁴ ❡ Luka Pintarič ∧ izvajalka Mera ⊙ ⟨DVOJE-ROK⟩ 2432 · MERJENO, ⟨NE⟩ UGIBANO ⊙ 2690 · dvojni podpis: ❡ Luka Pintarič ∧ izvajalka Mera
