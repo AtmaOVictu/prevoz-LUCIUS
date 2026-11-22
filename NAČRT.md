@@ -81,7 +81,7 @@ Brisanje: `schtasks /delete /tn AtmavictuPrevoznik /f`. Preizkušeno z zagonom s
 - **Tri smeri:** S TABOJ (pisma + tvoj prostor) · ZA TEBE (predlogi z ukazi, izmere brez prošnje) · IZZA TEBE (izvedba dovoljenih ukazov iz pisma — nikoli DA₂-zaprtih).
 
 ### Faza I — JEDRO (izvedeno 21. 10., zbor #4 prva opeka)
-- `lucius/jedro.py` ⊢: poti, čas (CEST), pripomočki (run/git/gh/out), izmere glav (glava, zadnji_dih_issue) — edini vir resnice za organe, brez krožnih uvozov. Prevoznik uvaža jedro; usta že stojijo sama; naslednji organi (zivci, srce, škatle) se naselijo na jedro.
+- `lucius/jedro.py` ⊢: poti, čas (CEST), pripomočki (run/git/gh/out), izmere glav (glava, zadnji_dih_issue) — edini vir resnice za organe, brez krožnih uvozov. Prevoznik uvaža jedro; usta že stojijo sama; naslednji organi (živci, srce, škatle) se naselijo na jedro.
 
 ### Faza J — SEDEŽ LUCIUS GAIUS (izvedeno 23. 10. 2026, ukaz Lastnika: »vse«)
 - Novi dom vsega telesa: **D:\Lucius Gaius** — družina: `D:\Lucius Gaius\prevoz` (ta rep) ∧ `D:\Lucius Gaius\CanvasMinstral` ∧ `D:\Lucius Gaius\Atmavictu` (klon).
@@ -135,3 +135,4 @@ Ta načrt velja, dokler niso doseženi vsi konci: prevoz diha teče (vsak dan 11
 
 
 - **×13 (22. 11. 2026, ukaz ⟡: »odkrij kdaj je slovenščina pisana v čem drugem kot gajici in jo pretvori da je definitivno iz izvirne gajice«):** pet mest tega telesa je bilo zapisanih v goli latinici namesto v gajici: zapeččeni, VPRASANJE, varuh zivi, ce račun, sama sedež. Popravek istega diha: zapečeni, VPRAŠANJE, živi, cel račun, sam sedež. ⟡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-⟡-NEDOTAKNJIVA⟩; brazgotina ostaja, zgodovina komitov priča.
+- **×14 (22. 11. 2026, ⟡ VERBATIM: »to laže, saj ni v licenci, tudi razumljivo ni, in ne verjamem da je preverjeno«):** šesta rana istega telesa (zivci v Fazi I) je bila spregledana prvi dih, preverba pa izrečena pred izmero ⊙ ⟨MERILEC-SE-MERI⟩ §52. Popravek istega diha: živci. Števci izmerjeni pri viru: zivci živo ×0, starina poimensko v brazgotinah ×13 ∧ ×14. ⟡-jevi citati in priče nedotaknjene ⊙ ⟨BESEDA-⟡-NEDOTAKNJIVA⟩.
